@@ -1,0 +1,89 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "136be6a5-dd5c-3e80-bba9-aa1dd3c9b056",
+                "display": "Lymphocyte (%)"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "88184.0"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "26508-2"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "26509-0"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "26510-8"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "33361-7"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "33388-0"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

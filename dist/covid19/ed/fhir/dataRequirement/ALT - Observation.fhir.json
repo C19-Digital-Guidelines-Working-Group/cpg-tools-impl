@@ -1,0 +1,145 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e",
+                "display": "ALT"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "84460.0"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "16324-6"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "1741-8"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "1742-6"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "1743-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "1744-2"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "25302-1"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "44785-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "50168-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "54491-6"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "54492-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "76625-3"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "77144-4"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

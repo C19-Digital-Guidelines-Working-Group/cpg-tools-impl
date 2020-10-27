@@ -1,0 +1,49 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "84a8ab48-fc39-307a-9f4f-99a89db68d73",
+                "display": "Heart Rate"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "2544737.0"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

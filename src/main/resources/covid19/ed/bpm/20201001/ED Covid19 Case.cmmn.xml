@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/CMMN/20151109/MODEL"
+  xmlns="https://clinicalknowledgemanagement.mayo.edu/artifacts/67838dc0-e4e1-42d9-84f8-5a640e65c499"
+  xmlns:cmmndi="http://www.omg.org/spec/CMMN/20151109/CMMNDI"
+  xmlns:dc="http://www.omg.org/spec/CMMN/20151109/DC"
+  xmlns:di="http://www.omg.org/spec/CMMN/20151109/DI"
+  xmlns:ns1="https://clinicalknowledgemanagement.mayo.edu/artifacts/f9b2d664-64b2-458c-9324-b0495aaa3450"
+  xmlns:ns2="https://clinicalknowledgemanagement.mayo.edu/artifacts/cb184964-9004-4727-a6ca-9b68779850f0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/"
+  id="_67838dc0-e4e1-42d9-84f8-5a640e65c499"
+  name="ED Covid19 Case"
+  targetNamespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/67838dc0-e4e1-42d9-84f8-5a640e65c499"
+>
+  <semantic:case id="Case_bd57e222-8e05-40db-a143-c1acedbf94e6" name="Page 1">
+    <semantic:casePlanModel id="_bd57e222-8e05-40db-a143-c1acedbf94e6" name="Page 1">
+      <semantic:planningTable id="PT__bd57e222-8e05-40db-a143-c1acedbf94e6"/>
+    </semantic:casePlanModel>
+  </semantic:case>
+  <semantic:case id="Case_9633a5c6-9d31-4903-b26a-07bff550ec5c" name="Covid19 ED Case">
+    <semantic:casePlanModel autoComplete="true"
+      id="_9633a5c6-9d31-4903-b26a-07bff550ec5c"
+      name="Covid19 ED Case">
+      <semantic:extensionElements/>
+      <semantic:planItem definitionRef="PID__d306a367-cde1-4d5b-bd3b-bbdc59ea7415"
+        id="_d306a367-cde1-4d5b-bd3b-bbdc59ea7415">
+        <semantic:entryCriterion id="_4cefccf4-a173-48ca-8c61-833322264251"
+          sentryRef="_ec9a7c27-f97d-47b5-9bbf-ef570719e82e"/>
+        <semantic:entryCriterion id="_bd3b9c30-439d-40ab-b148-b416550e204f"
+          sentryRef="_52399eba-7ae3-4b42-a15a-fdf1ddb340fd"/>
+        <semantic:exitCriterion id="_ff0d113f-b931-45f8-8f7a-3aaee4125ee7"
+          sentryRef="_c83535ef-f214-457a-9962-bc51b18f9ac4"/>
+      </semantic:planItem>
+      <semantic:planItem definitionRef="PID__b280a251-f006-452c-a064-c2eb0d5f5be1"
+        id="_b280a251-f006-452c-a064-c2eb0d5f5be1">
+        <semantic:entryCriterion id="_bbfaf1da-76dc-4305-a867-c700286720c0"
+          sentryRef="_f891bf5c-6d35-4c5f-ab45-66daa55bb21d"/>
+        <semantic:exitCriterion id="_95f7c673-2775-4118-8327-34a36bdf8b95"
+          sentryRef="_9a787c85-b32c-444b-b6c4-3728c59fbc1f"/>
+        <semantic:exitCriterion id="_2c0433da-56ae-4209-8924-15c31ce12c73"
+          sentryRef="_1e870005-b04e-4e89-b480-28bfbd512b67"/>
+        <semantic:exitCriterion id="_a7b4ddea-27d2-44c5-b22b-a85394bf124e"
+          sentryRef="_74a61e4b-a1a8-4af1-81ee-535912c390ad"/>
+      </semantic:planItem>
+      <semantic:planItem definitionRef="PID__8ae7e6ee-4517-46bc-aa56-a267b55c31e7"
+        id="_8ae7e6ee-4517-46bc-aa56-a267b55c31e7"/>
+      <semantic:planItem definitionRef="PID__5ee41f3c-1532-4a3e-8b36-a360be35ecc1"
+        id="_5ee41f3c-1532-4a3e-8b36-a360be35ecc1">
+        <semantic:entryCriterion id="_ad4fb137-4da2-42c3-adb9-bcd53b7c9ed0"
+          sentryRef="_e621b90b-ecf2-4446-a429-f106f3e0047f"/>
+        <semantic:entryCriterion id="_b7199a4b-a96c-46ee-83ca-1875e7d87cee"
+          sentryRef="_73ce43be-f0a8-4313-adb8-2b1697920b57"/>
+      </semantic:planItem>
+      <semantic:sentry id="_ec9a7c27-f97d-47b5-9bbf-ef570719e82e">
+        <semantic:planItemOnPart id="_c094a993-769e-4d10-9441-219393cda3ee"
+          sourceRef="_9a787c85-b32c-444b-b6c4-3728c59fbc1f"/>
+      </semantic:sentry>
+      <semantic:sentry id="_52399eba-7ae3-4b42-a15a-fdf1ddb340fd">
+        <semantic:planItemOnPart id="_2c739551-f8cc-4001-ad0d-9c4773e12254"
+          sourceRef="_74a61e4b-a1a8-4af1-81ee-535912c390ad"/>
+      </semantic:sentry>
+      <semantic:sentry id="_c83535ef-f214-457a-9962-bc51b18f9ac4">
+        <semantic:planItemOnPart id="_eb08d70e-6ba8-4756-aef1-07b960a46dce"
+          sourceRef="_73ce43be-f0a8-4313-adb8-2b1697920b57"/>
+      </semantic:sentry>
+      <semantic:sentry id="_6fd85bbe-eaf4-4e86-9354-ab8c4d90ef69">
+        <semantic:ifPart id="_522e3872-e378-4858-88a3-ed8dd07f4cbd"/>
+      </semantic:sentry>
+      <semantic:sentry id="_709ebb56-b460-4df8-98e0-2067e8f760c0">
+        <semantic:planItemOnPart id="_2c6a2e36-24ee-4081-9f38-31ecba91ae17"
+          sourceRef="_94baef81-87ed-4b1d-86dd-3120bb2cde88">
+          <semantic:standardEvent>complete</semantic:standardEvent>
+        </semantic:planItemOnPart>
+      </semantic:sentry>
+      <semantic:sentry id="_f999bd7a-8e34-4907-b458-9385ee408a0c"/>
+      <semantic:sentry id="_f891bf5c-6d35-4c5f-ab45-66daa55bb21d">
+        <semantic:planItemOnPart id="_7d998bbb-dcd1-4efc-a93a-30bce6ee3b8a"
+          sourceRef="_8ae7e6ee-4517-46bc-aa56-a267b55c31e7">
+          <semantic:standardEvent>occur</semantic:standardEvent>
+        </semantic:planItemOnPart>
+        <semantic:ifPart id="_1be632ee-0dd3-495d-8ec9-b65336b7ce74"/>
+      </semantic:sentry>
+      <semantic:sentry id="_9a787c85-b32c-444b-b6c4-3728c59fbc1f">
+        <semantic:planItemOnPart id="_c094a993-769e-4d10-9441-219393cda3ee"
+          sourceRef="_ec9a7c27-f97d-47b5-9bbf-ef570719e82e"/>
+        <semantic:ifPart id="_aa01bddf-95c4-4bfe-b027-927f0e9b32ea"/>
+      </semantic:sentry>
+      <semantic:sentry id="_1e870005-b04e-4e89-b480-28bfbd512b67">
+        <semantic:planItemOnPart id="_507c3d10-44c9-477d-bf8d-b94b732aa47a"
+          sourceRef="_e621b90b-ecf2-4446-a429-f106f3e0047f"/>
+      </semantic:sentry>
+      <semantic:sentry id="_74a61e4b-a1a8-4af1-81ee-535912c390ad">
+        <semantic:planItemOnPart id="_2c739551-f8cc-4001-ad0d-9c4773e12254"
+          sourceRef="_52399eba-7ae3-4b42-a15a-fdf1ddb340fd"/>
+        <semantic:ifPart id="_f1d4e7d0-29fb-482b-8e59-392a3091b027">
+          <semantic:condition language="http://www.omg.org/spec/DMN/20180521/FEEL/">"status" =
+            "critical"
+          </semantic:condition>
+        </semantic:ifPart>
+      </semantic:sentry>
+      <semantic:sentry id="_103f10ea-22f1-448d-951d-438a395995eb">
+        <semantic:planItemOnPart id="_f2155633-eaff-488f-95a5-55531ff306ee"
+          sourceRef="_262f8042-9919-4a01-80d6-0f64cb7c1fc7">
+          <semantic:standardEvent>complete</semantic:standardEvent>
+        </semantic:planItemOnPart>
+      </semantic:sentry>
+      <semantic:sentry id="_0eb39735-08f8-415c-b928-d99a7ec033aa"/>
+      <semantic:sentry id="_e621b90b-ecf2-4446-a429-f106f3e0047f">
+        <semantic:planItemOnPart id="_507c3d10-44c9-477d-bf8d-b94b732aa47a"
+          sourceRef="_1e870005-b04e-4e89-b480-28bfbd512b67"/>
+      </semantic:sentry>
+      <semantic:sentry id="_73ce43be-f0a8-4313-adb8-2b1697920b57">
+        <semantic:planItemOnPart id="_eb08d70e-6ba8-4756-aef1-07b960a46dce"
+          sourceRef="_c83535ef-f214-457a-9962-bc51b18f9ac4"/>
+      </semantic:sentry>
+      <semantic:stage autoComplete="true" id="PID__d306a367-cde1-4d5b-bd3b-bbdc59ea7415">
+        <semantic:planItem definitionRef="PID__94baef81-87ed-4b1d-86dd-3120bb2cde88"
+          id="_94baef81-87ed-4b1d-86dd-3120bb2cde88">
+          <semantic:entryCriterion id="_1128c990-378c-4e6a-8497-a1ec487f12af"
+            sentryRef="_6fd85bbe-eaf4-4e86-9354-ab8c4d90ef69"/>
+        </semantic:planItem>
+        <semantic:planItem definitionRef="PID__9e2284e6-0d4c-41f8-931c-8e91029f5563"
+          id="_9e2284e6-0d4c-41f8-931c-8e91029f5563">
+          <semantic:entryCriterion id="_d21c6340-0021-4e6c-8b94-8d624f2923c2"
+            sentryRef="_709ebb56-b460-4df8-98e0-2067e8f760c0"/>
+        </semantic:planItem>
+        <semantic:planItem definitionRef="PID__1c38cf68-8f02-470c-95ae-85c2c59ae0a7"
+          id="_1c38cf68-8f02-470c-95ae-85c2c59ae0a7">
+          <semantic:entryCriterion id="_a60db7a3-2d37-4eb4-a4ae-391077b8fe80"
+            sentryRef="_f999bd7a-8e34-4907-b458-9385ee408a0c"/>
+        </semantic:planItem>
+        <semantic:planningTable id="PT__d306a367-cde1-4d5b-bd3b-bbdc59ea7415">
+          <semantic:discretionaryItem definitionRef="PID__6c324c9e-2a19-4006-8eff-3764453a81d8"
+            id="_6c324c9e-2a19-4006-8eff-3764453a81d8"/>
+        </semantic:planningTable>
+        <semantic:humanTask id="PID__6c324c9e-2a19-4006-8eff-3764453a81d8"
+          isBlocking="false"
+          name="Perform Dx Test">
+          <semantic:defaultControl>
+            <semantic:manualActivationRule/>
+          </semantic:defaultControl>
+        </semantic:humanTask>
+        <semantic:decisionTask decisionRef="_61b0fc5b00becb7806fc03bcdf90e669"
+          id="PID__94baef81-87ed-4b1d-86dd-3120bb2cde88"
+          name="Diagnostic Assessment">
+          <semantic:extensionElements/>
+          <semantic:defaultControl>
+            <semantic:repetitionRule/>
+          </semantic:defaultControl>
+        </semantic:decisionTask>
+        <semantic:decisionTask decisionRef="_44034b84ea6ce8b3b92c2c3756ff574a"
+          id="PID__9e2284e6-0d4c-41f8-931c-8e91029f5563"
+          name="Final Disposition">
+          <semantic:extensionElements/>
+          <semantic:defaultControl>
+            <semantic:requiredRule/>
+          </semantic:defaultControl>
+        </semantic:decisionTask>
+        <semantic:task id="PID__1c38cf68-8f02-470c-95ae-85c2c59ae0a7"
+          name="Clinical Assessment">
+          <semantic:defaultControl>
+            <semantic:repetitionRule/>
+          </semantic:defaultControl>
+        </semantic:task>
+      </semantic:stage>
+      <semantic:stage autoComplete="true" id="PID__b280a251-f006-452c-a064-c2eb0d5f5be1">
+        <semantic:defaultControl>
+          <semantic:requiredRule/>
+        </semantic:defaultControl>
+        <semantic:planItem definitionRef="PID__d841a6fe-ead6-4e4f-9141-f902dfc128c9"
+          id="_d841a6fe-ead6-4e4f-9141-f902dfc128c9">
+          <semantic:entryCriterion id="_ef636727-1f09-4c8a-b01d-993fdc9e0261"
+            sentryRef="_103f10ea-22f1-448d-951d-438a395995eb"/>
+        </semantic:planItem>
+        <semantic:planItem definitionRef="PID__262f8042-9919-4a01-80d6-0f64cb7c1fc7"
+          id="_262f8042-9919-4a01-80d6-0f64cb7c1fc7">
+          <semantic:entryCriterion id="_56bd035b-aa01-4d3c-8fa1-cad045f4d408"
+            sentryRef="_0eb39735-08f8-415c-b928-d99a7ec033aa"/>
+        </semantic:planItem>
+        <semantic:planningTable id="PT__b280a251-f006-452c-a064-c2eb0d5f5be1">
+          <semantic:discretionaryItem definitionRef="PID__1a05b40c-3eb3-4e2f-abba-3a0b190e50f9"
+            id="_1a05b40c-3eb3-4e2f-abba-3a0b190e50f9"/>
+        </semantic:planningTable>
+        <semantic:decisionTask decisionRef="_1d89105fc0568af1c78cfb5bf321e84d"
+          id="PID__d841a6fe-ead6-4e4f-9141-f902dfc128c9"
+          name="Initial Disposition">
+          <semantic:extensionElements/>
+          <semantic:defaultControl>
+            <semantic:requiredRule/>
+          </semantic:defaultControl>
+        </semantic:decisionTask>
+        <semantic:decisionTask decisionRef="_3779adfb54deeab4871d8ef3b8086362"
+          id="PID__262f8042-9919-4a01-80d6-0f64cb7c1fc7"
+          name="Clinical Assessment">
+          <semantic:extensionElements/>
+          <semantic:defaultControl>
+            <semantic:repetitionRule/>
+            <semantic:requiredRule/>
+          </semantic:defaultControl>
+        </semantic:decisionTask>
+        <semantic:humanTask id="PID__1a05b40c-3eb3-4e2f-abba-3a0b190e50f9"
+          isBlocking="false"
+          name="Perform Covid19 Nucleic Test">
+          <semantic:defaultControl>
+            <semantic:manualActivationRule/>
+          </semantic:defaultControl>
+        </semantic:humanTask>
+      </semantic:stage>
+      <semantic:eventListener id="PID__8ae7e6ee-4517-46bc-aa56-a267b55c31e7"/>
+      <semantic:humanTask id="PID__5ee41f3c-1532-4a3e-8b36-a360be35ecc1"
+        name="Discharge to Care Setting">
+        <semantic:defaultControl>
+          <semantic:requiredRule/>
+          <semantic:manualActivationRule/>
+        </semantic:defaultControl>
+      </semantic:humanTask>
+    </semantic:casePlanModel>
+  </semantic:case>
+  <semantic:decision externalRef="ns1:_296c055d-6b7b-4314-adb0-945d3aa01043"
+    id="_61b0fc5b00becb7806fc03bcdf90e669"
+    implementationType="http://www.omg.org/spec/CMMN/DecisionType/DMN1"
+    name="Current Covid19 Severity - Kind of"/>
+  <semantic:decision externalRef="ns1:_c199f4f0-b747-4aa7-95c6-e34fb18e438b"
+    id="_44034b84ea6ce8b3b92c2c3756ff574a"
+    implementationType="http://www.omg.org/spec/CMMN/DecisionType/DMN1"
+    name="Covid Care Setting Disposition - Kind of"/>
+  <semantic:decision externalRef="ns2:_727c991f-4dc2-4a78-ac23-4d3cedf7cd77"
+    id="_1d89105fc0568af1c78cfb5bf321e84d"
+    implementationType="http://www.omg.org/spec/CMMN/DecisionType/DMN1"
+    name="Initial Covid19 Management Disposition"/>
+  <semantic:decision externalRef="ns2:_b0325b61-9eaf-4a2d-bebe-8a0b2017945d"
+    id="_3779adfb54deeab4871d8ef3b8086362"
+    implementationType="http://www.omg.org/spec/CMMN/DecisionType/DMN1"
+    name="Current Severity of Covid19 - Kind of -- Clinical"/>
+  <cmmndi:CMMNDI>
+    <cmmndi:CMMNDiagram cmmnElementRef="_0007bb0e-b427-49a2-a71e-45ddb0422220"
+      id="_6f64eb57-eb59-4466-b3d0-41660db04142"
+      name="Covid19 ED Case">
+      <cmmndi:Size height="1058" width="1684"/>
+      <cmmndi:CMMNShape cmmnElementRef="_9633a5c6-9d31-4903-b26a-07bff550ec5c"
+        id="_0007bb0e-b427-49a2-a71e-45ddb0422220">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="608" width="1292" x="156.5" y="53"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="12.015625"
+            width="201"
+            x="166.19"
+            y="55.026666666666664"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_d306a367-cde1-4d5b-bd3b-bbdc59ea7415"
+        id="_923ea7cf-addd-4a9e-ab41-a3d5d1b03302">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="310" width="424" x="946.5" y="180"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_6c324c9e-2a19-4006-8eff-3764453a81d8"
+        id="_b9b972a4-761d-4e8d-9842-d46ae857d166">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="980.5" y="331.8024989671898"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="26" width="68" x="994.5" y="356.8024989671898"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_94baef81-87ed-4b1d-86dd-3120bb2cde88"
+        id="_f1f58d24-6756-43c2-9315-ac1af31ed08f">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="1184.5" y="229.97917118631818"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="26" width="68" x="1198.5" y="254.97917118631818"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_9e2284e6-0d4c-41f8-931c-8e91029f5563"
+        id="_40be7403-e04e-43e5-a52a-8cb7f07e43c4">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="1110.5" y="379"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="26" width="68" x="1124.5" y="404"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_d21c6340-0021-4e6c-8b94-8d624f2923c2"
+        id="_d21c6340-0021-4e6c-8b94-8d624f2923c2_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="1159.7780580765411"
+          y="364.0394357355854"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_1128c990-378c-4e6a-8497-a1ec487f12af"
+        id="_1128c990-378c-4e6a-8497-a1ec487f12af_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="1173.503490120694"
+          y="258.0834749090798"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_1c38cf68-8f02-470c-95ae-85c2c59ae0a7"
+        id="_87d79591-8bfc-4fd5-be9c-8d62cb8859ca">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="998.9177698813382" y="212"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="26" width="89" x="1003.4177698813382" y="237"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_a60db7a3-2d37-4eb4-a4ae-391077b8fe80"
+        id="_a60db7a3-2d37-4eb4-a4ae-391077b8fe80_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="27.99999999999997"
+          width="20"
+          x="987.9255450871472"
+          y="229.8547125273491"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_4cefccf4-a173-48ca-8c61-833322264251"
+        id="_4cefccf4-a173-48ca-8c61-833322264251_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="935.5033161043192"
+          y="303.6106178875571"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_b280a251-f006-452c-a064-c2eb0d5f5be1"
+        id="_6591e52c-5312-4243-9b0d-a5377286c1ad">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="269" width="354" x="321" y="76"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_d841a6fe-ead6-4e4f-9141-f902dfc128c9"
+        id="_07536630-c862-498f-b95b-6aef68903f87">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="550" y="212"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="26" width="68" x="564" y="237"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_262f8042-9919-4a01-80d6-0f64cb7c1fc7"
+        id="_6663cd5c-630c-437d-80d4-9d3129966f06">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="365" y="212"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="26" width="68" x="379" y="237"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_ef636727-1f09-4c8a-b01d-993fdc9e0261"
+        id="_ef636727-1f09-4c8a-b01d-993fdc9e0261_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28" width="20" x="539" y="236"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_1a05b40c-3eb3-4e2f-abba-3a0b190e50f9"
+        id="_404e7710-c24c-4665-999f-d0fee0617704">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="365" y="101"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="40" width="68" x="379" y="119"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_56bd035b-aa01-4d3c-8fa1-cad045f4d408"
+        id="_56bd035b-aa01-4d3c-8fa1-cad045f4d408_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28" width="20" x="354" y="236"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_bbfaf1da-76dc-4305-a867-c700286720c0"
+        id="_bbfaf1da-76dc-4305-a867-c700286720c0_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="310.03702557236124"
+          y="146.6777756694553"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_95f7c673-2775-4118-8327-34a36bdf8b95"
+        id="_95f7c673-2775-4118-8327-34a36bdf8b95_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="665.9919096854135"
+          y="173.72042285798338"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_2c0433da-56ae-4209-8924-15c31ce12c73"
+        id="_2c0433da-56ae-4209-8924-15c31ce12c73_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="588.5966535072043"
+          y="331.8024989671898"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_8ae7e6ee-4517-46bc-aa56-a267b55c31e7"
+        id="_dc1f3aa4-7c8b-4fca-88bd-34510f2285d3">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="36" width="36" x="200" y="196.8060160203566"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_5ee41f3c-1532-4a3e-8b36-a360be35ecc1"
+        id="_e294cad5-87ea-49e6-98ac-da1e5151840d">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="76" width="96" x="674" y="508"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="26" width="68" x="688" y="533"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_ad4fb137-4da2-42c3-adb9-bcd53b7c9ed0"
+        id="_ad4fb137-4da2-42c3-adb9-bcd53b7c9ed0_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28" width="20" x="712" y="493"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_b7199a4b-a96c-46ee-83ca-1875e7d87cee"
+        id="_b7199a4b-a96c-46ee-83ca-1875e7d87cee_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28" width="20" x="761" y="532"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_ff0d113f-b931-45f8-8f7a-3aaee4125ee7"
+        id="_ff0d113f-b931-45f8-8f7a-3aaee4125ee7_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="1036.9177698813382"
+          y="476.8130240395727"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_a7b4ddea-27d2-44c5-b22b-a85394bf124e"
+        id="_a7b4ddea-27d2-44c5-b22b-a85394bf124e_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28.000000000000014"
+          width="20"
+          x="665.8800716469117"
+          y="100.52515908316347"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape cmmnElementRef="_bd3b9c30-439d-40ab-b148-b416550e204f"
+        id="_bd3b9c30-439d-40ab-b148-b416550e204f_di">
+        <cmmndi:CMMNStyle>
+          <cmmndi:FillColor blue="255" green="255" red="255"/>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <dc:Bounds height="28"
+          width="20"
+          x="935.6368123968706"
+          y="196.49511668496206"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNEdge cmmnElementRef="_2c6a2e36-24ee-4081-9f38-31ecba91ae17"
+        id="_2578fac1-fa15-4737-a886-0f8e13b3907d"
+        isStandardEventVisible="true">
+        <cmmndi:CMMNStyle>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <di:waypoint x="1232.5" y="305.9791711863182"/>
+        <di:waypoint x="1232.5" y="335.5093034609518"/>
+        <di:waypoint x="1169.7780580765411" y="335.5093034609518"/>
+        <di:waypoint x="1169.7780580765411" y="365.0394357355854"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="12.015625"
+            width="110"
+            x="1181.7780580765411"
+            y="348.0238107355854"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNEdge cmmnElementRef="_c094a993-769e-4d10-9441-219393cda3ee"
+        id="_5bde888f-8065-4a4d-9edf-067a3dc8710a"
+        isStandardEventVisible="true">
+        <cmmndi:CMMNStyle>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <di:waypoint x="684.9919096854135" y="187.72042285798338"/>
+        <di:waypoint x="763.7476128948663" y="187.72042285798338"/>
+        <di:waypoint x="763.7476128948663" y="317.6106178875571"/>
+        <di:waypoint x="936.5033161043192" y="317.6106178875571"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNEdge cmmnElementRef="_f2155633-eaff-488f-95a5-55531ff306ee"
+        id="_385578f1-d142-4640-b86e-15c93a300611"
+        isStandardEventVisible="true">
+        <cmmndi:CMMNStyle>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <di:waypoint x="461" y="250"/>
+        <di:waypoint x="540" y="250"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="12.015625" width="50.75" x="474" y="255"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNEdge cmmnElementRef="_7d998bbb-dcd1-4efc-a93a-30bce6ee3b8a"
+        id="_4f8995eb-4835-419c-9477-302ae5c2130b"
+        isStandardEventVisible="true">
+        <cmmndi:CMMNStyle>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <di:waypoint x="236" y="214.8480770573945"/>
+        <di:waypoint x="273.51851286271483" y="214.8480770573945"/>
+        <di:waypoint x="273.51851286271483" y="160.67832896577855"/>
+        <di:waypoint x="311.03702572542966" y="160.67832896577855"/>
+        <cmmndi:CMMNLabel>
+          <dc:Bounds height="12.015625"
+            width="33.015625"
+            x="248"
+            y="219.8480770573945"/>
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNEdge cmmnElementRef="_507c3d10-44c9-477d-bf8d-b94b732aa47a"
+        id="_d4b88530-0979-4f3a-9979-c44ad9a0e65d"
+        isStandardEventVisible="true">
+        <cmmndi:CMMNStyle>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <di:waypoint x="598.5966535072043" y="358.8024989671898"/>
+        <di:waypoint x="598.5966535072043" y="454.8024989671898"/>
+        <di:waypoint x="722" y="454.8024989671898"/>
+        <di:waypoint x="722" y="495"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNEdge cmmnElementRef="_eb08d70e-6ba8-4756-aef1-07b960a46dce"
+        id="_967e4f4a-2ab9-425c-ba07-99d7a4679762"
+        isStandardEventVisible="true">
+        <cmmndi:CMMNStyle>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <di:waypoint x="779" y="546"/>
+        <di:waypoint x="1046.9177698813382" y="546"/>
+        <di:waypoint x="1046.9177698813382" y="503.8130240395727"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNEdge cmmnElementRef="_2c739551-f8cc-4001-ad0d-9c4773e12254"
+        id="_7602a624-8864-4314-a0f5-b8d7eceef970"
+        isStandardEventVisible="true">
+        <cmmndi:CMMNStyle>
+          <cmmndi:StrokeColor blue="0" green="0" red="0"/>
+          <cmmndi:FontColor blue="0" green="0" red="0"/>
+        </cmmndi:CMMNStyle>
+        <di:waypoint x="684.8800716469117" y="114.52515908316347"/>
+        <di:waypoint x="811.2584420218911" y="114.52515908316347"/>
+        <di:waypoint x="811.2584420218911" y="210.49511668496206"/>
+        <di:waypoint x="937.6368123968706" y="210.49511668496206"/>
+        <cmmndi:CMMNLabel/>
+      </cmmndi:CMMNEdge>
+    </cmmndi:CMMNDiagram>
+  </cmmndi:CMMNDI>
+</semantic:definitions>

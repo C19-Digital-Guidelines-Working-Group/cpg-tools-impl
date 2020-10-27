@@ -1,0 +1,49 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "986a4f4e-4179-3e81-9dc8-b2a297aa8c87",
+                "display": "Malignancy"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "C80.1"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onsetDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

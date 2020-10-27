@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/"
+  xmlns="https://clinicalknowledgemanagement.mayo.edu/artifacts/23d712f2-0798-4fb0-acbe-42c722864a9a"
+  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+  xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  id="_23d712f2-0798-4fb0-acbe-42c722864a9a"
+  name="Inclusion Criteria"
+  namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/23d712f2-0798-4fb0-acbe-42c722864a9a"
+>
+  <semantic:extensionElements/>
+  <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+    name="Situational Data Definitions"
+    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"/>
+  <semantic:itemDefinition label="Quantity" name="Quantity">
+    <semantic:itemComponent id="_7065c437-69b6-4efd-9852-cef31e42aa8b" name="value">
+      <semantic:typeRef>number</semantic:typeRef>
+    </semantic:itemComponent>
+    <semantic:itemComponent id="_d1156a59-b8ab-49a3-a438-ec8b98fb5c40" name="unit">
+      <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemComponent>
+  </semantic:itemDefinition>
+  <semantic:itemDefinition isCollection="false" label="tBeliefType" name="tBeliefType">
+    <semantic:typeRef>string</semantic:typeRef>
+    <semantic:allowedValues>
+      <semantic:text>"Known","Unknown","Suspected","At Risk"</semantic:text>
+    </semantic:allowedValues>
+  </semantic:itemDefinition>
+  <semantic:itemDefinition label="Belief Type" name="Belief_Type">
+    <semantic:typeRef>tBeliefType</semantic:typeRef>
+  </semantic:itemDefinition>
+  <semantic:decisionService id="_23d712f2-0798-4fb0-acbe-42c722864a9a_DS"
+    name="Whole Model Decision Service">
+    <semantic:variable id="_23d712f2-0798-4fb0-acbe-42c722864a9a_DS_VAR"
+      name="Whole Model Decision Service"
+      typeRef="Any"/>
+    <semantic:outputDecision href="#_97f7824b-1c9d-491f-8aba-7dc314d92ab2"/>
+    <semantic:outputDecision href="#_5f808c25-bee1-47a8-846f-5906dc790a8b"/>
+    <semantic:encapsulatedDecision href="#_283ce1aa-8fdb-4d11-8c2d-752335ea2711"/>
+    <semantic:inputData href="#_0fd31ebd-ca25-4d21-8d79-6668c00fb9f6"/>
+    <semantic:inputData href="#_7c0ac6d6-82f5-4927-9bbf-c47725df5498"/>
+    <semantic:inputData href="#_e24386cb-792e-47a3-ab81-fb3d41a3e18c"/>
+  </semantic:decisionService>
+  <semantic:decisionService id="_56bb9b95-5a0f-437b-8202-18c966bfeee6_DS" name="Diagram Page 1">
+    <semantic:variable id="_56bb9b95-5a0f-437b-8202-18c966bfeee6_DS_VAR"
+      name="Diagram Page 1"
+      typeRef="Any"/>
+    <semantic:outputDecision href="#_97f7824b-1c9d-491f-8aba-7dc314d92ab2"/>
+    <semantic:outputDecision href="#_5f808c25-bee1-47a8-846f-5906dc790a8b"/>
+    <semantic:encapsulatedDecision href="#_283ce1aa-8fdb-4d11-8c2d-752335ea2711"/>
+    <semantic:inputData href="#_0fd31ebd-ca25-4d21-8d79-6668c00fb9f6"/>
+    <semantic:inputData href="#_7c0ac6d6-82f5-4927-9bbf-c47725df5498"/>
+    <semantic:inputData href="#_e24386cb-792e-47a3-ab81-fb3d41a3e18c"/>
+  </semantic:decisionService>
+  <semantic:decision id="_97f7824b-1c9d-491f-8aba-7dc314d92ab2"
+    name="Eligible for Covid ED Management - Is">
+    <semantic:extensionElements/>
+    <semantic:variable id="_10f46410-9aa1-461f-8c65-1915906aa72e"
+      name="Eligible for Covid ED Management - Is"
+      typeRef="boolean"/>
+    <semantic:informationRequirement id="_00f53b1a-9977-42c7-8374-942a1cb1674a">
+      <semantic:requiredInput href="#_0fd31ebd-ca25-4d21-8d79-6668c00fb9f6"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_f7d2f9d1-6d9b-418c-8566-b04890003805">
+      <semantic:requiredDecision href="#_283ce1aa-8fdb-4d11-8c2d-752335ea2711"/>
+    </semantic:informationRequirement>
+    <semantic:literalExpression id="_b1ad45c4-3963-42f0-973a-92680086cbe5" typeRef="boolean">
+      <semantic:text>Age - Value of.value &gt; 18 and (Having Covid19 - Belief in = "Known" or
+        Having Covid19 - Belief in = "Suspected")
+      </semantic:text>
+    </semantic:literalExpression>
+  </semantic:decision>
+  <semantic:inputData id="_0fd31ebd-ca25-4d21-8d79-6668c00fb9f6" name="Age - Value of">
+    <semantic:variable id="_5233b5ae-dd92-4c69-9143-7248793952da"
+      name="Age - Value of"
+      typeRef="Quantity"/>
+  </semantic:inputData>
+  <semantic:decision id="_283ce1aa-8fdb-4d11-8c2d-752335ea2711"
+    name="Having Covid19 - Belief in">
+    <semantic:variable id="_d24b586f-99b1-495c-ab7c-3758516af1ee"
+      name="Having Covid19 - Belief in"
+      typeRef="Belief_Type"/>
+    <semantic:informationRequirement id="_517bd3ee-6dd4-4f28-b01f-a5b2922b9a7c">
+      <semantic:requiredInput href="#_7c0ac6d6-82f5-4927-9bbf-c47725df5498"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_438ed1f7-b980-4275-9fbf-5da32aa51e35">
+      <semantic:requiredInput href="#_e24386cb-792e-47a3-ab81-fb3d41a3e18c"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="UNIQUE"
+      id="_b162f329-14de-43d8-bda1-7a760514f987"
+      outputLabel="Having Covid19 - Belief in"
+      typeRef="Belief_Type">
+      <semantic:input id="_a83b7956-9e05-4041-bc18-2d542e6794bc"
+        label="Has Pending Covid19 Test - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Pending Covid19 Test - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_752af52f-594a-49e3-be9d-783c084e7807"
+        label="Has Positive Covd19 Test - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Positive Covd19 Test - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="_6eaf3d2d-83a5-46b7-8d5b-e5f66f89284f"/>
+      <semantic:annotation name="Description"/>
+      <semantic:rule id="_9c83eae7-e011-43d5-9cd4-916414ef79ce">
+        <semantic:inputEntry id="_889b1ca4-05ca-4504-a588-e8fad6697c71">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_eda84c4a-08f9-466e-a203-9bcc63d5438d">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_c0a5a0c0-7199-4ed4-9647-9f131d165080">
+          <semantic:text>"Known"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_213446df-91a4-422d-a551-17e220391e17">
+        <semantic:inputEntry id="_f938f5e4-5c3f-4a0e-8200-10206fc16c7a">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_7847e37d-5302-4f75-96da-25233cf97418">
+          <semantic:text>false</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_277cb4ce-b077-4041-ac7b-9587b6b59fbf">
+          <semantic:text>"Suspected"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_e7d27766-65ad-4992-911a-71e111bd3952">
+        <semantic:inputEntry id="_83a57a06-cb2f-4ce1-be04-9954f795720b">
+          <semantic:text>false</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_ed473f27-a512-47f7-94c3-33947ab71d81">
+          <semantic:text>false</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_cef8e4f9-a9b5-427c-bedd-9c4857eeb296">
+          <semantic:text>"Unknown"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:decision id="_5f808c25-bee1-47a8-846f-5906dc790a8b"
+    name="Confirmed Covid19 - Is">
+    <semantic:variable id="_d5ed0e51-3bcd-40cd-9140-e384f38d663b"
+      name="Confirmed Covid19 - Is"
+      typeRef="boolean"/>
+    <semantic:informationRequirement id="_1b03457d-03e6-4109-ab1e-68a22f5589f7">
+      <semantic:requiredDecision href="#_283ce1aa-8fdb-4d11-8c2d-752335ea2711"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="UNIQUE"
+      id="_dd0e8531-b1b6-4fba-b33a-f289a8ee77d3"
+      outputLabel="Confirmed Covid19 - Is"
+      typeRef="boolean">
+      <semantic:input id="_c16f5637-9447-47f3-a1b9-15e6e81604a4"
+        label="Having Covid19 - Belief in">
+        <semantic:inputExpression typeRef="Belief_Type">
+          <semantic:text>Having Covid19 - Belief in</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="_306c9b36-989a-4797-b3da-9fbdddcc1917"/>
+      <semantic:annotation name="Description"/>
+      <semantic:rule id="_f188862e-c7ac-43e2-a65a-a829bc048ccd">
+        <semantic:inputEntry id="_d1465546-0d87-403a-b9ed-8987ed7e9ba3">
+          <semantic:text>"Known"</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_86847d2e-6c0b-4a08-b07a-ac5db637a0e1">
+          <semantic:text>true</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_1020a19c-faa0-4e64-816b-d684c2539329">
+        <semantic:inputEntry id="_4290527c-ad18-4076-be3b-7695300d6c84">
+          <semantic:text>"Unknown"</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_5b65cff6-0660-4b32-abdc-0610e09099d2">
+          <semantic:text>false</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_602ff2d6-0e46-4fac-a950-4648fd3c122a">
+        <semantic:inputEntry id="_401c5369-1713-4946-98c1-45f942caed21">
+          <semantic:text>"Suspected"</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_d7272945-3e88-45ce-8787-7beb75ea0b68">
+          <semantic:text>false</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_5c790539-7724-433a-94db-879370ce851a">
+        <semantic:inputEntry id="_1d649adf-d694-418f-a5ae-f2ea7e6d1e1a">
+          <semantic:text>"At Risk"</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_ad4834ff-229b-4e78-8dd1-367e840c10c9">
+          <semantic:text>false</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:inputData id="_7c0ac6d6-82f5-4927-9bbf-c47725df5498"
+    name="Has Pending Covid19 Test - Is">
+    <semantic:variable id="_01a87e52-9f29-4fae-9c6b-47a81b47a27e"
+      name="Has Pending Covid19 Test - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_e24386cb-792e-47a3-ab81-fb3d41a3e18c"
+    name="Has Positive Covd19 Test - Is">
+    <semantic:variable id="_bee2c62a-712e-44b7-85a5-2ae9c5f5882d"
+      name="Has Positive Covd19 Test - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_56bb9b95-5a0f-437b-8202-18c966bfeee6" name="Page 1">
+      <di:extension/>
+      <dmndi:Size height="1050" width="1485"/>
+      <dmndi:DMNShape dmnElementRef="_97f7824b-1c9d-491f-8aba-7dc314d92ab2"
+        id="_c890c60c-b663-4d71-a1d9-f52c36d1b34c">
+        <dc:Bounds height="60" width="153" x="399" y="73"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_0fd31ebd-ca25-4d21-8d79-6668c00fb9f6"
+        id="_5c49ec2f-4b6e-4029-a041-84477105fa82">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="294.7588291168213"
+          y="222.99999618530273"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_283ce1aa-8fdb-4d11-8c2d-752335ea2711"
+        id="_fe6e4d77-faca-4987-82f2-a9855166da29">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="501.7588291168213"
+          y="222.99999618530273"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_5f808c25-bee1-47a8-846f-5906dc790a8b"
+        id="_9bdbab9d-a14c-4790-8644-5d266e66097f">
+        <dc:Bounds height="60" width="153" x="628.2411708831787" y="126"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_7c0ac6d6-82f5-4927-9bbf-c47725df5498"
+        id="_fe955314-7d4f-4d00-89c6-0248869e2482">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="407.7588291168213"
+          y="379.99999618530273"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_e24386cb-792e-47a3-ab81-fb3d41a3e18c"
+        id="_e4339e80-f7a3-4f3f-9aee-78a82f460f0c">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="603.7588291168213"
+          y="379.99999618530273"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge dmnElementRef="_00f53b1a-9977-42c7-8374-942a1cb1674a"
+        id="_ace1ad88-b605-4dd7-bf68-b8e879d3c49a">
+        <di:waypoint x="362.4968013763428" y="222.99999618530273"/>
+        <di:waypoint x="465.5" y="133"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_f7d2f9d1-6d9b-418c-8566-b04890003805"
+        id="_258530ef-1e92-4b85-a5ec-b264052dc718">
+        <di:waypoint x="559.4968013763428" y="222.99999618530273"/>
+        <di:waypoint x="485.5" y="133"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_1b03457d-03e6-4109-ab1e-68a22f5589f7"
+        id="_09603f1b-94fa-4088-9a6e-13e51c846c76">
+        <di:waypoint x="579.4968013763428" y="222.99999618530273"/>
+        <di:waypoint x="704.7411708831787" y="186"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_517bd3ee-6dd4-4f28-b01f-a5b2922b9a7c"
+        id="_5dc4a2a4-b75b-4c27-8fef-656c0ca5c599">
+        <di:waypoint x="475.4968013763428" y="379.99999618530273"/>
+        <di:waypoint x="560.644944982591" y="283.00000381469727"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_438ed1f7-b980-4275-9fbf-5da32aa51e35"
+        id="_c18357b2-d461-43ad-83a4-97970276193a">
+        <di:waypoint x="671.4968013763428" y="379.99999618530273"/>
+        <di:waypoint x="569.5" y="283.00000381469727"/>
+        <dmndi:DMNLabel sharedStyle="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+    <dmndi:DMNStyle fontBold="false"
+      fontFamily="arial,helvetica,sans-serif"
+      fontItalic="false"
+      fontSize="11"
+      fontStrikeThrough="false"
+      fontUnderline="false"
+      id="LS_23d712f2-0798-4fb0-acbe-42c722864a9a_0"/>
+  </dmndi:DMNDI>
+</semantic:definitions>

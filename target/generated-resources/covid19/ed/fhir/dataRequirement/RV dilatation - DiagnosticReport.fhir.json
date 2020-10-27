@@ -1,0 +1,49 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "1e63bbb8-709a-300a-94e7-d47fcd830d85",
+                "display": "RV dilatation"
+              }
+            }
+          ],
+          "type": "DiagnosticReport",
+          "profile": [
+            "http://hl7.org/fhir/DiagnosticReport"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "I51.7"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

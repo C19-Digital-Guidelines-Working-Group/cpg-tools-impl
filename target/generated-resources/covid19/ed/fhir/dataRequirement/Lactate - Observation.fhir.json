@@ -1,0 +1,169 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "c434158d-0aa9-3676-b699-ea3d00be1e1b",
+                "display": "Lactate"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "83605.0"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "14118-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "19239-3"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "2518-9"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "2519-7"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "2524-7"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "30241-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "30242-2"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "32132-3"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "32133-1"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "32693-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "51829-0"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "55932-8"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "59032-3"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "75366-5"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "19240-1"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

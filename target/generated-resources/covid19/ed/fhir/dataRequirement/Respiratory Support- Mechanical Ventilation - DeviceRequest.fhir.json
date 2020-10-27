@@ -1,0 +1,39 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                "display": "Respiratory Support- Mechanical Ventilation"
+              }
+            }
+          ],
+          "type": "DeviceRequest",
+          "profile": [
+            "http://hl7.org/fhir/DeviceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "sort": [
+            {
+              "path": "occurrenceDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

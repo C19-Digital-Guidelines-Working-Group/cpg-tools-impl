@@ -1,0 +1,81 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "2c31b3cd-5258-36b2-b5e9-b49434ed3e3d",
+                "display": "BMI"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "39156-5"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "59574-4"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "59575-1"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "59576-9"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "89270-3"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

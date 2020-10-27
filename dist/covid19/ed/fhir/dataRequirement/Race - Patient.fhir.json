@@ -1,0 +1,33 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "4e221fc0-84bb-39a8-a315-a154d6dd7879",
+                "display": "Race"
+              }
+            }
+          ],
+          "type": "Patient",
+          "profile": [
+            "http://hl7.org/fhir/Patient"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

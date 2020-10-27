@@ -1,0 +1,2221 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.mayo.edu/ontologies/clinicalsituationontology/"
+     xml:base="http://ontology.mayo.edu/ontologies/clinicalsituationontology/"
+     xmlns:sh="http://www.w3.org/ns/shacl#"
+     xmlns:cso="http://ontology.mayo.edu/ontologies/clinicalsituationontology/"
+     xmlns:ns1="http://topbraid.org/swa#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sct="http://snomed.info/id/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:model="http://edg.topbraid.solutions/model/"
+     xmlns:metadata="http://topbraid.org/metadata#"
+     xmlns:teamwork="http://topbraid.org/teamwork#">
+    <owl:Ontology rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/">
+        <owl:versionIRI rdf:resource="http://ontology.mayo.edu/ontologies/SNAPSHOT/clinicalsituationontology/"/>
+        <model:subjectArea rdf:resource="urn:x-tb-governance:KM-Clinical"/>
+        <metadata:identifier>urn:uuid:bb14951c-5ae1-4a9e-b9f5-0893cf691f89</metadata:identifier>
+        <metadata:officialName>Clinical Situation Ontology (CSO)</metadata:officialName>
+        <metadata:purpose>Define Situations where healthcare (delivery) is relevant</metadata:purpose>
+        <metadata:status rdf:resource="http://topbraid.org/metadata#UnderDevelopmentStatus"/>
+        <metadata:version>SNAPSHOT</metadata:version>
+        <ns1:defaultNamespace>http://ontology.mayo.edu/ontologies/SNAPSHOT/clinicalsituationontology/</ns1:defaultNamespace>
+        <rdfs:comment>Ontology of Clinical Situations 
+Curated by KMD</rdfs:comment>
+        <rdfs:label>Clinical Situation Ontology (SNAPSHOT)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://edg.topbraid.solutions/model/subjectArea -->
+
+    <owl:AnnotationProperty rdf:about="http://edg.topbraid.solutions/model/subjectArea"/>
+    
+
+
+    <!-- http://topbraid.org/metadata#identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://topbraid.org/metadata#identifier"/>
+    
+
+
+    <!-- http://topbraid.org/metadata#officialName -->
+
+    <owl:AnnotationProperty rdf:about="http://topbraid.org/metadata#officialName"/>
+    
+
+
+    <!-- http://topbraid.org/metadata#purpose -->
+
+    <owl:AnnotationProperty rdf:about="http://topbraid.org/metadata#purpose"/>
+    
+
+
+    <!-- http://topbraid.org/metadata#status -->
+
+    <owl:AnnotationProperty rdf:about="http://topbraid.org/metadata#status"/>
+    
+
+
+    <!-- http://topbraid.org/metadata#version -->
+
+    <owl:AnnotationProperty rdf:about="http://topbraid.org/metadata#version"/>
+    
+
+
+    <!-- http://topbraid.org/swa#defaultNamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://topbraid.org/swa#defaultNamespace"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologiehttp://ontology.mayo.edu/ontologies/clinicalsituationontology/1b540861-e806-4c01-92bd-5a44dd51494es/clinicalsituationontology/is_focus_of -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologiehttp://ontology.mayo.edu/ontologies/clinicalsituationontology/1b540861-e806-4c01-92bd-5a44dd51494es/clinicalsituationontology/is_focus_of">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/363702006"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/404684003"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:label>is focus of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/b19f3fb3-8ed1-44df-a2af-434569f22e2f -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/b19f3fb3-8ed1-44df-a2af-434569f22e2f">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/42752001"/>
+        <rdfs:label>Causes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca73816e-a677-482b-8452-3a212d533503 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca73816e-a677-482b-8452-3a212d533503">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/363714003"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/108252007"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/364644000"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/386053000"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:label xml:lang="en">is interpreted by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/ea3f4b77-e644-4ba8-846f-ca9630640928 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ea3f4b77-e644-4ba8-846f-ca9630640928">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/704319004"/>
+        <rdfs:label xml:lang="en">has inherent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/ea68d613-3d90-4d85-92a5-b16713db6be4 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ea68d613-3d90-4d85-92a5-b16713db6be4">
+        <rdfs:domain rdf:resource="http://snomed.info/id/243796009"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/243796009"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://snomed.info/id/246090004"/>
+            <rdf:Description rdf:about="http://snomed.info/id/47429007"/>
+            <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1f16e84f-f6df-452e-b4d2-1d93fc3efd40"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://snomed.info/id/408732007"/>
+            <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1cfab7d7-3a5b-4fb0-8165-377a1228adca"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Connects two clinical situations that either share a participant (person/subject) or a temporal context.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/ef3491fa-df54-485a-9481-dcbd96815b2d -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ef3491fa-df54-485a-9481-dcbd96815b2d">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://snomed.info/id/246090004"/>
+            <rdf:Description rdf:about="http://snomed.info/id/363714003"/>
+            <rdf:Description rdf:about="http://snomed.info/id/246093002"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">measures quantity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/1cfab7d7-3a5b-4fb0-8165-377a1228adca -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1cfab7d7-3a5b-4fb0-8165-377a1228adca">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/408732007"/>
+        <rdfs:domain rdf:resource="http://snomed.info/id/125676002"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/243796009"/>
+        <rdfs:label xml:lang="en">is subject of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/1f16e84f-f6df-452e-b4d2-1d93fc3efd40 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1f16e84f-f6df-452e-b4d2-1d93fc3efd40">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/246090004"/>
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/413350009"/>
+        <rdfs:label xml:lang="en">is finding in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/64a384dc-d46b-403e-a2b9-85b479759385 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/64a384dc-d46b-403e-a2b9-85b479759385">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/370130000"/>
+        <rdfs:label xml:lang="en">evaluated by way of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/68a88c2f-7d92-44c7-aa30-98e4d1298d1b -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/68a88c2f-7d92-44c7-aa30-98e4d1298d1b">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/273249006"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://snomed.info/id/363714003"/>
+            <rdf:Description rdf:about="http://snomed.info/id/246501002"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">using scale</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/717f7304-414d-4e5e-ac7a-74b4619bdf5e -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/717f7304-414d-4e5e-ac7a-74b4619bdf5e">
+        <owl:inverseOf rdf:resource="http://snomed.info/id/246501002"/>
+        <rdfs:domain rdf:resource="http://snomed.info/id/273249006"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/364644000"/>
+        <rdfs:label xml:lang="en">technique of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/116676008 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/116676008">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/49755003"/>
+        <rdfs:label>has associated morphology</rdfs:label>
+        <skos:prefLabel>Associated morphology (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/246075003 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/246075003">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/105590001"/>
+        <rdfs:label>causative agent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/246090004 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/246090004">
+        <rdfs:domain rdf:resource="http://snomed.info/id/413350009"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:label>has associated finding</rdfs:label>
+        <skos:prefLabel>Associated finding (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/246093002 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/246093002">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/364644000"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/386053000"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://snomed.info/id/105590001"/>
+        <rdfs:label>has component</rdfs:label>
+        <skos:prefLabel>Component (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/246112005 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/246112005">
+        <rdfs:label>has severity</rdfs:label>
+        <skos:prefLabel>severity (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/246454002 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/246454002">
+        <rdfs:label>during stage of life</rdfs:label>
+        <skos:prefLabel>occurance (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/246501002 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/246501002">
+        <rdfs:domain rdf:resource="http://snomed.info/id/364644000"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/273249006"/>
+        <rdfs:label>observation technique</rdfs:label>
+        <skos:prefLabel>Technique (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/255234002 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/255234002">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/726633004"/>
+        <rdfs:label>after</rdfs:label>
+        <skos:prefLabel>After (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/260686004 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/260686004">
+        <rdfs:domain rdf:resource="http://snomed.info/id/386053000"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/129264002"/>
+        <rdfs:label>has method</rdfs:label>
+        <skos:prefLabel>Method (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/263502005 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/263502005">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/288524001"/>
+        <rdfs:label>clinical course</rdfs:label>
+        <skos:prefLabel>clinical course (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/288556008 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/288556008">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/726633004"/>
+        <rdfs:label>before</rdfs:label>
+        <skos:prefLabel>Before (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363589002 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363589002">
+        <rdfs:domain rdf:resource="http://snomed.info/id/129125009"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:label>has associated procedure</rdfs:label>
+        <skos:prefLabel>Associated procedure (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363698007 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363698007">
+        <rdfs:label>has finding site</rdfs:label>
+        <skos:prefLabel>Finding site (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363701004 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363701004">
+        <rdfs:domain rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/105590001"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/373873005"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>using substance</rdfs:label>
+        <skos:prefLabel>Direct substance (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363702006 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363702006">
+        <rdfs:domain rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/404684003"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>has focus</rdfs:label>
+        <skos:prefLabel>Has focus (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363703001 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363703001">
+        <rdfs:range rdf:resource="http://snomed.info/id/363675004"/>
+        <rdfs:label>has intent</rdfs:label>
+        <skos:prefLabel>Has intent (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363713009 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363713009">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/260245000"/>
+        <rdfs:label>has interpretation</rdfs:label>
+        <skos:prefLabel>Has interpretation (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363714003 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363714003">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/108252007"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/364644000"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/386053000"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>interprets</rdfs:label>
+        <skos:prefLabel>Interprets (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/370130000 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/370130000">
+        <rdfs:domain rdf:resource="http://snomed.info/id/364644000"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/118598001"/>
+        <rdfs:label>evaluates</rdfs:label>
+        <skos:prefLabel>Property (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/371881003 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/371881003">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/726633004"/>
+        <rdfs:label>during</rdfs:label>
+        <skos:prefLabel>During (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/408729009 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/408729009">
+        <rdfs:domain rdf:resource="http://snomed.info/id/413350009"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/410514004"/>
+        <rdfs:label>has finding context</rdfs:label>
+        <skos:prefLabel>Finding context (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/408730004 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/408730004">
+        <rdfs:label>has procedure context</rdfs:label>
+        <skos:prefLabel>Procedure context (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/408731000 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/408731000">
+        <rdfs:label>has temporal context</rdfs:label>
+        <skos:prefLabel>Temporal context (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/408732007 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/408732007">
+        <rdfs:domain rdf:resource="http://snomed.info/id/243796009"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/125676002"/>
+        <rdfs:label>has subject</rdfs:label>
+        <skos:prefLabel>Subject relationship context (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/418775008 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/418775008">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:label>has finding method</rdfs:label>
+        <skos:prefLabel>Finding method (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/42752001 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/42752001">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:label>due to</rdfs:label>
+        <skos:prefLabel>Due to (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/47429007 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/47429007">
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/105590001"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/404684003"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>associated with</rdfs:label>
+        <skos:prefLabel>Associated with (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/704319004 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/704319004">
+        <rdfs:domain rdf:resource="http://snomed.info/id/364644000"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/125676002"/>
+        <rdfs:label>inheres in</rdfs:label>
+        <skos:prefLabel>Inheres in (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/726633004 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/726633004">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/47429007"/>
+        <rdfs:domain rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/404684003"/>
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>is temporally related to</rdfs:label>
+        <skos:prefLabel>Temporally realted to (attribute)</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/a3ce9847-3378-46f5-acd1-6da1a296e253 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a3ce9847-3378-46f5-acd1-6da1a296e253">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/abc46476-b0eb-48b6-835a-4032e660bacc"/>
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/40340021-52fb-42a0-97b8-3fb4af6c2834"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Case</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/a639f48e-8f17-4b3e-95e5-d11ac80ab0dd -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a639f48e-8f17-4b3e-95e5-d11ac80ab0dd">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/129125009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408732007"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/116154003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>Patient Intervention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/a7663071-e313-4ea4-bc1e-b32340c15825 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a7663071-e313-4ea4-bc1e-b32340c15825">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/9b253218-ccde-4789-9a0e-6095e2393c39"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://snomed.info/id/246090004"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://snomed.info/id/64572001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/47429007"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/64572001"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Pattern: History of &amp;lt;Condition&amp;gt;&amp;lt;Relationship&amp;gt; &amp;lt;Condition&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Having Condition Related to Condition Ever</rdfs:label>
+        <skos:definition>Patient having Condition relevently related to Condition Ever</skos:definition>
+        <skos:example>History of Atrial Fibrillation related to Hyperthyroidism</skos:example>
+        <skos:prefLabel>Patient Having Condition Relationship Condition Ever</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/abc46476-b0eb-48b6-835a-4032e660bacc -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/abc46476-b0eb-48b6-835a-4032e660bacc">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/243796009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ea68d613-3d90-4d85-92a5-b16713db6be4"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/243796009"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>Clinical Situation Related to Clinical Situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/b03b7b4c-679a-4cb7-9c9e-ce3d85ac824b -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/b03b7b4c-679a-4cb7-9c9e-ce3d85ac824b">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca3b2c54-3a32-4218-b6d0-b253c117bcb7"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410511007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca3b2c54-3a32-4218-b6d0-b253c117bcb7"/>
+        <rdfs:label xml:lang="en">Patient Having Encounter for Condition Ever</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/bcc73963-b4fa-4e30-85c8-30d1a84b2e0d -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/bcc73963-b4fa-4e30-85c8-30d1a84b2e0d">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/9b253218-ccde-4789-9a0e-6095e2393c39"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410511007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/9b253218-ccde-4789-9a0e-6095e2393c39"/>
+        <rdfs:label>Patient Having Condition Ever</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/c66898fb-5370-4876-84c8-ee640a010f8c -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/c66898fb-5370-4876-84c8-ee640a010f8c">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/f4c73f32-b2fd-44f0-a816-42e28f6d8c08"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/363702006"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/64572001"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/f4c73f32-b2fd-44f0-a816-42e28f6d8c08"/>
+        <rdfs:comment>Action to be taken on behalf of the patient with the explicit intention of addressing a particular medical condition</rdfs:comment>
+        <rdfs:label>Patient  Intervention Condition Future</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/c744a1f8-ae51-49ab-b4b2-5fc79f6fb480 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/c744a1f8-ae51-49ab-b4b2-5fc79f6fb480">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/d556bd1a-d6b3-406b-b75d-d367632dd1c7"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/cec62f9d-80d6-4a43-81e9-de663937e8e7"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/d556bd1a-d6b3-406b-b75d-d367632dd1c7"/>
+        <rdfs:comment>Patient is on a regimen of taking a medication (or one or more of a class of medications) and the regimen has not ended.&amp;nbsp;&lt;br /&gt;&lt;br /&gt;Pattern: On &amp;lt;Medication&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Medication Now</rdfs:label>
+        <skos:definition>Patient on Medication  Now</skos:definition>
+        <skos:example>On Statin</skos:example>
+        <skos:prefLabel>Patient Medication Now</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca3b2c54-3a32-4218-b6d0-b253c117bcb7 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca3b2c54-3a32-4218-b6d0-b253c117bcb7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4fe7da90-4434-469d-9df5-91d21942330b"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://snomed.info/id/308335008"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/363702006"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/64572001"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4fe7da90-4434-469d-9df5-91d21942330b"/>
+        <rdfs:comment>&lt;table class=&quot;swa-labeled-objects-table&quot; style=&quot;width: 470px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td id=&quot;uniqueId56769-body&quot; class=&quot;swa-labeled-objects-body-td &quot; style=&quot;width: 470px;&quot;&gt;
+&lt;div class=&quot;swa-object-row&quot;&gt;
+&lt;div id=&quot;uniqueId56770&quot; class=&quot;swa-widget-row&quot; style=&quot;box-sizing: border-box;&quot;&gt;
+&lt;div class=&quot;swa-object-widget&quot;&gt;
+&lt;div class=&quot;swa-shifted-label&quot;&gt;Patient having encounter now and encounter having determinable and encounter having occurred any time in the past up to and including now.&amp;nbsp;&lt;br /&gt;Syntactic pattern:&amp;nbsp; Prior Encounter (for) &amp;lt;reason&amp;gt; or Prior &amp;lt;encounter type&amp;gt;&lt;br /&gt;Example: Prior encounter for A-fib or Prior Hospitalization&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</rdfs:comment>
+        <rdfs:label>Patient Having Encounter for Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca8f0090-520b-41b8-aa8d-8fbbbfecb02a -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca8f0090-520b-41b8-aa8d-8fbbbfecb02a">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/413350009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/246090004"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/64572001"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410511007"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408732007"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/303071001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Definition: Family Member Having Condition and Condition occurring any time up to and including now&lt;br /&gt;Pattern: Family History of &amp;lt;Condition&amp;gt;&lt;br /&gt;Example: Family History of Hyperlipidemia</rdfs:comment>
+        <rdfs:label>Family Member Having Condition Ever</rdfs:label>
+        <skos:prefLabel xml:lang="en">Family Member Having Condition Ever</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/cec62f9d-80d6-4a43-81e9-de663937e8e7 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/cec62f9d-80d6-4a43-81e9-de663937e8e7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+        <rdfs:comment>Action taken by an agent on behalf of a patient and that action being of an ongoing or intermittent nature.&amp;nbsp;&lt;br /&gt;Example: &quot;On Dialysis&quot;</rdfs:comment>
+        <rdfs:label>Patient Intervention Now</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/d556bd1a-d6b3-406b-b75d-d367632dd1c7 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/d556bd1a-d6b3-406b-b75d-d367632dd1c7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/416608005"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+        <rdfs:comment>Patient having ever taken a medication (or one or more medications from a class of medications) at any time in the past up to and including now.&amp;nbsp;&lt;br /&gt;Pattern: History of &amp;lt;Medication&amp;gt; Therapy</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Medication Ever</rdfs:label>
+        <skos:definition>Patient on Medication Ever</skos:definition>
+        <skos:example>History of Anticoagulant Therapy</skos:example>
+        <skos:prefLabel>Patient Medication Ever</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/e6f77ff5-1e8e-412a-860a-7dddece63047 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/e6f77ff5-1e8e-412a-860a-7dddece63047">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/c744a1f8-ae51-49ab-b4b2-5fc79f6fb480"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408730004"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410536001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/c744a1f8-ae51-49ab-b4b2-5fc79f6fb480"/>
+        <rdfs:label xml:lang="en">Patient Contraindicated Medication Now</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/e777c47a-246c-4963-9fa1-2bf9d8d91705 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/e777c47a-246c-4963-9fa1-2bf9d8d91705">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/bcc73963-b4fa-4e30-85c8-30d1a84b2e0d"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/bcc73963-b4fa-4e30-85c8-30d1a84b2e0d"/>
+        <rdfs:label>Patient Having Condition Now</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/e8ac1d55-a1bd-48bb-ae13-87b556baad73 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/e8ac1d55-a1bd-48bb-ae13-87b556baad73">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca3b2c54-3a32-4218-b6d0-b253c117bcb7"/>
+        <rdfs:label>Patient Having Encounter for Condition Within Timeframe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/f3230a03-5cd8-410e-92f2-21b50b4b5837 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/f3230a03-5cd8-410e-92f2-21b50b4b5837">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/900901ac-c70c-40af-8392-4a6667aa2266"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+        <rdfs:comment>Definition: Observation about a Patient and Observation being closest in time to most recent Observation&lt;br /&gt;Pattern: Last Previous &amp;lt;Observation&amp;gt;&lt;br /&gt;Example: Last Previous Troponin</rdfs:comment>
+        <rdfs:label>Patient Observation Last Previous</rdfs:label>
+        <skos:prefLabel xml:lang="en">Patient Observation Last Previous</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/f4c73f32-b2fd-44f0-a816-42e28f6d8c08 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/f4c73f32-b2fd-44f0-a816-42e28f6d8c08">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a639f48e-8f17-4b3e-95e5-d11ac80ab0dd"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/28ea516d-b0d1-4035-a81b-5c8128e43c24"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a639f48e-8f17-4b3e-95e5-d11ac80ab0dd"/>
+        <rdfs:label>Patient Intervention Future</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a639f48e-8f17-4b3e-95e5-d11ac80ab0dd"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410511007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Pattern: Prior &amp;lt;Intervention&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Intervention Ever</rdfs:label>
+        <skos:definition>Patient having undergone an Intervention in the past up to and including now. </skos:definition>
+        <skos:example>Prior Chemotherapy</skos:example>
+        <skos:prefLabel>Patient Intervention Ever</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/fdb30331-4f4d-4412-8602-342480e154b9 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fdb30331-4f4d-4412-8602-342480e154b9">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca8f0090-520b-41b8-aa8d-8fbbbfecb02a"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408732007"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/125679009"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca8f0090-520b-41b8-aa8d-8fbbbfecb02a"/>
+        <rdfs:label>Biological Family Member Having Condition Ever</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/051aed7a-c413-4b7c-9a0f-82ca3609a85c -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/051aed7a-c413-4b7c-9a0f-82ca3609a85c">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ef3491fa-df54-485a-9481-dcbd96815b2d"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/105590001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>example: Most Recent Troponin (the quantity of lab substance found by the observation procedure)</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Observation Lab Substance Ever</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/07735985-19e8-488d-9266-510e156bff80 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/07735985-19e8-488d-9266-510e156bff80">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4c45c169-6843-4584-9c55-4e43be21e213"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+        <rdfs:label>Patient Intervention Most Recent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/088844da-8e65-41a9-acee-6733a79c4ae6 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/088844da-8e65-41a9-acee-6733a79c4ae6">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/9da540aa-0483-4c3c-b549-630d39b07b7f"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Pattern: On &amp;lt;Medication&amp;gt; for &amp;lt;Condition&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Medication for Condition Now</rdfs:label>
+        <skos:definition>Patient on Medication Now and Medication manages Condition</skos:definition>
+        <skos:example>On Beta Blocker for Heart Failure</skos:example>
+        <skos:prefLabel>Patient Medication for Condition Now</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/114cbabd-666e-496d-a83a-51c68fdaa0aa -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/114cbabd-666e-496d-a83a-51c68fdaa0aa">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/246090004"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://snomed.info/id/404684003"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/68a88c2f-7d92-44c7-aa30-98e4d1298d1b"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/273249006"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+        <rdfs:label xml:lang="en">Patient Score Ever</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Clinical Entity</rdfs:label>
+        <skos:prefLabel>Clinically Relevant Entity</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/413350009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408729009"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/36692007"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410511007"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408732007"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/116154003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Pattern: Prior &amp;lt;Observation&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Observation Ever</rdfs:label>
+        <skos:definition>Observation about a Patient which Observation has ever Occurred</skos:definition>
+        <skos:example>History of Alcohol Use</skos:example>
+        <skos:prefLabel>Patient Observation Ever</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/2a1effcd-8ecb-487d-b203-65dd91f9b274 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/2a1effcd-8ecb-487d-b203-65dd91f9b274">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+        <rdfs:label xml:lang="en">Patient Observation Current</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/2688bf8c-7664-4ff0-a63e-7f0518a4123f -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/2688bf8c-7664-4ff0-a63e-7f0518a4123f">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/116154003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1cfab7d7-3a5b-4fb0-8165-377a1228adca"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a3ce9847-3378-46f5-acd1-6da1a296e253"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This is the URI of the &quot;Patient&quot; class in the CSO</rdfs:comment>
+        <rdfs:label xml:lang="en">Case Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/28ea516d-b0d1-4035-a81b-5c8128e43c24 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/28ea516d-b0d1-4035-a81b-5c8128e43c24">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410510008"/>
+        <rdfs:label xml:lang="en">Future</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/3c338081-b709-427e-8a51-76bb8f6ef26d -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/3c338081-b709-427e-8a51-76bb8f6ef26d">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/243796009"/>
+        <rdfs:label>Concrete Situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/3dc6ed3c-75aa-492f-a3b4-d87163ab89ab -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/3dc6ed3c-75aa-492f-a3b4-d87163ab89ab">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/451fe677-003c-4b30-8522-f6f5b6e82651"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/451fe677-003c-4b30-8522-f6f5b6e82651"/>
+        <rdfs:label>Patient Intervention Condition Now</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/4c45c169-6843-4584-9c55-4e43be21e213 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4c45c169-6843-4584-9c55-4e43be21e213">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410513005"/>
+        <rdfs:comment>qualifier of an entity of a type which has a temporal order, such that in a group of entities of that  type there is no other entity after this entity</rdfs:comment>
+        <rdfs:label xml:lang="en">Most recent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/4f11b452-537c-482a-8314-dc4031056ba1 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4f11b452-537c-482a-8314-dc4031056ba1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/f4c73f32-b2fd-44f0-a816-42e28f6d8c08"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/416608005"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/f4c73f32-b2fd-44f0-a816-42e28f6d8c08"/>
+        <rdfs:label>Patient Medication Future</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/4fe7da90-4434-469d-9df5-91d21942330b -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4fe7da90-4434-469d-9df5-91d21942330b">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a639f48e-8f17-4b3e-95e5-d11ac80ab0dd"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/308335008"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a639f48e-8f17-4b3e-95e5-d11ac80ab0dd"/>
+        <rdfs:comment>A patient interacting in some way with the health care system</rdfs:comment>
+        <rdfs:label>Patient Having Encounter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/40340021-52fb-42a0-97b8-3fb4af6c2834 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/40340021-52fb-42a0-97b8-3fb4af6c2834">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/243796009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408732007"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/116154003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/243796009"/>
+        <rdfs:label>Situation with Known Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/4202ae27-152d-41fd-a82c-3fc60378997a -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4202ae27-152d-41fd-a82c-3fc60378997a">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a7663071-e313-4ea4-bc1e-b32340c15825"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/a7663071-e313-4ea4-bc1e-b32340c15825"/>
+        <rdfs:comment>Pattern: Has &amp;lt;Condition&amp;gt;&amp;lt;Relationship&amp;gt;&amp;lt;Condition&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Having Condition Related to Condition Now</rdfs:label>
+        <skos:definition>Patient having Condition relevently related to Condition Now</skos:definition>
+        <skos:example>Has Cardiomyopathy induced by Tachycardia</skos:example>
+        <skos:prefLabel>Patient Having Condition Relationship Condition Now</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/451fe677-003c-4b30-8522-f6f5b6e82651 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/451fe677-003c-4b30-8522-f6f5b6e82651">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/363702006"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/64572001"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/fcb7205f-af58-466e-90d3-d21f67f7a94e"/>
+        <rdfs:comment>Definition: Patient Undergoing Intervention and Intervention being for Condition and Intervention occuring any time in the past&lt;br /&gt;Pattern: Prior &amp;lt;Intervention&amp;gt; for &amp;lt;Condition&amp;gt;&lt;br /&gt;Example: Prior Cardioversion for Atrial Fibrillation</rdfs:comment>
+        <rdfs:label>Patient Intervention for Condition Ever</rdfs:label>
+        <skos:prefLabel xml:lang="en">Patient Intervention for Condition Ever</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/7b1cb0fd-ce00-4fc4-8f07-bb3c6c1ed098 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/7b1cb0fd-ce00-4fc4-8f07-bb3c6c1ed098">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/d556bd1a-d6b3-406b-b75d-d367632dd1c7"/>
+        <rdfs:comment>Patient taking a medication within a defined time frame and that timeframe measured relative to a specified event.&amp;nbsp;</rdfs:comment>
+        <rdfs:label>Patient Medication Within Timeframe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/7f29b5d1-b9fa-42e9-974e-da883d26440f -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/7f29b5d1-b9fa-42e9-974e-da883d26440f">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410513005"/>
+        <rdfs:comment>qualifier of an entity of a type which has a temporal order, such that in a group of entities of that  type there is no other entity before this entity</rdfs:comment>
+        <rdfs:label xml:lang="en">Initial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/7106138e-738f-459e-b699-858b8c3e9a5d -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/7106138e-738f-459e-b699-858b8c3e9a5d">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca3b2c54-3a32-4218-b6d0-b253c117bcb7"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/ca3b2c54-3a32-4218-b6d0-b253c117bcb7"/>
+        <rdfs:comment>Patient having encounter now and encounter having determinable&lt;br /&gt;Syntactic pattern: Encounter &amp;lt;determinable&amp;gt;&lt;br /&gt;Example: Encounter type, Encounter reason</rdfs:comment>
+        <rdfs:label>Patient Having Encounter for Condition Now</rdfs:label>
+        <skos:prefLabel xml:lang="en">Patient Having Encounter Determinable Now</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/77a6cdb2-3b82-489a-9e04-921e8288286c -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/77a6cdb2-3b82-489a-9e04-921e8288286c">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/7f29b5d1-b9fa-42e9-974e-da883d26440f"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+        <rdfs:comment>The first in a series of observations. Often intended to serve as a baseline observation against which subsequent observations are compared.&amp;nbsp;</rdfs:comment>
+        <rdfs:label>Patient Observation Initial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/78a49332-e65e-4d32-903b-3f814dd2058e -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/78a49332-e65e-4d32-903b-3f814dd2058e">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/114cbabd-666e-496d-a83a-51c68fdaa0aa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/15240007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/114cbabd-666e-496d-a83a-51c68fdaa0aa"/>
+        <rdfs:label xml:lang="en">Patient Score Current</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/8a5c448d-0b98-446d-8e79-4e5983eac159 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/8a5c448d-0b98-446d-8e79-4e5983eac159">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/413350009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/246090004"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/416098002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/413350009"/>
+        <rdfs:label>Patient Having Allergy Now</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/85a6f446-0709-4fd4-b79c-e1b3995721c3 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/85a6f446-0709-4fd4-b79c-e1b3995721c3">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/c66898fb-5370-4876-84c8-ee640a010f8c"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4f11b452-537c-482a-8314-dc4031056ba1"/>
+        <rdfs:comment>Medication to be given to a patient with the intention of managing or treating a condition&amp;nbsp;&lt;br /&gt;Pattern: &amp;lt;Medication&amp;gt; for &amp;lt;Condition&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Medication Condition Future</rdfs:label>
+        <skos:example>Beta Blocker for Heart Failure</skos:example>
+        <skos:prefLabel>Patient Medication Condition Future</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/897c9bc1-3578-4d01-b1f5-74e8b29a65d7 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/897c9bc1-3578-4d01-b1f5-74e8b29a65d7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/4c45c169-6843-4584-9c55-4e43be21e213"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/17dfe2a8-33d9-4893-8f17-a1a326f73bc3"/>
+        <rdfs:comment>Pattern: Most Recent &amp;lt;Observation&amp;gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Observation Most Recent</rdfs:label>
+        <skos:definition>Observation about a Patient which Observation is closest in time to Now</skos:definition>
+        <skos:example>Most Recent BNP</skos:example>
+        <skos:prefLabel>Patient Observation Most Recent</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/9b253218-ccde-4789-9a0e-6095e2393c39 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/9b253218-ccde-4789-9a0e-6095e2393c39">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/413350009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/246090004"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/64572001"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408732007"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/116154003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>Patient Having Condition</rdfs:label>
+        <skos:prefLabel xml:lang="en">Patient Having Condition</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/9da540aa-0483-4c3c-b549-630d39b07b7f -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/9da540aa-0483-4c3c-b549-630d39b07b7f">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/d556bd1a-d6b3-406b-b75d-d367632dd1c7"/>
+                    <rdf:Description rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/451fe677-003c-4b30-8522-f6f5b6e82651"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://snomed.info/id/416608005"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/363702006"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/64572001"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Patient taking a medication (or one or more members of a class of medications) at any point up to and including currently, and that medication intended to treat or manage a condition.&amp;nbsp;</rdfs:comment>
+        <rdfs:label>Patient Medication for Condition Ever</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/900901ac-c70c-40af-8392-4a6667aa2266 -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/900901ac-c70c-40af-8392-4a6667aa2266">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410513005"/>
+        <rdfs:comment>qualifier of an entity of a type which has a temporal order, such that in a group of entities of that  type there is exactly one entity after this entity</rdfs:comment>
+        <rdfs:label xml:lang="en">Last previous</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.mayo.edu/ontologies/clinicalsituationontology/98494796-df6c-48e9-9fe8-6ac71e60991d -->
+
+    <owl:Class rdf:about="http://ontology.mayo.edu/ontologies/clinicalsituationontology/98494796-df6c-48e9-9fe8-6ac71e60991d">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/bcc73963-b4fa-4e30-85c8-30d1a84b2e0d"/>
+        <rdfs:label>Patient Having Condition Within Timeframe</rdfs:label>
+        <skos:prefLabel>Patient Having Condition Within Timeframe</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/105590001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/105590001">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Substance</rdfs:label>
+        <skos:prefLabel>Substance (substance)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/108252007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/108252007">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:label>Laboratory Procedure</rdfs:label>
+        <skos:prefLabel>Laboratory procedure (procedure)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/116154003 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/116154003">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/125676002"/>
+        <rdfs:label>Patient</rdfs:label>
+        <skos:prefLabel>Patient (person)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/118598001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/118598001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Property of measurement</rdfs:label>
+        <skos:prefLabel>Property of measurement (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/125676002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/125676002">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Person</rdfs:label>
+        <skos:prefLabel>Person (person)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/125679009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/125679009">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/303071001"/>
+        <rdfs:label>Biological relative</rdfs:label>
+        <skos:prefLabel>Blood relative (person)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/129125009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/129125009">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/243796009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/363589002"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/71388002"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408730004"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/288532009"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410510008"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/243796009"/>
+        <rdfs:label>Procedure Situation</rdfs:label>
+        <skos:prefLabel>Procedure with explicit context (situation)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/129264002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/129264002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Action</rdfs:label>
+        <skos:prefLabel>Action (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/129428001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/129428001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/363675004"/>
+        <rdfs:label>Preventive intent</rdfs:label>
+        <skos:prefLabel>Preventive - procedure intent (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/15240007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/15240007">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410512000"/>
+        <rdfs:label>Current</rdfs:label>
+        <skos:prefLabel>Current</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/243796009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/243796009">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Clinical situation</rdfs:label>
+        <skos:prefLabel>Situation with explicit context (situation)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/24484000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/24484000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/272141005"/>
+        <rdfs:label>Severe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/255604002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/255604002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/272141005"/>
+        <rdfs:label>Mild</rdfs:label>
+        <skos:prefLabel>Mild (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/260245000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/260245000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Findings value</rdfs:label>
+        <skos:prefLabel>Findings value (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/261004008 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/261004008">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/363675004"/>
+        <rdfs:label>Diagnositic intent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/261665006 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/261665006">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410514004"/>
+        <rdfs:label>Unknown</rdfs:label>
+        <skos:prefLabel>Unknown (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/262202000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/262202000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/363675004"/>
+        <rdfs:label>Therapeutic intent</rdfs:label>
+        <skos:prefLabel>Therapeutic intent (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/271872005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/271872005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/282032007"/>
+        <rdfs:label>Old age</rdfs:label>
+        <skos:prefLabel>Old age (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/272141005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/272141005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Severities</rdfs:label>
+        <skos:prefLabel>Severities (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/273249006 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/273249006">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Assessment scale</rdfs:label>
+        <skos:prefLabel>Assessment scales (assessment scale)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/282032007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/282032007">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Periods of life</rdfs:label>
+        <skos:prefLabel>Periods of life (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/288524001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/288524001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Courses</rdfs:label>
+        <skos:prefLabel>Courses (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/288532009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/288532009">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/529006"/>
+        <rdfs:label>Action context value</rdfs:label>
+        <skos:prefLabel>Context values for actions (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/30207005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/30207005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Risk of</rdfs:label>
+        <skos:prefLabel>Risk of (contextual qualifier) (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/303071001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/303071001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/125676002"/>
+        <rdfs:label>Family member</rdfs:label>
+        <skos:prefLabel>Person in the family (person)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/308335008 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/308335008">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:label>Encounter</rdfs:label>
+        <skos:prefLabel>Patient encounter procedure (procedure)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/362981000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/362981000">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Qualifier value</rdfs:label>
+        <skos:prefLabel>Qualifier value (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/363675004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/363675004">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Intent</rdfs:label>
+        <skos:prefLabel>Intents (nature of procedure values) (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/364644000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/364644000">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Observable entity</rdfs:label>
+        <skos:prefLabel>Functional observable (observable entity)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/36692007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/36692007">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410514004"/>
+        <rdfs:label>Known</rdfs:label>
+        <skos:prefLabel>Known (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/373873005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/373873005">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Pharmaceutical/biological product</rdfs:label>
+        <skos:prefLabel>Pharmaceutical/biological product (product)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/385643006 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/385643006">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410522006"/>
+        <rdfs:label>To be done</rdfs:label>
+        <skos:prefLabel>To be done (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/385652002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/385652002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410523001"/>
+        <rdfs:label>Started</rdfs:label>
+        <skos:prefLabel>Started (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/386053000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/386053000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:label>Evaulation procedure</rdfs:label>
+        <skos:prefLabel>Evaluation procedure (procedure)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/404684003 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/404684003">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Finding</rdfs:label>
+        <skos:prefLabel>Clinical finding (finding)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410510008 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410510008">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/529006"/>
+        <rdfs:label>Temporal context value</rdfs:label>
+        <skos:prefLabel>Temporal context value (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410511007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410511007">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410510008"/>
+        <rdfs:label>Current or past</rdfs:label>
+        <skos:prefLabel>Current or past (actual) (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410512000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410512000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410511007"/>
+        <rdfs:label>Current or specified time (qualifier value)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410513005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410513005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410511007"/>
+        <rdfs:label>In the past (qualifier value)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410514004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410514004">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/529006"/>
+        <rdfs:label>Finding context value</rdfs:label>
+        <skos:prefLabel>Finding context value (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410515003 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410515003">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/36692007"/>
+        <rdfs:label>Known present</rdfs:label>
+        <skos:prefLabel>Known present (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410522006 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410522006">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/288532009"/>
+        <rdfs:label>Pre-starting action status</rdfs:label>
+        <skos:prefLabel>Pre-starting action status (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410523001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410523001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/288532009"/>
+        <rdfs:label>Post-starting action status</rdfs:label>
+        <skos:prefLabel>Post-starting action status (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410535002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410535002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/288532009"/>
+        <rdfs:label>Indicated</rdfs:label>
+        <skos:prefLabel>Indicated (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410536001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410536001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/288532009"/>
+        <rdfs:label>Contraindicated</rdfs:label>
+        <skos:prefLabel>Contraindicated (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/410604004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/410604004">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/125676002"/>
+        <rdfs:label>Subject of record</rdfs:label>
+        <skos:prefLabel>Subject of record (person)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/413350009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/413350009">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/243796009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/246090004"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/404684003"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408729009"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410514004"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/408731000"/>
+                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/410510008"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/243796009"/>
+        <rdfs:label>Finding Situation</rdfs:label>
+        <skos:prefLabel>Finding with explicit context (situation)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/416098002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/416098002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:label>Allergy to drug</rdfs:label>
+        <skos:prefLabel>Allergy to drug (finding)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/416608005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/416608005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/71388002"/>
+        <rdfs:label>Drug therapy</rdfs:label>
+        <skos:prefLabel>Drug therapy (procedure)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/442083009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/442083009">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Body structure</rdfs:label>
+        <skos:prefLabel>Anatomical or acquired body structure (body structure)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/49755003 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/49755003">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/442083009"/>
+        <rdfs:label>Morphologic abnormality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/529006 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/529006">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Context value</rdfs:label>
+        <skos:prefLabel>Context values (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/64572001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/64572001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/404684003"/>
+        <rdfs:label>Disorder</rdfs:label>
+        <skos:prefLabel>Disease (disorder)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/6493001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/6493001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/410513005"/>
+        <rdfs:label>Recent (qualifier value)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/71388002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/71388002">
+        <rdfs:subClassOf rdf:resource="http://ontology.mayo.edu/ontologies/clinicalsituationontology/1534a5c8-8c5b-4312-9746-6511c1777fc2"/>
+        <rdfs:label>Procedure</rdfs:label>
+        <skos:prefLabel>Procedure (procedure)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/7389001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/7389001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label>Time frame</rdfs:label>
+        <skos:prefLabel>Time frame (qualifier value)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/782487009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/782487009">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/364644000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://snomed.info/id/246501002"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/273249006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Assessment Score</rdfs:label>
+        <skos:prefLabel>Assessment score (observable entitiy)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/90734009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/90734009">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/288524001"/>
+        <rdfs:label>Chronic</rdfs:label>
+        <skos:prefLabel>Chronic (qualifier value)</skos:prefLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

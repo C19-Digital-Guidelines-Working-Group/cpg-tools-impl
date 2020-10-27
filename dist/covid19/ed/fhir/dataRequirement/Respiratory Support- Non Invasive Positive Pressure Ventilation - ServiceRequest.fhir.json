@@ -1,0 +1,97 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                "display": "Respiratory Support- Non Invasive Positive Pressure Ventilation"
+              }
+            }
+          ],
+          "type": "ServiceRequest",
+          "profile": [
+            "http://hl7.org/fhir/ServiceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "94660.0"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-pcs",
+                  "code": "5A09357"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-pcs",
+                  "code": "5A09358"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-pcs",
+                  "code": "5A09457"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-pcs",
+                  "code": "5A09458"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-pcs",
+                  "code": "5A09557"
+                }
+              ]
+            },
+            {
+              "code": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-pcs",
+                  "code": "5A09558"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrenceDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

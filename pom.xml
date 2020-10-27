@@ -1,0 +1,173 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>edu.mayo.kmdp</groupId>
+    <artifactId>kmdp-bom</artifactId>
+    <version>8.0.6-SNAPSHOT</version>
+  </parent>
+
+  <groupId>edu.mayo.kmdp.kdcaci.knew</groupId>
+  <artifactId>cpg-tools-impl</artifactId>
+  <version>5.0.0-SNAPSHOT</version>
+
+  <name>CPG :: Tools :: Implementation</name>
+
+  <properties>
+    <kmdp.servers.version>4.8.6-SNAPSHOT</kmdp.servers.version>
+
+    <staging-dir>${project.build.directory}/tt-stage</staging-dir>
+  </properties>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-knowledge-transrepresentation-core</artifactId>
+      <version>${kmdp.servers.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-knowledgebase-construction-service-core</artifactId>
+      <version>${kmdp.servers.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-inference-broker-core</artifactId>
+      <version>${kmdp.servers.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-asset-repository-service-client</artifactId>
+      <version>${kmdp.impl.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-test</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-knowledge-asset-repository-core</artifactId>
+      <version>${kmdp.servers.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-asset-repository-service-server</artifactId>
+      <version>${kmdp.impl.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+
+    <dependency>
+
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-knowledge-asset-repository-trisotech-core</artifactId>
+      <version>${kmdp.servers.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-trisotech-client</artifactId>
+      <version>${kmdp.servers.version}</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.omg.spec</groupId>
+      <artifactId>API4KP</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-xml</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>kmdp-test-utils</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>ca.uhn.hapi.fhir</groupId>
+      <artifactId>hapi-fhir-structures-dstu3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>ca.uhn.hapi.fhir</groupId>
+      <artifactId>hapi-fhir-structures-r4</artifactId>
+      <version>${hapi.fhir.version}</version>
+    </dependency>
+
+
+  </dependencies>
+
+
+  <build>
+    <resources>
+      <resource>
+        <directory>${staging-dir}</directory>
+      </resource>
+      <resource>
+        <directory>${project.basedir}/src/main/resources</directory>
+      </resource>
+    </resources>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>include-terms</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>edu.mayo.kmdp</groupId>
+                  <artifactId>kmdp-terminology-content</artifactId>
+                  <version>${kmdp.impl.version}</version>
+
+                  <type>jar</type>
+                  <overWrite>true</overWrite>
+                  <outputDirectory>${staging-dir}</outputDirectory>
+                  <includes>**/*.rdf</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+   
+
+    </plugins>
+  </build>
+
+
+</project>

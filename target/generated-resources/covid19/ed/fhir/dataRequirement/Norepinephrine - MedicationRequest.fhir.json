@@ -1,0 +1,49 @@
+{
+  "resourceType": "PlanDefinition",
+  "action": [
+    {
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://c19hcc.org/ontologies/covid19/ed/",
+                "code": "f7ac0c35-613d-3796-b45c-13fa031adcdb",
+                "display": "Norepinephrine"
+              }
+            }
+          ],
+          "type": "MedicationRequest",
+          "profile": [
+            "http://hl7.org/fhir/MedicationRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                  "code": "7512.0"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrenceDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

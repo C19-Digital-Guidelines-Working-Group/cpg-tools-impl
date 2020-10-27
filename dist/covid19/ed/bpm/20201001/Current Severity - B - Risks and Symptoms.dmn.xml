@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/"
+  xmlns="https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a"
+  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+  xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  id="_7c03388f-9495-4ffe-ab8b-d9e24e79442a"
+  name="Current Covid Severity - B - Risks and Symptoms"
+  namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a"
+>
+  <semantic:extensionElements/>
+  <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+    name="Situational Data Definitions"
+    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"/>
+  <semantic:itemDefinition label="Quantity" name="Quantity">
+    <semantic:itemComponent id="_17092c7f-0683-449b-a99a-1547af08938c" name="value">
+      <semantic:typeRef>number</semantic:typeRef>
+    </semantic:itemComponent>
+    <semantic:itemComponent id="_3fe6f72a-7c48-457b-ba8f-5bb0d730619f" name="unit">
+      <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemComponent>
+  </semantic:itemDefinition>
+  <semantic:itemDefinition label="Sex" name="Sex">
+    <semantic:typeRef>string</semantic:typeRef>
+    <semantic:allowedValues>
+      <semantic:text>"Male","Female","Other"</semantic:text>
+    </semantic:allowedValues>
+  </semantic:itemDefinition>
+  <semantic:itemDefinition label="Race" name="Race">
+    <semantic:typeRef>string</semantic:typeRef>
+    <semantic:allowedValues>
+      <semantic:text>"African-American","(Other)"</semantic:text>
+    </semantic:allowedValues>
+  </semantic:itemDefinition>
+  <semantic:decisionService id="_7c03388f-9495-4ffe-ab8b-d9e24e79442a_DS"
+    name="Whole Model Decision Service">
+    <semantic:variable id="_7c03388f-9495-4ffe-ab8b-d9e24e79442a_DS_VAR"
+      name="Whole Model Decision Service"
+      typeRef="Any"/>
+    <semantic:outputDecision href="#_b0325b61-9eaf-4a2d-bebe-8a0b2017945d"/>
+    <semantic:outputDecision href="#_b4a8d3df-77fd-42e5-b99a-f41525570ab1"/>
+    <semantic:outputDecision href="#_31634752-ddb7-4d61-b34a-449cd765bf4b"/>
+    <semantic:encapsulatedDecision href="#_34bc0640-1a8d-4787-9fa4-0a21bb728b78"/>
+    <semantic:inputData href="#_9e9ea902-eb37-481b-8034-e49908ab33df"/>
+    <semantic:inputData href="#_bc6c3684-5076-4a72-9f47-22b9cd2514e6"/>
+    <semantic:inputData href="#_e6a85680-6e1c-43e3-8eac-50a9fe272bff"/>
+    <semantic:inputData href="#_08edb37b-43a1-4838-8e4e-793e8c202009"/>
+    <semantic:inputData href="#_cca5d61c-f96c-4273-9215-14cc0b67e17f"/>
+    <semantic:inputData href="#_52dfdbaa-4cc3-4068-ad2b-5937d6dc1ad5"/>
+    <semantic:inputData href="#_79235e75-88bf-47ba-9c00-a609c8e4671c"/>
+    <semantic:inputData href="#_f8047db8-1382-4e87-aa04-a6019375274c"/>
+    <semantic:inputData href="#_3d8c7be7-3f44-4438-8f94-c58dbed5f1d0"/>
+    <semantic:inputData href="#_0e1b983a-2d31-4b09-9b0a-1452cf2df721"/>
+    <semantic:inputData href="#_9f444b38-8b92-48bc-8df9-79daba78bfc1"/>
+    <semantic:inputData href="#_ad22eac1-2f56-4368-bca5-2f27772451cc"/>
+    <semantic:inputData href="#_b4a4ff8f-2e01-46a1-b90e-07e6ab2d4be7"/>
+    <semantic:inputData href="#_b2b0b2b3-5f90-48a8-91b6-36fe2515f496"/>
+    <semantic:inputData href="#_0b4bbec7-f5d9-491e-ad89-5524c4e99d08"/>
+  </semantic:decisionService>
+  <semantic:decisionService id="_7a2aa6e4-7014-4da6-b30f-b376509b04fd_DS" name="Diagram Page 1">
+    <semantic:variable id="_7a2aa6e4-7014-4da6-b30f-b376509b04fd_DS_VAR"
+      name="Diagram Page 1"
+      typeRef="Any"/>
+    <semantic:outputDecision href="#_b0325b61-9eaf-4a2d-bebe-8a0b2017945d"/>
+    <semantic:outputDecision href="#_b4a8d3df-77fd-42e5-b99a-f41525570ab1"/>
+    <semantic:outputDecision href="#_31634752-ddb7-4d61-b34a-449cd765bf4b"/>
+    <semantic:encapsulatedDecision href="#_34bc0640-1a8d-4787-9fa4-0a21bb728b78"/>
+    <semantic:inputData href="#_9e9ea902-eb37-481b-8034-e49908ab33df"/>
+    <semantic:inputData href="#_bc6c3684-5076-4a72-9f47-22b9cd2514e6"/>
+    <semantic:inputData href="#_e6a85680-6e1c-43e3-8eac-50a9fe272bff"/>
+    <semantic:inputData href="#_08edb37b-43a1-4838-8e4e-793e8c202009"/>
+    <semantic:inputData href="#_cca5d61c-f96c-4273-9215-14cc0b67e17f"/>
+    <semantic:inputData href="#_52dfdbaa-4cc3-4068-ad2b-5937d6dc1ad5"/>
+    <semantic:inputData href="#_79235e75-88bf-47ba-9c00-a609c8e4671c"/>
+    <semantic:inputData href="#_f8047db8-1382-4e87-aa04-a6019375274c"/>
+    <semantic:inputData href="#_3d8c7be7-3f44-4438-8f94-c58dbed5f1d0"/>
+    <semantic:inputData href="#_0e1b983a-2d31-4b09-9b0a-1452cf2df721"/>
+    <semantic:inputData href="#_9f444b38-8b92-48bc-8df9-79daba78bfc1"/>
+    <semantic:inputData href="#_ad22eac1-2f56-4368-bca5-2f27772451cc"/>
+    <semantic:inputData href="#_b4a4ff8f-2e01-46a1-b90e-07e6ab2d4be7"/>
+    <semantic:inputData href="#_b2b0b2b3-5f90-48a8-91b6-36fe2515f496"/>
+    <semantic:inputData href="#_0b4bbec7-f5d9-491e-ad89-5524c4e99d08"/>
+  </semantic:decisionService>
+  <semantic:decision id="_b0325b61-9eaf-4a2d-bebe-8a0b2017945d"
+    name="Current Severity of Covid-19 - Kind of -- Symptoms">
+    <semantic:extensionElements/>
+    <semantic:variable id="_b482cc7b-ba09-47ea-b0c7-f5da028de4d3"
+      name="Current Severity of Covid-19 - Kind of -- Symptoms"
+      typeRef="Situational Data Definitions.tCovid19Severity"/>
+    <semantic:informationRequirement id="_83864032-c0d9-48e8-affe-400d0ab62018">
+      <semantic:requiredInput href="#_b2b0b2b3-5f90-48a8-91b6-36fe2515f496"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_1d1fd812-210f-43cc-8b33-555aa9694a26">
+      <semantic:requiredInput href="#_b4a4ff8f-2e01-46a1-b90e-07e6ab2d4be7"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_0c59c27e-8445-42de-ac08-e06e2526038f">
+      <semantic:requiredInput href="#_ad22eac1-2f56-4368-bca5-2f27772451cc"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="PRIORITY"
+      id="_e7dee9b5-1b92-4c6a-9ec5-ae9d49d6566e"
+      outputLabel="Current Severity of Covid-19 - Kind of -- Symptoms"
+      typeRef="Situational Data Definitions.tCovid19Severity">
+      <semantic:input id="_eb1eadb7-3def-4385-832f-da342da73217" label="Has Altered LOC - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Altered LOC - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_c80a3b11-c18b-4dcf-acef-f86212de6e47" label="Has Hemoptysis - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Hemoptysis - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_04fafab6-c139-482b-94e3-93aed65b87cf" label="Has Dyspnea - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Dyspnea - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="_78942149-1483-497a-8c04-b16f55fde8ec"/>
+      <semantic:annotation name="Description"/>
+      <semantic:rule id="_6d484d9c-f8a0-4938-8c67-67b23f642c9e">
+        <semantic:inputEntry id="_8f9cef34-1537-43be-91e5-1eef4003a875">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_e4b75ebc-a971-49f1-afc5-43ee314ea2bc">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_76e09b13-19ff-452c-bebf-860d3d07d681">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_0a7ea15b-6564-4d55-8da3-12baf7e5203a">
+          <semantic:text>"Critical"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_9c662e38-0382-479e-9359-814a608161f8">
+        <semantic:inputEntry id="_7e594ad4-422f-4191-8196-ba58ec2bd942">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_db1f6454-5992-4efc-a278-3a85f126c1a9">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_f5b67630-97e1-4a57-aff7-aaf2edbd8f39">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_7483b27b-ba30-47a0-9a97-2e5e7c3462c7">
+          <semantic:text>"Severe"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_3091e226-bf17-48cf-90ed-48d113659f61">
+        <semantic:inputEntry id="_4479a1d0-1ce3-4601-9747-1867a6903bc7">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b178e620-6903-412f-ba0f-b0325f86387e">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_dd2e7ead-dacf-440f-be12-f469aeb848e5">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_c626faa8-cc1f-464a-9c60-afaacd3d1f21">
+          <semantic:text>"Moderate"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_294e021c-0098-4cdb-bd48-187763ee56e5">
+        <semantic:inputEntry id="_0316119f-bc33-446b-97ed-bdf9f1fa22ff">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_ca6e51ab-7829-4391-b029-65c9ebed7550">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_bbf2b10f-cc4a-4acf-9a7f-bc4063b9b2c4">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_6c6f5be1-922d-4c2d-8ceb-1e42dd1fc54f">
+          <semantic:text>"Mild Low Risk"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:decision id="_34bc0640-1a8d-4787-9fa4-0a21bb728b78"
+    name="Has Exacerbating Factor of Covid19 - Count of">
+    <semantic:variable id="_edc74f8f-cc4e-4d9c-aa55-2fe36bdd4aea"
+      name="Has Exacerbating Factor of Covid19 - Count of"
+      typeRef="number"/>
+    <semantic:informationRequirement id="_a8a54527-8519-4fe1-b98b-ac1655d17375">
+      <semantic:requiredInput href="#_9e9ea902-eb37-481b-8034-e49908ab33df"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_2e0c8337-3107-440b-846a-7c0f1342914e">
+      <semantic:requiredInput href="#_bc6c3684-5076-4a72-9f47-22b9cd2514e6"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_c70d6ab6-adca-4963-8e9c-322ff1a82bc5">
+      <semantic:requiredInput href="#_e6a85680-6e1c-43e3-8eac-50a9fe272bff"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_d2b096c8-30d6-4724-a899-899d19e5cdf1">
+      <semantic:requiredInput href="#_08edb37b-43a1-4838-8e4e-793e8c202009"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_b278ff9e-fd0b-4448-b9d4-a4ccdefe34ac">
+      <semantic:requiredInput href="#_cca5d61c-f96c-4273-9215-14cc0b67e17f"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_d70992bb-5465-4eb5-b2a3-5fc5c6b978f4">
+      <semantic:requiredInput href="#_52dfdbaa-4cc3-4068-ad2b-5937d6dc1ad5"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_a09f7257-c7a8-4fd6-9e97-02ead269b1b8">
+      <semantic:requiredInput href="#_79235e75-88bf-47ba-9c00-a609c8e4671c"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_7fc46e42-8c45-4913-b334-a17dd4430db9">
+      <semantic:requiredInput href="#_f8047db8-1382-4e87-aa04-a6019375274c"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_2cb6c45e-ab8f-4ca1-944c-74d2b567cfed">
+      <semantic:requiredInput href="#_3d8c7be7-3f44-4438-8f94-c58dbed5f1d0"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_0998a954-fafc-4609-929b-d0304300c288">
+      <semantic:requiredInput href="#_0e1b983a-2d31-4b09-9b0a-1452cf2df721"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement id="_475a11ca-0556-4910-86f6-1f0bce8c6cea">
+      <semantic:requiredInput href="#_9f444b38-8b92-48bc-8df9-79daba78bfc1"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable aggregation="SUM"
+      hitPolicy="COLLECT"
+      id="_b3a83438-b986-427e-8578-5291443a62ca"
+      outputLabel="Has Exacerbating Factor of Covid19 - Count of"
+      typeRef="number">
+      <semantic:input id="_4871ab58-5211-40dc-9422-93d60bde8103"
+        label="Current Patient Age - Value of.value">
+        <semantic:inputExpression typeRef="number">
+          <semantic:text>Current Patient Age - Value of.value</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_48535fea-4d91-465d-a96b-8707a37be4c1"
+        label="Patient Sex - Kind of">
+        <semantic:inputExpression typeRef="Sex">
+          <semantic:text>Patient Sex - Kind of</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues>
+          <semantic:text>"Male","Female","Other",null</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:input id="_3f867c52-9e78-43d3-80b7-d20323cb3b6e"
+        label="Patient Race - Kind of">
+        <semantic:inputExpression typeRef="Race">
+          <semantic:text>Patient Race - Kind of</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues>
+          <semantic:text>"African-American","(Other)",null</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:input id="_09820763-30c1-4450-b26e-85ccd3f1182c"
+        label="Has Diabetes Mellitus - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Diabetes Mellitus - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_7d25f15f-c361-4487-a28c-7a1a1be8c1f4"
+        label="Has Cardiovascular Disease - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Cardiovascular Disease - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_457e5391-28be-4030-9049-70cc85a3829e"
+        label="Has Chronic Obstructive Pulmonary Disease - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Chronic Obstructive Pulmonary Disease - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_95ae8903-21b2-4630-bd12-f4d395def71a"
+        label="Has Hypertension - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Hypertension - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_8dc304eb-d544-45bd-90e9-bd7c3ba96c55" label="Has Malignancy - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Malignancy - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_5fd6d520-d18e-458b-8452-a7084be24c0b"
+        label="Has Kidney Disease - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Kidney Disease - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_4d36d3bc-6a02-4ce9-8e92-d62e17a7c3be" label="Has Obesity - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Obesity - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="_d85f195d-6e1d-44df-a58b-7eb24bf10a6c"
+        label="Has Cerebrovascular Disease - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Has Cerebrovascular Disease - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="_0a8f78dc-cda0-4a81-b058-d8c029c51421"/>
+      <semantic:annotation name="Description"/>
+      <semantic:rule id="_5c9a16de-2739-46da-8828-32d72a26586c">
+        <semantic:inputEntry id="_41305fc8-531f-454d-bddb-3723d708e128">
+          <semantic:text>&gt; 60</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_f7d5e243-dffd-42df-b006-d23af0709e0c">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_a0328591-1a40-4c31-aa03-e70777b5dda0">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b5c7faee-cebb-4f44-80e3-e24d75195ecd">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_e076dc19-82a7-41d4-b166-4f9d4da9b41b">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_ba428d2d-d7ec-4d53-8fda-897e288a6e93">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_55cadd38-af00-4c13-8455-dd5d726dcb31">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_33795e47-0855-4d05-8802-7a5e397d583e">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_a7185c82-caa4-4e03-b582-2bfb022a81c6">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_d441e49e-7081-4545-8924-82635e33371f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_5fded3a3-8146-42bf-9e11-f9431c36e3dc">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_6768eb41-a8ad-4fff-990d-1b7e43859c06">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_1e52538c-871f-4b07-b4ff-d32bd3f7cd3c">
+        <semantic:inputEntry id="_f435c901-d8b2-43bb-93c3-2053fa38f66f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_10528e82-f5b6-4fdd-b9cd-4babfda989d5">
+          <semantic:text>"Male"</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_501ebced-c87b-42fa-8d5b-bd276b2c65e4">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_e0e93d52-c5ac-4409-9b29-75e51da256d4">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_2190e494-452a-4ef2-8995-bec6d63d2231">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_935f5b44-770d-4949-b69d-ed8b5b1a8106">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_4ae0063f-fb63-453d-8dee-9030856da059">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_cfe70691-5ff6-4b09-b125-613242268fdc">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_1d530201-2bf2-4176-9879-b56df8c13df7">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_cd995f7f-c2a5-480f-a73c-61d15c52a5f3">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_37959336-b336-4740-94dc-e07ca2646b41">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_3a3aeb7b-a690-4b14-9115-895e824b9063">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_a56d7928-9c36-41e7-b54e-a08d1250df3c">
+        <semantic:inputEntry id="_abd322a7-8321-4a78-ba44-b7caf5aeaf78">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_7a723c0e-4579-446f-a834-0a6a0c39326e">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_4b5179e0-7aa5-4f77-b770-ec78f5236a45">
+          <semantic:text>"African-American"</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_81c161d3-b863-449f-b795-a689739ae48f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b3c9193c-b0d9-4303-af6a-f77f5a14aa73">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_cf995c34-8129-4cdb-8777-b8ee0d73acb8">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_efa3be86-7ed4-45c7-8d78-aa613ec70ced">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_934535da-032b-4daf-b70d-4cee4978dc57">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_c4de3244-bc27-4fad-8cf6-5d9ffdf22b8f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_c8a4fa8f-7505-44fb-9e0b-8261a887e77e">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_d6a63cec-8e64-489a-b13b-3b00d1499ee5">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_af40fe06-cab7-44c8-b8d7-9712474f7682">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_882e7725-82b7-4e00-928e-9c72b35e5d81">
+        <semantic:inputEntry id="_2f205af0-c7e6-4ad2-9418-d02abb9f8338">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_5ed48eb0-b08c-4511-aa43-9ff383a6cebc">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_8f73e82a-a88a-423d-8980-faa105b5f597">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_cf4b935d-ee69-4201-a869-ca0b96aab582">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_6b96694b-e89e-45a8-b4c1-d6adaaba6035">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_5de06bd9-d45b-41c1-8ffc-91009bddb251">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_d2fd08ad-1bd0-4bbc-a596-8090767e79ed">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_9db0c615-245d-4428-90b0-ecbf2a8353ea">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_5c54de2e-c3cc-43ee-955c-e202b7a64145">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_40fee7f4-785d-4819-a71b-79e92e781b48">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_5e9a27ac-59de-4dd1-90cd-6233085304d4">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_d15ef58c-8722-4070-bfce-01c6b281b855">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_dd01291b-ae1c-4474-a1e2-41dc17548546">
+        <semantic:inputEntry id="_d9ae7cd6-c223-493c-90ee-be2a04dd3c4f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_60f36cf8-99b5-4c4d-8c1b-6f3a4d28503f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b6bb1f50-a8d8-466f-b3a6-099f0f172a4c">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_21438dd1-5cad-4079-be18-cbe78010cffb">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_87ab39a0-503f-4aa6-a02f-c3fe5e80ea9f">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_26ad1fd5-8cb4-43ab-98bc-1e5d555f06ca">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_9d46440f-2e35-48a0-ae1c-675858933d76">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_319aab02-59a3-444a-8de9-1587e73cae47">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_a6bdede4-0d39-48f3-8efc-be4c72ba74c0">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_1d6b7b21-feea-415b-8348-59585df996a7">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_0b2afa5d-c810-4a09-b80f-3af8ed0fab85">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_8260e186-9f95-4e69-a90c-0b92c6f87c70">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_b5ec4255-91e6-42fc-97de-95bcfedb3e74">
+        <semantic:inputEntry id="_5ee74702-8904-4789-96f5-135f3393c967">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_329b783b-71d0-4959-a071-d84d80031352">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_7dd86b49-37fa-4663-8887-7231309b6c60">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_388bc200-272c-45d3-b765-4075f114937a">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_6c23b0b2-2993-4457-a2dd-ebfaa6068926">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_ba7683ed-d516-40b8-a2c9-9987a5553de5">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_27b604dc-0cf0-4d01-a8f8-4d3be40c9715">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_38825269-d19a-4a64-a2da-41aab627aa72">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_11049e90-57fd-46f1-8321-246f58f8fa9f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_032d6eab-86bb-461d-995a-29c00badc62b">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_278c8d54-c6e2-4533-81f0-bf9fd3b63544">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_8c81c8ec-a3f6-463e-9c86-1a673d19ad7f">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_d3804bf6-0fbe-40c0-98ef-abc6a90821f6">
+        <semantic:inputEntry id="_6a92c740-b00c-4747-8849-dd162c6553af">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b1b323e8-2f86-4726-9af0-15828d20446d">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_3b447375-d855-4776-9363-657dcb9ad371">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_86586134-3ba6-4bb4-9844-119794143ae4">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_6c703dfa-63d0-44e7-8487-1b0e8f938334">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_828a8049-64cd-4b50-a934-41ecefa1400f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b2ab52e0-32f7-468d-921c-059cddcab09a">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_2488df24-1eaf-4dc8-aa16-0e5e1b534d83">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_3021f740-c34f-4072-b04e-1e4f94ef04fe">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_7f100614-2f97-4dae-8a08-804e33474591">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_735d722f-dad8-406e-97c0-0bb0d53c3c90">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_213393a5-5e84-4c29-b641-3f6194e8eee5">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_43a998b6-a723-49e1-b7a4-bc9b0f109a8f">
+        <semantic:inputEntry id="_48ff62d3-4803-4af7-bfd9-e7d116f48e66">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_c4f7cb8a-1ce5-4f67-8795-d10767a837cd">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_db724f1c-33d2-4a31-b6db-f6ae4a096ac6">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_2f2c4194-669f-4b40-8c54-653756270e33">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_7768e974-af4c-4329-b740-530ceaf3243e">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_d3660b35-9339-4904-8ff4-dd593de0f715">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b8cbcdcd-cb40-4c9c-a23d-fcd736296818">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_425b1662-1932-476f-b6e9-685751c8d96a">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_e877d95f-32d5-4144-9eb0-847dbddf0850">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_8509a321-60f3-4f2d-a042-e256aa0e5e5f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_6b8dc54b-1078-4c37-83e0-d9799e8ebb8a">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_def78ded-6e59-4a80-a263-c1893f9ea8a5">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_e867ac81-f62a-45fd-82e5-45a80fa69600">
+        <semantic:inputEntry id="_e0fccda0-f49d-4404-a8f4-e34390712ddf">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_902686d0-cac5-437a-9ca5-6f2149e4fdb3">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_8a793dd3-d18b-47d7-8c88-f9b6e8d74620">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_52823e9e-dddd-45b1-a339-5752e1b007c8">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_98a2ccad-65f4-4596-9e18-2a62af7788d0">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_cc4b28a7-33c0-42d5-8046-34828504593f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_6c972f9d-a86c-471a-98c1-55ea34359cd5">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_8e1167ca-2506-4254-be3b-f501797a1cef">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_ff7a2406-d235-4fe3-9249-80db61dc07b6">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_89e3baa9-d176-45cf-85a7-2ae6ae60f8b0">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_017685b3-1b6e-4c86-85dd-4f16d4b526b3">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_816210c5-f9a2-4324-a8d0-c17d5e4cf302">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_f0193968-752e-4d8f-8a80-ed4684fbb365">
+        <semantic:inputEntry id="_bfdd7e24-3bb0-42b3-a8da-aefeca9ef3cd">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_e0f7ff9b-0754-42ca-ba6b-c205fd65c81d">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_5efde5dc-bda8-433d-a186-728b48635439">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_74f578d1-dbcf-4199-bc21-8529ef67d22d">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_bd967734-7b53-4d45-9a76-80140f19c731">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_d8616be4-22ca-4026-b363-f3c4b0d82044">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_cc80ea9d-2199-429e-bbee-8a05e7e5591c">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_95eb7c51-779e-450e-9c05-d2fd562e1974">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_3d5d11c9-d91e-49f4-b4dc-d0edcb7fc34f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_0f04c0ad-ae66-45d2-8052-e14c929905be">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_7b455f4e-86bc-44fa-aa9e-ede2985de5cf">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_d1cb64fa-3a5a-401e-8abc-ff299f0a4fc5">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_944b61a3-ce3a-43e4-ac74-35d0903bc110">
+        <semantic:inputEntry id="_d20b4663-e96e-422d-847a-589281ff7858">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_027fee6a-3383-4408-9413-650b9c299a02">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_dccb18b9-74b0-4e8f-9eca-4a454cbb619b">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_081d3db1-c901-44e2-8d45-cbd97195da67">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_3216056c-3e45-4f3d-b7f5-12e36bc31b43">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b4cd0d77-c86b-4c30-b27c-dced072090d6">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b47a9a2c-8e47-4ef7-8faf-0c1b1dfece95">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_12fa4f0e-a12d-4f59-82ff-d91b8e0f2abe">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_fb0e4443-6aff-476d-a9e0-01c420934d4a">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_e88ebaca-9fa5-4747-a882-e52656c196b9">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_8d05b962-12f5-4da3-9022-0edf3db4047c">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_2f332332-9674-42e4-a1ce-58c591c3ee18">
+          <semantic:text>1</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:inputData id="_9e9ea902-eb37-481b-8034-e49908ab33df" name="Patient Sex - Kind of">
+    <semantic:variable id="_7aa93806-446a-477f-913d-5adf3b835819"
+      name="Patient Sex - Kind of"
+      typeRef="Sex"/>
+  </semantic:inputData>
+  <semantic:inputData id="_bc6c3684-5076-4a72-9f47-22b9cd2514e6"
+    name="Current Patient Age - Value of">
+    <semantic:variable id="_5df4d6f8-8b5b-4e8b-95e5-266a25860090"
+      name="Current Patient Age - Value of"
+      typeRef="Situational Data Definitions.Quantity"/>
+  </semantic:inputData>
+  <semantic:inputData id="_e6a85680-6e1c-43e3-8eac-50a9fe272bff"
+    name="Patient Race - Kind of">
+    <semantic:variable id="_e9ea8607-3fb7-404d-8dc4-88103e93b6af"
+      name="Patient Race - Kind of"
+      typeRef="Race"/>
+  </semantic:inputData>
+  <semantic:inputData id="_08edb37b-43a1-4838-8e4e-793e8c202009"
+    name="Has Diabetes Mellitus - Is">
+    <semantic:variable id="_089666f2-ddb5-4ac4-a8ad-093a0e9c42ce"
+      name="Has Diabetes Mellitus - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_cca5d61c-f96c-4273-9215-14cc0b67e17f"
+    name="Has Cardiovascular Disease - Is">
+    <semantic:variable id="_060a5420-574a-45a1-b4fa-0571a7dadd84"
+      name="Has Cardiovascular Disease - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_52dfdbaa-4cc3-4068-ad2b-5937d6dc1ad5" name="Has Hypertension - Is">
+    <semantic:variable id="_69391237-2ee3-495b-baa8-f34ddb10bd00"
+      name="Has Hypertension - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_79235e75-88bf-47ba-9c00-a609c8e4671c"
+    name="Has Kidney Disease - Is">
+    <semantic:variable id="_e829fa4a-f6f0-447a-a0f8-7dcc362a9d3e"
+      name="Has Kidney Disease - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_f8047db8-1382-4e87-aa04-a6019375274c"
+    name="Has Chronic Obstructive Pulmonary Disease - Is">
+    <semantic:variable id="_84868641-f8d5-4527-b772-13f0307e9bbb"
+      name="Has Chronic Obstructive Pulmonary Disease - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_3d8c7be7-3f44-4438-8f94-c58dbed5f1d0" name="Has Malignancy - Is">
+    <semantic:variable id="_60b3cf1c-4330-43e8-bc23-b47e7ea03f94"
+      name="Has Malignancy - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_0e1b983a-2d31-4b09-9b0a-1452cf2df721" name="Has Obesity - Is">
+    <semantic:variable id="_f094aef2-4d16-4264-b52f-b44cafaf1578"
+      name="Has Obesity - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_9f444b38-8b92-48bc-8df9-79daba78bfc1"
+    name="Has Cerebrovascular Disease - Is">
+    <semantic:variable id="_593c947e-a804-4b9c-9868-3135f12362ab"
+      name="Has Cerebrovascular Disease - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_ad22eac1-2f56-4368-bca5-2f27772451cc" name="Has Dyspnea - Is">
+    <semantic:variable id="_98549d43-6fe1-491b-9f79-c1533d54ce55"
+      name="Has Dyspnea - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_b4a4ff8f-2e01-46a1-b90e-07e6ab2d4be7" name="Has Hemoptysis - Is">
+    <semantic:variable id="_f575306d-8b79-4a1e-a742-7e8521bae8e8"
+      name="Has Hemoptysis - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_b2b0b2b3-5f90-48a8-91b6-36fe2515f496" name="Has Altered LOC - Is">
+    <semantic:variable id="_69c6270d-887d-41ee-821f-87d57cbad486"
+      name="Has Altered LOC - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:inputData id="_0b4bbec7-f5d9-491e-ad89-5524c4e99d08"
+    name="Long Term Care Resident - Is">
+    <semantic:variable id="_55bcb99e-0408-4063-951d-e3a3435df1e6"
+      name="Long Term Care Resident - Is"
+      typeRef="boolean"/>
+  </semantic:inputData>
+  <semantic:decision id="_b4a8d3df-77fd-42e5-b99a-f41525570ab1"
+    name="Current Severity of Covid19 - Kind of -- Social Factors">
+    <semantic:variable id="_f3eea3c6-ce58-454c-a355-f99f393a0708"
+      name="Current Severity of Covid19 - Kind of -- Social Factors"
+      typeRef="Situational Data Definitions.tCovid19Severity"/>
+    <semantic:informationRequirement id="_aad7076e-c69d-4fd8-b7ff-34ac58ef6e16">
+      <semantic:requiredInput href="#_0b4bbec7-f5d9-491e-ad89-5524c4e99d08"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="UNIQUE"
+      id="_eebb559b-2d18-4ad7-bd0c-cdd299be965c"
+      outputLabel="Current Severity of Covid19 - Kind of -- Social Factors"
+      typeRef="Situational Data Definitions.tCovid19Severity">
+      <semantic:input id="_e59fd8e4-9562-48f6-92e9-760f08911763"
+        label="Long Term Care Resident - Is">
+        <semantic:inputExpression typeRef="boolean">
+          <semantic:text>Long Term Care Resident - Is</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="_cdc7c208-a138-41ef-9fe6-dc5c9e39d650"/>
+      <semantic:annotation name="Description"/>
+      <semantic:rule id="_faadb60a-5850-4762-bf5f-83ae558275d8">
+        <semantic:inputEntry id="_9a777345-fe13-49aa-ba2d-e692a4e3a03d">
+          <semantic:text>true</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_9621ed75-883b-4001-aa52-02df691df671">
+          <semantic:text>"Moderate"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:decision id="_31634752-ddb7-4d61-b34a-449cd765bf4b"
+    name="Current Severity of Covid19 - Kind of -- Risk Factors">
+    <semantic:variable id="_f92371cb-12ff-43da-95fe-7a59b141a3f1"
+      name="Current Severity of Covid19 - Kind of -- Risk Factors"
+      typeRef="Situational Data Definitions.tCovid19Severity"/>
+    <semantic:informationRequirement id="_34c8120c-521a-4e11-a470-7c7dbaa30590">
+      <semantic:requiredDecision href="#_34bc0640-1a8d-4787-9fa4-0a21bb728b78"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="UNIQUE"
+      id="_a395ae78-bd30-4e43-8a01-9069944d4468"
+      outputLabel="Current Severity of Covid19 - Kind of -- Risk Factors"
+      typeRef="Situational Data Definitions.tCovid19Severity">
+      <semantic:input id="_d52ed809-a55d-4d51-9b8c-c6cd8e42ace2"
+        label="Has Exacerbating Factor of Covid19 - Count of">
+        <semantic:inputExpression typeRef="number">
+          <semantic:text>Has Exacerbating Factor of Covid19 - Count of</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="_b7829717-d12c-4e5b-bdaa-269b4e2a13d8"/>
+      <semantic:annotation name="Description"/>
+      <semantic:rule id="_de400afa-8961-4bd5-8360-0d2a997f9832">
+        <semantic:inputEntry id="_d472238f-14be-409d-b5a3-7dcf3ff7ce41">
+          <semantic:text>&gt;=2</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_f30195aa-e028-41e3-a945-71c4aba61af7">
+          <semantic:text>"Mild at Risk"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+      <semantic:rule id="_031a2896-9271-489e-bfb9-d6028b282d63">
+        <semantic:inputEntry id="_c98bd63e-badd-4487-81ff-0f7a760350a3">
+          <semantic:text>[0..1]</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_1d02c48f-586e-4bb0-bd8d-d6b43ad51d98">
+          <semantic:text>"Mild Low Risk"</semantic:text>
+        </semantic:outputEntry>
+        <semantic:annotationEntry>
+          <semantic:text/>
+        </semantic:annotationEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_7a2aa6e4-7014-4da6-b30f-b376509b04fd" name="Page 1">
+      <di:extension/>
+      <dmndi:Size height="1090" width="4397.796283650409"/>
+      <dmndi:DMNShape dmnElementRef="_b0325b61-9eaf-4a2d-bebe-8a0b2017945d"
+        id="_c5357982-0101-4f70-b926-f21f27e5bd34">
+        <dc:Bounds height="60"
+          width="153"
+          x="527.3041704110989"
+          y="223.8272494624831"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_34bc0640-1a8d-4787-9fa4-0a21bb728b78"
+        id="_d428ba43-46d8-45e1-90ea-4700063a01f3">
+        <dc:Bounds height="60"
+          width="153"
+          x="1521.6655881619267"
+          y="366.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_9e9ea902-eb37-481b-8034-e49908ab33df"
+        id="_7f1af0b5-c024-4215-aca5-c5e95afbc18b">
+        <dc:Bounds height="60.000007629394474"
+          width="135.48234176635742"
+          x="1127.2120588437303"
+          y="435.54684378372076"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_bc6c3684-5076-4a72-9f47-22b9cd2514e6"
+        id="_fb84eccd-1820-4d08-ad78-6c8033201ace">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1138.0647616951146"
+          y="519.4548898489304"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_e6a85680-6e1c-43e3-8eac-50a9fe272bff"
+        id="_92d6f6ae-e2bc-489b-9407-4ee863c7e617">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635765"
+          x="1208.4576948725464"
+          y="599.9163608595786"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_08edb37b-43a1-4838-8e4e-793e8c202009"
+        id="_03fdfb9d-745e-4ec0-8d3e-c1aac97dcbdf">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1274.7182311068286"
+          y="794.9491404365895"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_cca5d61c-f96c-4273-9215-14cc0b67e17f"
+        id="_ce0a987c-ea71-4d32-a366-e2df5c63286a">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1383.5700825117142"
+          y="860.9491421114062"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_52dfdbaa-4cc3-4068-ad2b-5937d6dc1ad5"
+        id="_6cc67253-96aa-4c8f-b127-35171a2d8fb9">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1624.3602055070019"
+          y="770.9491404365895"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_79235e75-88bf-47ba-9c00-a609c8e4671c"
+        id="_7d72681e-e01d-4e13-943d-63dc88d02f87">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1781.9157606046888"
+          y="821.9491404365895"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_f8047db8-1382-4e87-aa04-a6019375274c"
+        id="_4009a376-1092-410f-b84e-8e1a81866236">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1829.175019395178"
+          y="706.9491404365895"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_3d8c7be7-3f44-4438-8f94-c58dbed5f1d0"
+        id="_e635d36d-282f-4016-8390-af5f1f71fbe9">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1917.434278185668"
+          y="630.9491421114062"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_0e1b983a-2d31-4b09-9b0a-1452cf2df721"
+        id="_50c1f4f4-587e-4b15-9e9c-46f8c8ddd16f">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="2024.928104873758"
+          y="530.9491421114062"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_9f444b38-8b92-48bc-8df9-79daba78bfc1"
+        id="_617ee905-4e16-4c48-b7cd-5a95f34aabdc">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="1530.424417278748"
+          y="860.9491421114062"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_ad22eac1-2f56-4368-bca5-2f27772451cc"
+        id="_cc456758-1b3b-453b-aea4-b8766e9a7b6e">
+        <dc:Bounds height="60.000007629394474"
+          width="135.48234176635737"
+          x="356.02894153940207"
+          y="357.4200699985164"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_b4a4ff8f-2e01-46a1-b90e-07e6ab2d4be7"
+        id="_4db22e32-a37f-49b7-8f8a-98955e380153">
+        <dc:Bounds height="60.00000762939453"
+          width="135.48234176635742"
+          x="439.936987056523"
+          y="437.8798396724681"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_b2b0b2b3-5f90-48a8-91b6-36fe2515f496"
+        id="_ffeec496-7b70-4fea-8391-b5cb829364c6">
+        <dc:Bounds height="60.000007629394474"
+          width="135.48234176635742"
+          x="568.6726185348457"
+          y="509.12689900176"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_0b4bbec7-f5d9-491e-ad89-5524c4e99d08"
+        id="_0bb0d2e0-f4d1-4094-bb33-bb0aa251fd66">
+        <dc:Bounds height="60.000007629394474"
+          width="135.48234176635742"
+          x="898.2588291168213"
+          y="359.5928205360333"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_b4a8d3df-77fd-42e5-b99a-f41525570ab1"
+        id="_4ed83917-8925-4643-86c6-da85d8d9bda8">
+        <dc:Bounds height="60" width="153" x="889.5" y="216"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="_31634752-ddb7-4d61-b34a-449cd765bf4b"
+        id="_3f8ffdca-0814-4411-80b7-9c7e020a9bea">
+        <dc:Bounds height="60" width="153" x="1521.6655881619267" y="216"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge dmnElementRef="_a8a54527-8519-4fe1-b98b-ac1655d17375"
+        id="_2f9b5543-7869-4c6d-bc7d-5612d34837ba">
+        <di:waypoint x="1194.9500311032518" y="435.54684378372076"/>
+        <di:waypoint x="1598.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_2e0c8337-3107-440b-846a-7c0f1342914e"
+        id="_db972b56-b74c-46a1-a0ee-c14e0e632543">
+        <di:waypoint x="1205.802733954636" y="519.4548898489304"/>
+        <di:waypoint x="1578.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_c70d6ab6-adca-4963-8e9c-322ff1a82bc5"
+        id="_c6020838-7670-4b42-9ebf-d3deb392fd98">
+        <di:waypoint x="1276.1956671320681" y="599.9163608595786"/>
+        <di:waypoint x="1588.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_d2b096c8-30d6-4724-a899-899d19e5cdf1"
+        id="_c32709eb-1ddd-412d-98fa-91417776fe71">
+        <di:waypoint x="1352.45620336635" y="794.9491404365895"/>
+        <di:waypoint x="1588.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_b278ff9e-fd0b-4448-b9d4-a4ccdefe34ac"
+        id="_a538614b-c468-48d0-b222-bbdd12ac05ba">
+        <di:waypoint x="1451.3080547712357" y="860.9491421114062"/>
+        <di:waypoint x="1598.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_d70992bb-5465-4eb5-b2a3-5fc5c6b978f4"
+        id="_a9a955f3-a135-43c3-94a5-dcc03f6235b7">
+        <di:waypoint x="1692.0981777665233" y="770.9491404365895"/>
+        <di:waypoint x="1608.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_a09f7257-c7a8-4fd6-9e97-02ead269b1b8"
+        id="_4e66abef-f924-4d36-9f6a-4bda90571a3a">
+        <di:waypoint x="1849.6537328642103" y="821.9491404365895"/>
+        <di:waypoint x="1618.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_7fc46e42-8c45-4913-b334-a17dd4430db9"
+        id="_f6879c0f-ac7c-4788-8da7-f01159df14ca">
+        <di:waypoint x="1886.9129916546995" y="706.9491404365896"/>
+        <di:waypoint x="1598.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_2cb6c45e-ab8f-4ca1-944c-74d2b567cfed"
+        id="_37de1b09-7697-4cd4-9bf3-4fc73abdc513">
+        <di:waypoint x="1995.1722504451895" y="630.9491421114062"/>
+        <di:waypoint x="1608.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_0998a954-fafc-4609-929b-d0304300c288"
+        id="_4ed471b2-b4fa-4b3c-b17c-4628709fc5e4">
+        <di:waypoint x="2082.6660771332795" y="530.9491421114062"/>
+        <di:waypoint x="1648.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_475a11ca-0556-4910-86f6-1f0bce8c6cea"
+        id="_3267445d-502b-414f-b056-8389c104f707">
+        <di:waypoint x="1588.1623895382695" y="860.9491421114062"/>
+        <di:waypoint x="1608.1655881619267" y="426.4770780468189"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_83864032-c0d9-48e8-affe-400d0ab62018"
+        id="_e314e7a9-6acb-4f77-a908-b26122b434f9">
+        <di:waypoint x="666.4105907943672" y="509.12689900176"/>
+        <di:waypoint x="603.8041704110989" y="283.8272494624831"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_1d1fd812-210f-43cc-8b33-555aa9694a26"
+        id="_8fd46daf-2ae7-4817-aee7-81138923e99f">
+        <di:waypoint x="537.6749593160445" y="437.8798396724681"/>
+        <di:waypoint x="583.8041704110989" y="283.8272494624831"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_0c59c27e-8445-42de-ac08-e06e2526038f"
+        id="_82c94cd9-3d0e-4124-bb71-39fa72fadf0c">
+        <di:waypoint x="443.76691379892355" y="357.4200699985164"/>
+        <di:waypoint x="553.8041704110989" y="283.8272494624831"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_aad7076e-c69d-4fd8-b7ff-34ac58ef6e16"
+        id="_e1c19d39-c4f0-40ae-81d6-4c49aa065107">
+        <di:waypoint x="965.9968013763428" y="359.5928205360333"/>
+        <di:waypoint x="956" y="276"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge dmnElementRef="_34c8120c-521a-4e11-a470-7c7dbaa30590"
+        id="_ca56263e-7f07-4822-9d6e-5663772a1d2f">
+        <di:waypoint x="1598.1655881619267" y="366.4770780468189"/>
+        <di:waypoint x="1598.1655881619267" y="276"/>
+        <dmndi:DMNLabel sharedStyle="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+    <dmndi:DMNStyle fontBold="false"
+      fontFamily="arial,helvetica,sans-serif"
+      fontItalic="false"
+      fontSize="11"
+      fontStrikeThrough="false"
+      fontUnderline="false"
+      id="LS_7c03388f-9495-4ffe-ab8b-d9e24e79442a_0"/>
+  </dmndi:DMNDI>
+</semantic:definitions>
