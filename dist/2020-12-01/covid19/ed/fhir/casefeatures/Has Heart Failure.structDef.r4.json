@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Has Heart Failure",
+        "language": "text/cql",
+        "expression": "Has Heart Failure - Condition"
+      }
+    }
+  ],
+  "name": "Has Heart Failure",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Condition",
+  "derivation": "constraint"
+}

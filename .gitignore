@@ -1,0 +1,9 @@
+*.iml
+.idea
+.project
+.classpath
+.settings
+target/
+bin/
+
+**/*.xml.versionsBackup

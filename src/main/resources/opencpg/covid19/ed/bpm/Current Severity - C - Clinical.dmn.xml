@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                      xmlns="https://clinicalknowledgemanagement.mayo.edu/artifacts/5d4c6b73-330e-46d9-a8b6-b89a74ada510"
+                      xmlns:assets="https://clinicalknowledgemanagement.mayo.edu/assets"
+                      xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+                      xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+                      xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+                      xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/"
+                      xmlns:include1="https://clinicalknowledgemanagement.mayo.edu/artifacts/6fd72751-c356-496a-880a-e8a70d9ee62f"
+                      xmlns:include2="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"
+                      xmlns:include3="https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a"
+                      xmlns:include4="https://clinicalknowledgemanagement.mayo.edu/artifacts/c101ba4a-2875-402b-865b-59ed2cb86ed5"
+                      xmlns:include5="https://clinicalknowledgemanagement.mayo.edu/artifacts/b75cdb09-aa5d-45d1-88e1-a7fa9cd48564"
+                      xmlns:openapi="https://openapis.org/omg/extension/1.0"
+                      xmlns:rss="http://purl.org/rss/2.0/"
+                      xmlns:surr="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                      xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      id="_5d4c6b73-330e-46d9-a8b6-b89a74ada510"
+                      name="Current Severity - C - Clinical"
+                      namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/5d4c6b73-330e-46d9-a8b6-b89a74ada510"
+                      xsi:schemaLocation="https://www.omg.org/spec/API4KP/20200801/surrogate xsd/API4KP/surrogate/surrogate.xsd https://www.omg.org/spec/DMN/1.2/ http://www.omg.org/spec/DMN/20180521/MODEL/">
+   <semantic:extensionElements/>
+   <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                    name="Current Severity - A - qCSI and Vitals"
+                    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/6fd72751-c356-496a-880a-e8a70d9ee62f"/>
+   <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                    name="Situational Data Definitions"
+                    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"/>
+   <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                    name="Current Severity - B - Risks and Symptoms"
+                    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a"/>
+   <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                    name="Exclusion Criteria"
+                    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/c101ba4a-2875-402b-865b-59ed2cb86ed5"/>
+   <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                    name="Current Severity - X - Social Determinants"
+                    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/b75cdb09-aa5d-45d1-88e1-a7fa9cd48564"/>
+   <semantic:decisionService id="_5d4c6b73-330e-46d9-a8b6-b89a74ada510_DS"
+                             name="Whole Model Decision Service">
+      <semantic:variable id="_5d4c6b73-330e-46d9-a8b6-b89a74ada510_DS_VAR"
+                         name="Whole Model Decision Service"
+                         typeRef="Any"/>
+      <semantic:outputDecision href="#_afbed7fa-e20d-440f-879a-2e74f18ab25a"/>
+      <semantic:encapsulatedDecision href="#_8cbc8259-3f4a-4abf-b23b-5cc85711c4e2"/>
+   </semantic:decisionService>
+   <semantic:decisionService id="_cae295e2-142f-4613-9487-53464aa68019_DS" name="Diagram Page 1">
+      <semantic:variable id="_cae295e2-142f-4613-9487-53464aa68019_DS_VAR"
+                         name="Diagram Page 1"
+                         typeRef="Any"/>
+      <semantic:outputDecision href="#_afbed7fa-e20d-440f-879a-2e74f18ab25a"/>
+      <semantic:encapsulatedDecision href="#_8cbc8259-3f4a-4abf-b23b-5cc85711c4e2"/>
+   </semantic:decisionService>
+   <semantic:decision id="_afbed7fa-e20d-440f-879a-2e74f18ab25a"
+                      name="Current Severity of Covid19 - Kind of -- Clinical">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="captures"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/captures"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      tag="captures"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      versionTag="20201118-154414">
+               <id:uuid>8856ffdd-044d-37cd-8124-a6be5dcea329</id:uuid>
+            </surr:rel>
+            <surr:ref establishedOn="2020-11-18T00:00:00"
+                      name="Assessment Decision"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KAO/DecisionType"
+                      referentId="http://ontology.mayo.edu/ontologies/decisionmodels/AssessmentDecision"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      tag="AssessmentDecision"
+                      versionId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/versions/20201118-154433#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      versionTag="20201118-154433">
+               <id:uuid>d03ea564-0d31-3e72-a98b-cb93aa4c5cce</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_cfdaeca7-784b-4452-998f-b5163d64a4b8"
+                         name="Current Severity of Covid19 - Kind of -- Clinical"
+                         typeRef="Situational Data Definitions.tCovid19Severity"/>
+      <semantic:informationRequirement id="_e61d2a5b-8a01-499c-ae7a-f54ba80e5973">
+         <semantic:requiredDecision href="#_8cbc8259-3f4a-4abf-b23b-5cc85711c4e2"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_f304ce6c-5f90-4ef8-b964-c54022ccc19e">
+         <semantic:requiredDecision href="https://clinicalknowledgemanagement.mayo.edu/artifacts/c101ba4a-2875-402b-865b-59ed2cb86ed5#be7e21f0-b07f-43dc-bc9d-9b65c73da774"/>
+      </semantic:informationRequirement>
+      <semantic:decisionTable hitPolicy="PRIORITY"
+                              id="_733706bf-ac83-48ce-81f0-eaa25ef8ad37"
+                              outputLabel="Current Severity of Covid19 - Kind of -- Clinical"
+                              typeRef="Situational Data Definitions.tCovid19Severity">
+         <semantic:input id="_dace9247-eceb-46c4-a531-1a1ea9ba4907"
+                         label="Exclusion Criteria.On Hemodynamic Support - Is">
+            <semantic:inputExpression typeRef="boolean">
+               <semantic:text>Exclusion Criteria.On Hemodynamic Support - Is</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_b1a0dde2-96da-41cf-bea1-cb27b558efc2"
+                         label="Current Severity of Covid19 - Kind of - Manifestations">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tCovid19Severity">
+               <semantic:text>Current Severity of Covid19 - Kind of - Manifestations</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:output id="_32046557-1ae0-435e-b6ae-0338d26bcd53"/>
+         <semantic:annotation name="Description"/>
+         <semantic:rule id="_d6174e5d-46d8-41d3-994e-dc193819ab91">
+            <semantic:inputEntry id="_83165381-98b0-4ea7-bd1a-150b8646ff33">
+               <semantic:text>true</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_3aa9c730-d9e8-470b-963f-3e5c3a37576c">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_3f2e3d55-1e57-487d-9917-0aa0d9510ea8">
+               <semantic:text>"Critical"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_ed507e1a-b8a6-42ab-94f7-7ecb3cf0a734">
+            <semantic:inputEntry id="_3360187c-9183-4725-9e10-569edf4557f7">
+               <semantic:text>false</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_62969331-c0b4-4dde-8755-164b6753c178">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_407514b4-d563-4035-b410-1407e4b8ad50">
+               <semantic:text>Current Severity of Covid19 - Kind of - Manifestations</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+      </semantic:decisionTable>
+   </semantic:decision>
+   <semantic:decision id="_8cbc8259-3f4a-4abf-b23b-5cc85711c4e2"
+                      name="Current Severity of Covid19 - Kind of - Manifestations">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="captures"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/captures"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      tag="captures"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      versionTag="20201118-154414">
+               <id:uuid>8856ffdd-044d-37cd-8124-a6be5dcea329</id:uuid>
+            </surr:rel>
+            <surr:ref establishedOn="2020-11-18T00:00:00"
+                      name="Assessment Decision"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KAO/DecisionType"
+                      referentId="http://ontology.mayo.edu/ontologies/decisionmodels/AssessmentDecision"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      tag="AssessmentDecision"
+                      versionId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/versions/20201118-154433#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      versionTag="20201118-154433">
+               <id:uuid>d03ea564-0d31-3e72-a98b-cb93aa4c5cce</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_c91b166d-edcf-418b-b0b1-0523cab225c6"
+                         name="Current Severity of Covid19 - Kind of - Manifestations"
+                         typeRef="Situational Data Definitions.tCovid19Severity"/>
+      <semantic:informationRequirement id="_7db28f2b-b0cc-4d6e-8058-814e64d3ae81">
+         <semantic:requiredDecision href="https://clinicalknowledgemanagement.mayo.edu/artifacts/6fd72751-c356-496a-880a-e8a70d9ee62f#5f52c28a-ff2e-40e2-bfe2-ee50dbeea7e3"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_48616606-e9bc-4728-8d0c-e5fd6fed0c55">
+         <semantic:requiredDecision href="https://clinicalknowledgemanagement.mayo.edu/artifacts/6fd72751-c356-496a-880a-e8a70d9ee62f#7fd9b144-c827-42a6-b559-45198a9e2263"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_25b9144f-3e66-4738-a902-c0c04d8273d9">
+         <semantic:requiredDecision href="https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a#b0325b61-9eaf-4a2d-bebe-8a0b2017945d"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_65b85c7e-afc9-4968-99c0-b10a24b5f036">
+         <semantic:requiredDecision href="https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a#31634752-ddb7-4d61-b34a-449cd765bf4b"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_d5ba0a7a-bccb-4391-822e-129b6d1c7728">
+         <semantic:requiredDecision href="https://clinicalknowledgemanagement.mayo.edu/artifacts/b75cdb09-aa5d-45d1-88e1-a7fa9cd48564#783c05d6-d906-48e0-aabe-7cc3a7680112"/>
+      </semantic:informationRequirement>
+      <semantic:decisionTable hitPolicy="PRIORITY"
+                              id="_343cc521-221d-4584-812c-c67f202509a5"
+                              outputLabel="Current Severity of Covid19 - Kind of - Manifestations"
+                              typeRef="Situational Data Definitions.tCovid19Severity">
+         <semantic:input id="_52b37b36-a3b7-40fc-806f-d11ceef2aa1f"
+                         label="Current Severity - A - qCSI and Vitals.Current Severity of Covid19 - Kind of -- qCSI">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tCovid19Severity">
+               <semantic:text>Current Severity - A - qCSI and Vitals.Current Severity of Covid19 - Kind of -- qCSI</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_cc358509-47e6-4a90-b175-f8df62ef2a6b"
+                         label="Current Severity - A - qCSI and Vitals.Current Severity of Covid19 - Kind of -- Vitals">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tCovid19Severity">
+               <semantic:text>Current Severity - A - qCSI and Vitals.Current Severity of Covid19 - Kind of -- Vitals</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_916c6b38-d590-4fca-bcda-de9f5c8e7610"
+                         label="Current Severity - B - Risks and Symptoms.Current Severity of Covid-19 - Kind of -- Symptoms">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tCovid19Severity">
+               <semantic:text>Current Severity - B - Risks and Symptoms.Current Severity of Covid-19 - Kind of -- Symptoms</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_d9817ba9-d90d-434d-9b44-c279f18a3331"
+                         label="Current Severity - B - Risks and Symptoms.Current Severity of Covid19 - Kind of -- Risk Factors">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tCovid19Severity">
+               <semantic:text>Current Severity - B - Risks and Symptoms.Current Severity of Covid19 - Kind of -- Risk Factors</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_c60b0877-2213-4ccd-b5b2-d73ecd107116"
+                         label="Current Severity - X - Social Determinants.Current Covid Severity - Kind of -- Social Factors">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tCovid19Severity">
+               <semantic:text>Current Severity - X - Social Determinants.Current Covid Severity - Kind of -- Social Factors</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:output id="_6a4fafd4-ecc7-4eb1-bb4d-acba2486a45f"/>
+         <semantic:annotation name="Description"/>
+         <semantic:rule id="_d391818f-ab4c-4b3e-aaea-3bae3e78adf0">
+            <semantic:inputEntry id="_f4172f1f-77f1-4026-b4eb-3be0b3bb2669">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_0e1f389e-9db4-4f47-b626-5c0297d04c9b">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_2ede31fb-62bd-49e0-93f2-319b028b02ab">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_b966fc41-1d09-4385-aa2a-040566f4933e">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_6d25e2c5-4d02-4cd3-8b71-888a548c0e9a">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_80387009-38d8-46a4-96f9-b6b5f8752fa7">
+               <semantic:text>Current Severity - A - qCSI and Vitals.Current Severity of Covid19 - Kind of -- qCSI</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_22f806bc-1a25-4a45-aa87-b5d228ad66a6">
+            <semantic:inputEntry id="_9073ae83-55fb-4827-bd1c-0bcd1dbc0166">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_cbb60d3b-54f9-4578-8389-2da011c32b27">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_9ab8184d-62cc-4680-a4c8-934fd695002f">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_10c595af-b6fe-46c9-a0b9-cf5416a74e02">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_463ce95c-47d2-4e9a-a933-35c2b35a4d29">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_3d45c65b-881e-4b6a-89d6-910f017df0e3">
+               <semantic:text>Current Severity - A - qCSI and Vitals.Current Severity of Covid19 - Kind of -- Vitals</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_b29efdc0-97cd-4b99-afaa-42c8e605c976">
+            <semantic:inputEntry id="_a3633745-7c62-4812-80c1-3bc293130052">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_d8684ebb-626a-46a2-8204-8d5599a663ab">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_45a23cc9-cb2c-4a30-ae0d-24b9679923cc">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_be64a973-8f14-41ac-8f18-fefb486a12c4">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_edb87c17-5780-43da-bf6a-359f61fee457">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_5eaf4ffd-bfce-4d2f-a588-997d8cd117ea">
+               <semantic:text>Current Severity - B - Risks and Symptoms.Current Severity of Covid-19 - Kind of -- Symptoms</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_d4b38d34-d592-48c3-8284-dd81fdeb6f29">
+            <semantic:inputEntry id="_59af6780-4e3a-4172-93d1-3130fc4c3bc0">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_aa0483e6-f26e-427a-8f9e-47a0a6bafed6">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_4cc6040b-09d1-419e-aa0c-e1a48990384b">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_0006e37d-aaeb-4345-b36f-0c09a64a7df0">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_32d2379b-4e24-4804-8a88-4b0899295789">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_832bf873-7e03-45db-9dd2-95aea2343d3e">
+               <semantic:text>Current Severity - B - Risks and Symptoms.Current Severity of Covid19 - Kind of -- Risk Factors</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_44d72ad9-02a7-49ba-b3f9-1a873161fe4c">
+            <semantic:inputEntry id="_2abd0ef7-b1a9-4739-9e6a-f7d54e80466e">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_6488f83c-656c-43fa-adff-a8b518784d08">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_1f865f38-db43-4c31-8c60-1b18d881103e">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_9f42468c-721b-454d-83f2-50bc05e96db4">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_17d99d48-8ecd-42e8-94f1-23a3f7f2a191">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_3b43be23-60da-480c-b920-5f5331f8c199">
+               <semantic:text>Current Severity - X - Social Determinants.Current Covid Severity - Kind of -- Social Factors</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+      </semantic:decisionTable>
+   </semantic:decision>
+   <dmndi:DMNDI>
+      <dmndi:DMNDiagram id="_cae295e2-142f-4613-9487-53464aa68019" name="Page 1">
+         <di:extension/>
+         <dmndi:Size height="1050" width="1485"/>
+         <dmndi:DMNShape dmnElementRef="include3:_b0325b61-9eaf-4a2d-bebe-8a0b2017945d"
+                         id="_3ade7439-c0ca-4780-96f9-e74011b29cba">
+            <dc:Bounds height="60" width="153" x="562.5" y="581"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include3:_31634752-ddb7-4d61-b34a-449cd765bf4b"
+                         id="_62335232-e790-4d5d-9642-719a635b985d">
+            <dc:Bounds height="60" width="153" x="753.5" y="542"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include1:_5f52c28a-ff2e-40e2-bfe2-ee50dbeea7e3"
+                         id="_524dff25-3048-46db-8dde-b4dd0dcb8bfa">
+            <dc:Bounds height="60" width="153" x="212.5" y="409"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include1:_7fd9b144-c827-42a6-b559-45198a9e2263"
+                         id="_977c864a-8ac6-47ba-a3c9-b60253887e32">
+            <dc:Bounds height="60" width="153" x="354.5" y="530"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_afbed7fa-e20d-440f-879a-2e74f18ab25a"
+                         id="_04327649-7a83-44fc-9122-079f7fe4e996">
+            <dc:Bounds height="60" width="153" x="578.5" y="86"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_8cbc8259-3f4a-4abf-b23b-5cc85711c4e2"
+                         id="_bbe25b2b-a07a-45d8-a008-88f9daeb14e4">
+            <dc:Bounds height="60" width="153" x="578.5" y="267"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include4:_be7e21f0-b07f-43dc-bc9d-9b65c73da774"
+                         id="_18ecf2b1-8ac6-4623-a15e-6d019d3001af">
+            <dc:Bounds height="60" width="153" x="332.5" y="139"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include5:_783c05d6-d906-48e0-aabe-7cc3a7680112"
+                         id="_b303d141-c527-4945-a1dc-5d828dfc8696">
+            <dc:Bounds height="60" width="153" x="814.5" y="336"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNEdge dmnElementRef="_7db28f2b-b0cc-4d6e-8058-814e64d3ae81"
+                        id="_7f33fe42-7b35-49e1-ac8e-68d0ca4cad5c">
+            <di:waypoint x="289" y="409"/>
+            <di:waypoint x="595" y="327"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_48616606-e9bc-4728-8d0c-e5fd6fed0c55"
+                        id="_519128da-7ea9-4a47-8353-6f1362309fe5">
+            <di:waypoint x="431" y="530"/>
+            <di:waypoint x="625" y="327"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_25b9144f-3e66-4738-a902-c0c04d8273d9"
+                        id="_3e4e3010-1187-4b11-b001-55d8ace7228b">
+            <di:waypoint x="609" y="581"/>
+            <di:waypoint x="655" y="327"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_65b85c7e-afc9-4968-99c0-b10a24b5f036"
+                        id="_4fb6711c-319a-4362-ab31-98be0079c208">
+            <di:waypoint x="790" y="542"/>
+            <di:waypoint x="685" y="327"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_e61d2a5b-8a01-499c-ae7a-f54ba80e5973"
+                        id="_839a3eae-2fc3-4289-b9f9-d0ce02a4834e">
+            <di:waypoint x="655" y="267"/>
+            <di:waypoint x="655" y="146"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_f304ce6c-5f90-4ef8-b964-c54022ccc19e"
+                        id="_81d35407-6faf-42b1-b164-9c620ca89717">
+            <di:waypoint x="485.5" y="169"/>
+            <di:waypoint x="578.5" y="116"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_d5ba0a7a-bccb-4391-822e-129b6d1c7728"
+                        id="_6b793b3e-d81c-4066-a3a1-c7f62ff6cf77">
+            <di:waypoint x="814.5" y="366"/>
+            <di:waypoint x="731.5" y="307"/>
+            <dmndi:DMNLabel sharedStyle="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+         </dmndi:DMNEdge>
+      </dmndi:DMNDiagram>
+      <dmndi:DMNStyle fontBold="false"
+                      fontFamily="arial,helvetica,sans-serif"
+                      fontItalic="false"
+                      fontSize="11"
+                      fontStrikeThrough="false"
+                      fontUnderline="false"
+                      id="LS_5d4c6b73-330e-46d9-a8b6-b89a74ada510_0"/>
+   </dmndi:DMNDI>
+</semantic:definitions>

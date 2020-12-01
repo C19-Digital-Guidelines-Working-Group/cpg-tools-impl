@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Current FiO2",
+        "language": "text/cql",
+        "expression": "Current FiO2 - Observation"
+      }
+    }
+  ],
+  "name": "Current FiO2",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Observation",
+  "derivation": "constraint"
+}

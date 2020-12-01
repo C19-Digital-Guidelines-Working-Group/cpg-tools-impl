@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Most Recent C-Reactive Peptide",
+        "language": "text/cql",
+        "expression": "Most Recent C-Reactive Peptide - Observation"
+      }
+    }
+  ],
+  "name": "Most Recent C-Reactive Peptide",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Observation",
+  "derivation": "constraint"
+}

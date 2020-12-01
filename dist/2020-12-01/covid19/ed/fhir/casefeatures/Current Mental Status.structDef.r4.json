@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Current Mental Status",
+        "language": "text/cql",
+        "expression": "Current Mental Status - Observation"
+      }
+    }
+  ],
+  "name": "Current Mental Status",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Observation",
+  "derivation": "constraint"
+}

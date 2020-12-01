@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Prior Respiratory Support- High Flow Nasal Canula",
+        "language": "text/cql",
+        "expression": "Prior Respiratory Support- High Flow Nasal Canula -  ServiceRequest"
+      }
+    }
+  ],
+  "name": "Prior Respiratory Support- High Flow Nasal Canula",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": " ServiceRequest",
+  "derivation": "constraint"
+}

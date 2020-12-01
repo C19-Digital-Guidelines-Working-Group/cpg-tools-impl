@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                      xmlns="https://clinicalknowledgemanagement.mayo.edu/artifacts/92fb6274-efd5-4df8-b231-2c570617cd0f"
+                      xmlns:assets="https://clinicalknowledgemanagement.mayo.edu/assets"
+                      xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+                      xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+                      xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+                      xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/"
+                      xmlns:include1="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"
+                      xmlns:openapi="https://openapis.org/omg/extension/1.0"
+                      xmlns:rss="http://purl.org/rss/2.0/"
+                      xmlns:surr="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                      xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      id="_92fb6274-efd5-4df8-b231-2c570617cd0f"
+                      name="Current Severity - D - Labs and Dx"
+                      namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/92fb6274-efd5-4df8-b231-2c570617cd0f"
+                      xsi:schemaLocation="https://www.omg.org/spec/API4KP/20200801/surrogate xsd/API4KP/surrogate/surrogate.xsd https://www.omg.org/spec/DMN/1.2/ http://www.omg.org/spec/DMN/20180521/MODEL/">
+   <semantic:extensionElements/>
+   <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                    name="Situational Data Definitions"
+                    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"/>
+   <semantic:itemDefinition isCollection="false" label="tAbnormalLabs" name="tAbnormalLabs">
+      <semantic:typeRef>string</semantic:typeRef>
+      <semantic:allowedValues>
+         <semantic:text>"Elevated Troponin","Elevated D-Dimer","Lymphopenia","Low LDH","Elevated CRP","Elevated Creatinine","Elevated ALT","Elevated AST","Neutrophils","Thrombocytopenia","Elevated WBC","Elevated Ferritin"</semantic:text>
+      </semantic:allowedValues>
+   </semantic:itemDefinition>
+   <semantic:decisionService id="_92fb6274-efd5-4df8-b231-2c570617cd0f_DS"
+                             name="Whole Model Decision Service">
+      <semantic:variable id="_92fb6274-efd5-4df8-b231-2c570617cd0f_DS_VAR"
+                         name="Whole Model Decision Service"
+                         typeRef="Any"/>
+      <semantic:outputDecision href="#_8483b507-3001-439e-a2ce-febfe7f9006f"/>
+      <semantic:encapsulatedDecision href="#_099bccf8-e325-4490-86ea-681ab1268250"/>
+      <semantic:encapsulatedDecision href="#_2723005f-a26b-49ae-89d6-7aebef1ed1db"/>
+      <semantic:encapsulatedDecision href="#_a3e10eee-33c1-44a4-be3d-f35c8c3aea80"/>
+      <semantic:encapsulatedDecision href="#_de728a62-0a66-4c75-b507-a649a7b30873"/>
+      <semantic:encapsulatedDecision href="#_54cf8cf3-45ba-45b9-8f57-e9f6329c3f13"/>
+      <semantic:encapsulatedDecision href="#_9a401377-1b7c-4c02-b795-f266aeb1100c"/>
+      <semantic:encapsulatedDecision href="#_5676ea56-407f-40f4-a4aa-cb8e793392b7"/>
+      <semantic:encapsulatedDecision href="#_149192c0-4e09-4d00-85f4-19f39c1c45cb"/>
+      <semantic:encapsulatedDecision href="#_87a79ccc-35fe-4339-a62b-d2c4ae0144fd"/>
+      <semantic:encapsulatedDecision href="#_ef3ffada-98af-4dae-8e11-faede3359d0f"/>
+      <semantic:encapsulatedDecision href="#_cf7e47cd-edeb-4e3a-8be4-90f8dd87395d"/>
+      <semantic:encapsulatedDecision href="#_e0b2ac71-317c-4e2f-99fc-387bbbfceb0e"/>
+      <semantic:encapsulatedDecision href="#_7e0f7c76-3d72-4700-88d4-e2f18fdf120a"/>
+      <semantic:encapsulatedDecision href="#_9e966a71-43c8-428f-8547-5de8d6e44c38"/>
+      <semantic:encapsulatedDecision href="#_537b76a4-8c06-44e8-84ca-5928553c4bfb"/>
+      <semantic:encapsulatedDecision href="#_0a282d85-41e4-44ee-ba06-0118be7ab810"/>
+      <semantic:encapsulatedDecision href="#_8cc50e32-fa70-40e8-9a4c-90a1ab053b33"/>
+   </semantic:decisionService>
+   <semantic:decisionService id="_7a2aa6e4-7014-4da6-b30f-b376509b04fd_DS" name="Diagram Page 1">
+      <semantic:variable id="_7a2aa6e4-7014-4da6-b30f-b376509b04fd_DS_VAR"
+                         name="Diagram Page 1"
+                         typeRef="Any"/>
+      <semantic:outputDecision href="#_8483b507-3001-439e-a2ce-febfe7f9006f"/>
+      <semantic:encapsulatedDecision href="#_099bccf8-e325-4490-86ea-681ab1268250"/>
+      <semantic:encapsulatedDecision href="#_2723005f-a26b-49ae-89d6-7aebef1ed1db"/>
+      <semantic:encapsulatedDecision href="#_a3e10eee-33c1-44a4-be3d-f35c8c3aea80"/>
+      <semantic:encapsulatedDecision href="#_de728a62-0a66-4c75-b507-a649a7b30873"/>
+      <semantic:encapsulatedDecision href="#_54cf8cf3-45ba-45b9-8f57-e9f6329c3f13"/>
+      <semantic:encapsulatedDecision href="#_9a401377-1b7c-4c02-b795-f266aeb1100c"/>
+      <semantic:encapsulatedDecision href="#_5676ea56-407f-40f4-a4aa-cb8e793392b7"/>
+      <semantic:encapsulatedDecision href="#_149192c0-4e09-4d00-85f4-19f39c1c45cb"/>
+      <semantic:encapsulatedDecision href="#_87a79ccc-35fe-4339-a62b-d2c4ae0144fd"/>
+      <semantic:encapsulatedDecision href="#_ef3ffada-98af-4dae-8e11-faede3359d0f"/>
+      <semantic:encapsulatedDecision href="#_cf7e47cd-edeb-4e3a-8be4-90f8dd87395d"/>
+      <semantic:encapsulatedDecision href="#_e0b2ac71-317c-4e2f-99fc-387bbbfceb0e"/>
+      <semantic:encapsulatedDecision href="#_7e0f7c76-3d72-4700-88d4-e2f18fdf120a"/>
+      <semantic:encapsulatedDecision href="#_9e966a71-43c8-428f-8547-5de8d6e44c38"/>
+      <semantic:encapsulatedDecision href="#_537b76a4-8c06-44e8-84ca-5928553c4bfb"/>
+      <semantic:encapsulatedDecision href="#_0a282d85-41e4-44ee-ba06-0118be7ab810"/>
+      <semantic:encapsulatedDecision href="#_8cc50e32-fa70-40e8-9a4c-90a1ab053b33"/>
+   </semantic:decisionService>
+   <semantic:decision id="_099bccf8-e325-4490-86ea-681ab1268250"
+                      name="Current Troponin - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent Troponin I (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/4becaa45-8d21-383b-89b7-8e17f06e6712"
+                      tag="4becaa45-8d21-383b-89b7-8e17f06e6712">
+               <id:uuid>4becaa45-8d21-383b-89b7-8e17f06e6712</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_6e6329d0-9b25-4271-b340-2152938c111c"
+                         name="Current Troponin - Value of"
+                         typeRef="Situational Data Definitions.tTroponinLevelValue"/>
+      <semantic:informationRequirement id="_a9694a9d-1bba-42db-b3b8-d2d3cd928c9c">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_08dc2fcf-6f6d-4eb3-a7cb-d569c8f782a2"
+                                  typeRef="Situational Data Definitions.tTroponinLevelValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentTroponinLevelValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_2723005f-a26b-49ae-89d6-7aebef1ed1db"
+                      name="Current D-Dimer - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent D-dimer (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/5959cf6f-9a5d-3640-947a-e81012372314"
+                      tag="5959cf6f-9a5d-3640-947a-e81012372314">
+               <id:uuid>5959cf6f-9a5d-3640-947a-e81012372314</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_18f873fe-bf45-4b83-8f9b-7b95cd1ea8b2"
+                         name="Current D-Dimer - Value of"
+                         typeRef="Situational Data Definitions.tDDimerValue"/>
+      <semantic:informationRequirement id="_d4383c9b-50dd-4dd9-aa55-265f56369864">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_f93c20b4-a9b0-434c-8568-25d7dc23ba53"
+                                  typeRef="Situational Data Definitions.tDDimerValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentDDimerValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_a3e10eee-33c1-44a4-be3d-f35c8c3aea80"
+                      name="Current Lactate - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_6a6b26f9-41ad-4024-a4c8-54014e6d9f1b"
+                         name="Current Lactate - Value of"
+                         typeRef="Situational Data Definitions.tLactateValue"/>
+      <semantic:informationRequirement id="_1d6c5146-cd8c-4730-9683-a0f84d94c9b8">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_16d8ab83-7ed5-4a0b-ad36-3aea71635fa7"
+                                  typeRef="Situational Data Definitions.tLactateValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentLactateValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_de728a62-0a66-4c75-b507-a649a7b30873"
+                      name="Current LDH - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent Lactate Dehydrogenase (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/95bfa631-4574-3a2b-8c16-e6b08ab7c989"
+                      tag="95bfa631-4574-3a2b-8c16-e6b08ab7c989">
+               <id:uuid>95bfa631-4574-3a2b-8c16-e6b08ab7c989</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_8bb2acbc-7a12-45de-800c-575005d95e99"
+                         name="Current LDH - Value of"
+                         typeRef="Situational Data Definitions.tLDHValue"/>
+      <semantic:informationRequirement id="_92756f32-800d-4164-b93b-f5501c1af355">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_d05c1c5e-d9e7-41ee-a321-fc9c773a5aaf"
+                                  typeRef="Situational Data Definitions.tLDHValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentLDHValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_54cf8cf3-45ba-45b9-8f57-e9f6329c3f13"
+                      name="Current CRP - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent C-Reactive Peptide (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/1a5f251e-6304-3d4c-b207-6fe2a5961eaa"
+                      tag="1a5f251e-6304-3d4c-b207-6fe2a5961eaa">
+               <id:uuid>1a5f251e-6304-3d4c-b207-6fe2a5961eaa</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_8f8ddd23-b361-4d4b-834f-ea8b7d7757ac"
+                         name="Current CRP - Value of"
+                         typeRef="Situational Data Definitions.tCRPValue"/>
+      <semantic:informationRequirement id="_203aacf7-861c-417e-a68c-a2ab9c249118">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_29217ba2-b8ac-4b45-b6b9-8a9165a6cb30"
+                                  typeRef="Situational Data Definitions.tCRPValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentCRPValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_9a401377-1b7c-4c02-b795-f266aeb1100c"
+                      name="Current Lymphocyte Count - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent Lymphocytes (#) (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/fc070a93-5c12-34c2-8b3f-3cc7115e1059"
+                      tag="fc070a93-5c12-34c2-8b3f-3cc7115e1059">
+               <id:uuid>fc070a93-5c12-34c2-8b3f-3cc7115e1059</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_f2567390-a65b-443b-abab-f933f255d1f3"
+                         name="Current Lymphocyte Count - Value of"
+                         typeRef="Situational Data Definitions.tLymphocyteCountValue"/>
+      <semantic:informationRequirement id="_9146857a-d658-4854-b2d6-2d4ac1ad5143">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_c3fd4a82-f2a1-4906-afca-65a2f443be21"
+                                  typeRef="Situational Data Definitions.tLymphocyteCountValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentLymphocyteCountValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_5676ea56-407f-40f4-a4aa-cb8e793392b7"
+                      name="Current CXR Score - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_cd4ddf3e-ad9d-401b-938b-84cc4dec5c5f"
+                         name="Current CXR Score - Value of"
+                         typeRef="Situational Data Definitions.tCXRScore"/>
+      <semantic:informationRequirement id="_723b8a5c-190f-4509-bf45-715ca5b87027">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_78c5800a-41db-4a86-9c8a-3936f8402c12"
+                                  typeRef="Situational Data Definitions.tCXRScore">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentCXRScoreValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_149192c0-4e09-4d00-85f4-19f39c1c45cb"
+                      name="Has Bilateral Pneumonia - Is">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Has Bilateral Pneumonia (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/a5a5c081-4462-3dc8-99f3-e1471d1b4d4f"
+                      tag="a5a5c081-4462-3dc8-99f3-e1471d1b4d4f">
+               <id:uuid>a5a5c081-4462-3dc8-99f3-e1471d1b4d4f</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20201101">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_141bf937-210d-492c-997f-5c0c99e22cee"
+                         name="Has Bilateral Pneumonia - Is"
+                         typeRef="boolean"/>
+      <semantic:informationRequirement id="_991e6252-c672-4124-b7f6-247a73164434">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_70538b2f-2e47-417f-8859-ff7afe01b98d" typeRef="boolean">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.hasBilateralPneumoniaPresent</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_87a79ccc-35fe-4339-a62b-d2c4ae0144fd"
+                      name="Has RV Enlargement - Is">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Has RV enlargement (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/af583d30-4a8e-330d-a864-926fd59a0d0f"
+                      tag="af583d30-4a8e-330d-a864-926fd59a0d0f">
+               <id:uuid>af583d30-4a8e-330d-a864-926fd59a0d0f</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20201101">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_3041cb27-95c4-469a-9fc5-ae4f99ea389e"
+                         name="Has RV Enlargement - Is"
+                         typeRef="boolean"/>
+      <semantic:informationRequirement id="_a029c2b3-6f28-4106-8a57-b3121d7282aa">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_c07d67f1-1d06-4418-b05a-b86a6a6a54c8" typeRef="boolean">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.hasRVEnlargementPresent</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_8483b507-3001-439e-a2ce-febfe7f9006f"
+                      name="Current Severity of Covid19 - Kind of -- Diagnostics">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="captures"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/captures"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      tag="captures"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      versionTag="20201118-154414">
+               <id:uuid>8856ffdd-044d-37cd-8124-a6be5dcea329</id:uuid>
+            </surr:rel>
+            <surr:ref establishedOn="2020-11-18T00:00:00"
+                      name="Assessment Decision"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KAO/DecisionType"
+                      referentId="http://ontology.mayo.edu/ontologies/decisionmodels/AssessmentDecision"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      tag="AssessmentDecision"
+                      versionId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/versions/20201118-154433#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      versionTag="20201118-154433">
+               <id:uuid>d03ea564-0d31-3e72-a98b-cb93aa4c5cce</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_f233ad8f-d15e-46d1-a165-a67fdfd1db72"
+                         name="Current Severity of Covid19 - Kind of -- Diagnostics"
+                         typeRef="Situational Data Definitions.tCovid19Severity"/>
+      <semantic:informationRequirement id="_a1bddc43-ba3b-42b0-8ce3-a6c2e148f8e1">
+         <semantic:requiredDecision href="#_87a79ccc-35fe-4339-a62b-d2c4ae0144fd"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_bb4688df-b15c-4609-8551-a1ae63cd8d9b">
+         <semantic:requiredDecision href="#_149192c0-4e09-4d00-85f4-19f39c1c45cb"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_dbafdd81-d1f6-45e5-b59c-190616ed07cd">
+         <semantic:requiredDecision href="#_5676ea56-407f-40f4-a4aa-cb8e793392b7"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_25f10392-a0e7-4491-ab83-050631125e4b">
+         <semantic:requiredDecision href="#_a3e10eee-33c1-44a4-be3d-f35c8c3aea80"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_93bdc70f-af31-471e-a20b-24794c40a8bc">
+         <semantic:requiredDecision href="#_ef3ffada-98af-4dae-8e11-faede3359d0f"/>
+      </semantic:informationRequirement>
+      <semantic:decisionTable hitPolicy="PRIORITY"
+                              id="_775c91fa-a1f7-48a0-86b5-eb0a212c7aa9"
+                              outputLabel="Current Severity of Covid19 - Kind of -- Diagnostics"
+                              typeRef="Situational Data Definitions.tCovid19Severity">
+         <semantic:input id="_b34502b5-fef5-4772-a75f-554ced28e073"
+                         label="Current Lactate - Value of">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tLactateValue">
+               <semantic:text>Current Lactate - Value of</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_113ac9de-da3d-4a70-b18a-33420f592855"
+                         label="Current CXR Score - Value of">
+            <semantic:inputExpression typeRef="Situational Data Definitions.tCXRScore">
+               <semantic:text>Current CXR Score - Value of</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_1a14aee9-909d-4a0d-80b5-8dde9794d6ee"
+                         label="Has Bilateral Pneumonia - Is">
+            <semantic:inputExpression typeRef="boolean">
+               <semantic:text>Has Bilateral Pneumonia - Is</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_a5c35c0a-915e-4fa1-8d28-b4e55764280a"
+                         label="Has RV Enlargement - Is">
+            <semantic:inputExpression typeRef="boolean">
+               <semantic:text>Has RV Enlargement - Is</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:input id="_84987eb2-35ef-4e6a-8f73-d113aa78892a"
+                         label="Abnormal Labs - Count of">
+            <semantic:inputExpression typeRef="number">
+               <semantic:text>Abnormal Labs - Count of</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:output id="_13637072-b40c-443a-af4d-6d0ca8d6fedf"/>
+         <semantic:annotation name="Description"/>
+         <semantic:rule id="_acf87869-7abe-4c41-96ef-1b0088ee35b7">
+            <semantic:inputEntry id="_9fe38591-26ab-4422-8b48-75c6d69f6904">
+               <semantic:text>&gt;= 4</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_19f3cfaa-160e-4190-afaf-575b291520f8">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_2144c1b6-ef36-4c3e-be98-77c0766432c9">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_d0903d1b-d6bb-485b-9938-baabadf1efcc">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_80ec5ea9-e54e-4c70-b150-04071cbd9c2b">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_50bf4b2e-9b69-4e03-bedc-ff77169b6a0b">
+               <semantic:text>"Critical"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_413898dc-0953-476a-adf8-9ceee3a8278f">
+            <semantic:inputEntry id="_1bc25c87-fa36-460c-b0ba-c19c25a7508c">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_58ead193-430e-4821-adbe-d1a5fd0ce532">
+               <semantic:text>&gt;= 3</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_df6a00df-af10-43c9-8fb4-80017893d8ac">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_285e384b-298e-4a8b-9e9d-19c5b8509941">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_b8b00632-a345-401e-b3c8-1143f13a35c7">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_c58c2e7a-5273-4e3c-bab4-45570b27a707">
+               <semantic:text>"Severe"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_a72f1566-0b71-4131-abd5-b177da54303c">
+            <semantic:inputEntry id="_5961ca19-30dc-4a5f-aff8-68115d555e86">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_8e4836c1-252b-4f18-910b-cc56c0c3ec4a">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_439f25ea-b29a-46a1-be59-b8b8cdef0ab2">
+               <semantic:text>true</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_3e650acb-1c96-4093-b96b-a84228d85c3d">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_998319d5-d3eb-450b-92f7-19d688140a29">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_4bda0393-3176-4e1b-a68e-0b7d1d8bfcfa">
+               <semantic:text>"Severe"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_c1004ee5-5f22-454a-a313-c0511f1e9b3f">
+            <semantic:inputEntry id="_19235d9a-140c-4257-a911-871f274a4a19">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_9828ccdf-ed12-4502-bf17-2e3511fa5c81">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_16178d11-591d-47a0-865c-2cc722e9420b">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_c3e5f32f-7ea6-40b8-a724-4d7668c233a6">
+               <semantic:text>true</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_38a1f2fe-d9aa-442e-8ff2-8cee4607deed">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_28500f0b-4745-436e-821f-b592fbfa9e9f">
+               <semantic:text>"Severe"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_7545006d-5a0b-4d87-8805-282edbfdd71a">
+            <semantic:inputEntry id="_af72fbd1-e2e1-484f-8348-deacdb4e4f57">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_06b24045-7b92-42f8-9446-e0df97c90c89">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_6e1a7159-f6ba-457d-a34c-a5c068c9d14f">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_952e356b-d120-47aa-b381-a9f6fddf5833">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_c4e304ce-f269-40ad-9be6-e14581cf7b31">
+               <semantic:text>&gt;= 1</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_14c8a869-4092-432c-812d-ec79a46627d0">
+               <semantic:text>"Severe"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_aeaf04ef-919e-42a4-aa36-ad1891f7f332">
+            <semantic:inputEntry id="_9e195e61-1a08-4ade-b346-74a747aa1eb4">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_44a50a50-c80e-4402-aecc-c00c8ac19b00">
+               <semantic:text>2</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_bf87fdfa-8eca-4a07-9007-e60d6cc0d246">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_2a9b8987-bd45-4392-98e4-1694e76a8506">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_88f51caa-f7ba-4c62-831c-190854bb0394">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_ecc23351-25c5-41f3-b94f-215a03fb00b4">
+               <semantic:text>"Moderate"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_714ba62b-3b3e-409f-a5a4-b22cf1f6d03d">
+            <semantic:inputEntry id="_f05d50c0-b36d-4e90-9847-155d3bbaf747">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_df5e50be-4b5e-4d90-afcd-564d42e15fbd">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_f12f9fcf-b99d-4e26-a989-bc85b1240dc2">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_0cc41e97-a88c-4ffa-bc72-023c3524b5f9">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:inputEntry id="_c7df32b2-315c-4fdb-9429-57c20b4cd9b0">
+               <semantic:text>-</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_d905072f-ffdc-4b77-8ed6-06a4302b318c">
+               <semantic:text>"Mild Low Risk"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+      </semantic:decisionTable>
+   </semantic:decision>
+   <semantic:decision id="_ef3ffada-98af-4dae-8e11-faede3359d0f"
+                      name="Abnormal Labs - Count of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="captures"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/captures"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      tag="captures"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      versionTag="20201118-154414">
+               <id:uuid>8856ffdd-044d-37cd-8124-a6be5dcea329</id:uuid>
+            </surr:rel>
+            <surr:ref establishedOn="2020-11-18T00:00:00"
+                      name="Assessment Decision"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KAO/DecisionType"
+                      referentId="http://ontology.mayo.edu/ontologies/decisionmodels/AssessmentDecision"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      tag="AssessmentDecision"
+                      versionId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/versions/20201118-154433#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      versionTag="20201118-154433">
+               <id:uuid>d03ea564-0d31-3e72-a98b-cb93aa4c5cce</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_fbd83820-1841-460c-821b-a3e8f3b3d2da"
+                         name="Abnormal Labs - Count of"
+                         typeRef="number"/>
+      <semantic:informationRequirement id="_eef712be-d2c7-4e3f-8d13-cca7273d0f3b">
+         <semantic:requiredDecision href="#_099bccf8-e325-4490-86ea-681ab1268250"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_c6fb1206-3637-4e67-9c75-6b0246d04e3a">
+         <semantic:requiredDecision href="#_2723005f-a26b-49ae-89d6-7aebef1ed1db"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_6b5ce9e7-20de-4ac7-a814-7934f1205044">
+         <semantic:requiredDecision href="#_9a401377-1b7c-4c02-b795-f266aeb1100c"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_b89788d3-9e1c-4f22-8602-f941bdda69b9">
+         <semantic:requiredDecision href="#_de728a62-0a66-4c75-b507-a649a7b30873"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_82633780-5f76-43a7-858c-4f4f7407562e">
+         <semantic:requiredDecision href="#_54cf8cf3-45ba-45b9-8f57-e9f6329c3f13"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_4f3e5601-9b69-489a-b660-a130436aac34">
+         <semantic:requiredDecision href="#_cf7e47cd-edeb-4e3a-8be4-90f8dd87395d"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_664320a3-1404-44fa-8f06-4149f1f66e08">
+         <semantic:requiredDecision href="#_e0b2ac71-317c-4e2f-99fc-387bbbfceb0e"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_752c46ea-424d-4f3f-afd0-703db93bc10b">
+         <semantic:requiredDecision href="#_7e0f7c76-3d72-4700-88d4-e2f18fdf120a"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_13d97279-251a-4720-8555-1349f2df8b98">
+         <semantic:requiredDecision href="#_0a282d85-41e4-44ee-ba06-0118be7ab810"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_40515e4e-d8b6-49e7-9258-1f4df3802ce1">
+         <semantic:requiredDecision href="#_537b76a4-8c06-44e8-84ca-5928553c4bfb"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_47fa507d-8861-4fe7-bef1-995306fb088f">
+         <semantic:requiredDecision href="#_9e966a71-43c8-428f-8547-5de8d6e44c38"/>
+      </semantic:informationRequirement>
+      <semantic:informationRequirement id="_017c5a64-58e1-4aa3-a6e0-684d26a5f7cc">
+         <semantic:requiredDecision href="#_8cc50e32-fa70-40e8-9a4c-90a1ab053b33"/>
+      </semantic:informationRequirement>
+      <semantic:context id="_3fdaa21f-ca83-44ab-8844-59f661e6ea72" typeRef="number">
+         <semantic:contextEntry id="_4354992d-c50c-47d7-9e33-2eaae1454df0">
+            <semantic:variable id="_3fa36b19-03db-4ec4-a940-6b17c1f37b22"
+                               name="Abnormal Labs"
+                               typeRef="tAbnormalLabs"/>
+            <semantic:decisionTable hitPolicy="COLLECT"
+                                    id="_c2da1f1a-fc9d-4ab7-9331-eff529f21e0d"
+                                    outputLabel="Abnormal Labs">
+               <semantic:input id="_e779f103-3b1f-42a5-81f7-66e91d9d3364"
+                               label="Current Troponin - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tTroponinLevelValue">
+                     <semantic:text>Current Troponin - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_c4bb81e1-8038-49fd-83a8-0f5e4a0d435a"
+                               label="Current D-Dimer - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tDDimerValue">
+                     <semantic:text>Current D-Dimer - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_21644bff-2e70-4ab1-b1bd-6c930bf938c4"
+                               label="Current Lymphocyte Count - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tLymphocyteCountValue">
+                     <semantic:text>Current Lymphocyte Count - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_77a2076d-8b81-464c-b98f-8e711f7c05cb"
+                               label="Current LDH - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tLDHValue">
+                     <semantic:text>Current LDH - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_20fe9607-b696-43c0-be2f-12613ab900fe"
+                               label="Current CRP - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tCRPValue">
+                     <semantic:text>Current CRP - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_10e5e20b-826b-4479-907e-a847b6e65541"
+                               label="Current Creatinine - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tCreatinineValue">
+                     <semantic:text>Current Creatinine - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_3f913c80-7b48-4fd2-a6e1-d7b5d22ebc20"
+                               label="Current ALT - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tALTValue">
+                     <semantic:text>Current ALT - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_c1c4df0c-eed4-4bd6-afe2-606a244307e3"
+                               label="Current AST - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tASTValue">
+                     <semantic:text>Current AST - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_27982a58-b74f-4724-88f5-351f207f5cc0"
+                               label="Current Neutrophils Count - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tNeutrophilsCountValue">
+                     <semantic:text>Current Neutrophils Count - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_8776918b-7f64-4b45-8e28-fbcbcf008f2d"
+                               label="Current Platelet Count - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tPlateletCountValue">
+                     <semantic:text>Current Platelet Count - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_639d7ab8-b5c3-434a-b3d1-63af3d2808c0"
+                               label="Current WBC Count - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tWBCCountValue">
+                     <semantic:text>Current WBC Count - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:input id="_15d2b2df-6b45-4f66-b853-4612169a7aec"
+                               label="Current Ferritin - Value of">
+                  <semantic:inputExpression typeRef="Situational Data Definitions.tFerritinValue">
+                     <semantic:text>Current Ferritin - Value of</semantic:text>
+                  </semantic:inputExpression>
+               </semantic:input>
+               <semantic:output id="_a35ec560-6376-4d9f-b76b-bd03128998e1">
+                  <semantic:outputValues>
+                     <semantic:text>"Elevated Troponin","Elevated D-Dimer","Lymphopenia","Low LDH","Elevated CRP","Elevated Creatinine","Elevated ALT","Elevated AST","Neutrophils","Thrombocytopenia","Elevated WBC","Elevated Ferritin",null</semantic:text>
+                  </semantic:outputValues>
+               </semantic:output>
+               <semantic:annotation name="Description"/>
+               <semantic:rule id="_122d9d9e-fd54-4ebe-9bc9-dbe107e5549a">
+                  <semantic:inputEntry id="_34f534bc-8332-42ba-89e9-4591c12e6a81">
+                     <semantic:text>&gt; 99</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_03404757-7ec6-41b1-b8a4-9ca9551e4493">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5f806ce4-ac1d-4696-b711-3f60c730bc64">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5f1d6da3-7195-43d4-95c7-8f121417e374">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_53e14634-e40d-4a6d-8811-61399eb85c44">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_f4dba16a-33ac-4b8f-bfc6-1ebaa90ec26c">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5b5746d1-27f9-4eec-b383-fb0b728813cc">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_93feecc2-8a6f-4ca0-92b3-74d5f83451d1">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_4b3baa20-22b9-4a74-bfac-9b707899a1a0">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_434ef99f-f7f5-49b8-a87a-a0cef1764a1e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_b1ceae84-41ee-4760-81d0-85bcccd43463">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_909a46d2-215b-40d2-9de9-4e86d4fc78f4">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_1eeed67e-619f-4e2f-a4fa-f8ac9010ce9d">
+                     <semantic:text>"Elevated Troponin"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_64d840b4-f38f-4922-9da8-e4d1f273c58e">
+                  <semantic:inputEntry id="_5658d613-c91d-4bea-a5b4-02b80fe453c7">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_49b39c2a-8fcb-455f-bf4f-307c2037bee4">
+                     <semantic:text>&gt;= 1</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_519b15e8-2c70-4e82-b865-1b4c536906d9">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3ebbeabe-6204-4ac4-aecc-3b5a5d5af185">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_c7f892b6-da51-4ae0-a9a7-e1c4a9d34cc3">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_295b4c5e-cdbc-40c3-b798-512bfb635e40">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_75afbcda-5c99-4727-9d12-ea15e182a015">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3d23004d-344e-43fc-96df-9730f172a01c">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_6075a920-fe8c-48ae-a0b6-2c2477710be6">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3b0db1ab-6f24-41a0-b5fc-23b0411e3dfc">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_99a065ed-5a79-45e4-a492-3e29086748cb">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3cd53766-10c2-4e1b-a5fe-96be548f08c6">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_03a5bbbb-ac9e-41cd-95f1-3e5fa651063f">
+                     <semantic:text>"Elevated D-Dimer"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_f845a75e-168d-4cbd-86ed-4c5ee8afd28f">
+                  <semantic:inputEntry id="_624d4eb4-a381-45fd-b94a-7effecc5e71f">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_41e66168-fd93-4323-8777-42309afcffea">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5c9a3ab3-82ef-4ccd-9c57-83977ca1770b">
+                     <semantic:text>&lt; 0.8</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_8d2ba9f1-467f-4e53-9c52-6ec9f270ca29">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_aa549d7e-6e80-4d3d-80c0-9ba6f74ff42e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_72896e33-142e-4508-b2bf-95117a9f9a95">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_1a5ea3da-c780-4ba1-8a56-c0372d61c5d9">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_e8af318c-b65f-4cd0-a294-4d1c8dc1d0d7">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_85cd6835-dda9-4ec0-8a82-f5c5d04e1db5">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_51372ce2-cb92-4e8b-98db-0c5acea2010a">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5753f247-6524-49f9-aff1-edcf77b98f31">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_2c376eae-9ab8-4198-b947-906cae782602">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_8fe2f22f-73bd-46f0-ad21-9b3383eec3ef">
+                     <semantic:text>"Lymphopenia"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_71fcb070-9fd1-47da-a1c8-ed60e3777ea5">
+                  <semantic:inputEntry id="_3705e559-758a-45fb-a43a-df8732ff3330">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_1fdf8eb5-a44d-4dc5-97da-29a51d03976d">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_859588eb-4278-44a3-a841-059eb76841ce">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_a560a785-7205-44ec-85fe-8ef7beec064a">
+                     <semantic:text>&gt; 250</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_34d6302d-d9e9-4fab-89ac-ac1fb9e612eb">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_05e7a968-afb2-4cbf-836e-1d43658435e6">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_f09ddb0f-5401-4e26-93a8-9d932f635be5">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_7a5873b0-d735-4a6a-8dfe-7efbe5be9550">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_0181faec-c283-420e-af39-8d5a0c9e03e6">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_9f0b0c1e-29b3-471b-a13f-bae800f20b34">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3b321001-48b6-4e0f-8b2c-412f3334a2ca">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_4daec898-1115-46be-b692-9e42a5df2577">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_645e2005-05bd-4fd1-875b-6b7a4203484e">
+                     <semantic:text>"Low LDH"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_9b9e4174-fedd-4003-8cf0-77cb54c1ed98">
+                  <semantic:inputEntry id="_36160e6b-076d-4045-941f-65eda08cf41a">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_b10ca2fa-877c-4c44-83d0-93f8087996c0">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_e379659f-f296-4b9d-b5a0-1b8cfd1c366b">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5f451890-3dc8-49b8-9b61-d976b48cb85d">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_42b05aa0-05f1-4a6d-9d34-26a3fead5880">
+                     <semantic:text>&gt;= 125</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_0f16350d-7850-4026-892d-69a9a3f7cc9c">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_aa559943-ae8f-4255-96d8-39a55995cb8f">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_0202ca2d-6c8c-4dbc-9df9-dff91bf4b819">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_a302d810-ffd9-452c-b924-4e4fb14cfa97">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_e1e0722c-be79-47c4-b292-a3831a4fd7dd">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_139eac0b-a0a5-48fd-9da2-06ef3c0a7bcc">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3f233d34-e55a-4f36-be9e-eb030968ceb4">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_fdb8d168-5e9b-4c8b-8fd5-310e3f672c2a">
+                     <semantic:text>"Elevated CRP"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_44608674-2a74-4935-9966-32877a212f00">
+                  <semantic:inputEntry id="_62b1901d-67ed-4f31-8a25-bc5818fce67f">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_84e2c335-f558-4741-96a9-23976bbeaea8">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_db7d21ba-47f2-4d8d-aab6-a8d1dc4f4132">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_327a2a4b-b405-403f-8e58-a2069bd91630">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_d321001e-e98a-4a22-ae82-1115bb071540">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_7c2c693f-fb62-4412-ad10-2bed3bd156dd">
+                     <semantic:text>&gt; 133</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_1e25c30c-e70d-4812-951b-24dc0801531d">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_f1a72fa3-9d16-44ce-bd6e-0bc8d3ba3e13">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_9b0f900e-eb3b-4246-ab78-b595f06b35b8">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_865679f4-fc02-49ae-91f2-0480afe7e28e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_49582cec-408a-43d6-af3e-4b6a5a89192e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_bbf35689-017e-4468-8afc-0afc1898989d">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_a7747f09-9e1a-4991-846c-3dda601a4b0e">
+                     <semantic:text>"Elevated Creatinine"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_5d3c168d-c903-4bfc-b93b-2f82e675d0c6">
+                  <semantic:inputEntry id="_598f1d26-98b6-411f-a38a-61b0f1f6468a">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_a74f248f-5cd2-45c6-95e3-3317b44323c7">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_92f53022-7204-4e92-8429-766fb977b73b">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_76cf4b54-9932-4d23-b6eb-1f164670cf6d">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_aca3e736-1f0d-4606-9529-9a27139b8cbf">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_463c0a70-cb00-40ad-832a-36cea2d8e09c">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_a38f6a88-f8aa-49ae-bbc2-73f2f9080d50">
+                     <semantic:text>&gt; 40</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_8cab1cff-3c79-4ce0-9700-e6fb4dbe1cbe">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_6473dd02-b3f1-4128-9b62-335260c9a89c">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_4cd8a8ec-1eb0-4ced-beda-9d253d0bb378">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_54407b54-b872-4591-9a22-2dd7c5401311">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3390f5a1-300a-4689-abbc-d642529336b3">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_5492fa70-17a4-43d2-aaf2-68233b5b9ee0">
+                     <semantic:text>"Elevated ALT"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_623cbe78-437c-4e5a-adfc-6cc1ac18b7ed">
+                  <semantic:inputEntry id="_0e2f2605-8d61-4c8a-a279-60071db011a3">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_8ea159be-dd45-4ce8-8401-e0b28b090c2e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_37ec4760-b22b-4695-a8af-0ef81e7ef187">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_b0713178-3bc3-4d49-a7b8-3a8b343a736b">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_9bde807f-1799-45dc-8415-681f955eb866">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_b16ac739-acb6-46a5-88a1-931e46201a1a">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3218d73d-87c8-48cb-b276-6dd4bfbd3ab7">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_45dce07c-6907-4bee-bf79-dd8042eae908">
+                     <semantic:text>&gt; 40</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_f46d751b-7f30-4c43-af88-06743e784e70">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_07af89b8-c4f2-47e9-9221-f6d1ad1cb112">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5ce07708-98c7-4f7c-b8a7-674d42ad0176">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_579bd4a8-b15a-4c8e-9a78-63cf8664186e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_7b81b69e-9cc3-4a35-b9c3-3cf8ed99c761">
+                     <semantic:text>"Elevated AST"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_e82a6462-4825-4b11-8401-9d8a5231c263">
+                  <semantic:inputEntry id="_4dfb1ca9-940a-4f2a-b3b0-84ea958d5288">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_f983016f-33b7-4b2f-9ba3-a07269dce64f">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_bd846b14-91e0-43c8-b317-cd6d016d68b5">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_d18b2bd6-83d7-4a3b-b9e2-f6476bcc2510">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_d80d99e4-ba93-485b-a593-8d7388cef2ce">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_600b4f8c-b21a-4a9f-95e4-1dd7f5d6f613">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_003a6231-621f-4a73-942b-24301aa4ed33">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_37219eed-ac1b-49c5-8639-a6963fa36392">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_b2e5b9dd-7e02-49f4-834d-afb9ae34e800">
+                     <semantic:text>&gt; 8000</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_16c781d6-9472-4744-9373-30e6800c512e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_2420287c-6bd7-4b42-81a4-f0e6f2ec5a2b">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_847776cf-5aa1-4478-bfe2-b1e6ddfa836e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_bd120c98-3345-4359-9dca-c5c8aa2d54f7">
+                     <semantic:text>"Neutrophils"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_14f05553-4f0c-4feb-a43c-e165d688456c">
+                  <semantic:inputEntry id="_6e289704-f12d-4d10-97b8-becb5f23b2e5">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_f89bc7c2-a69e-4f1a-b9c8-11a02d23a903">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_3ba9effc-d53f-47d2-9d0f-483f5609d3b1">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_9c61094a-9a8a-4ff8-8807-5ccb0bc79418">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_c9a51d8e-dd42-451a-a246-6d17baff2d41">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_b09a315e-d9eb-4d5e-bd30-f40b9e8728d5">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_cff4ae53-286e-4030-9b10-e2252d711671">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5fadd42f-6ed7-4f57-bbf7-1b4ad9ac8515">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_0e61db39-9e7b-41f4-84eb-7943bc76b5aa">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_2c11acb5-071b-4157-bc67-eb8661169e28">
+                     <semantic:text>&lt; 150000</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5ee310ed-de29-44b7-bf76-a087e4d994e0">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_c341db96-f6a8-45d8-8da6-f4b9dfbc4301">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_e349f016-b5e9-4dc1-9843-7b73ea529866">
+                     <semantic:text>"Thrombocytopenia"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_0c124e1f-cd3a-4eba-91eb-a11ee91c2d80">
+                  <semantic:inputEntry id="_b8f8f06d-0174-465f-a23e-e2bd83e67b2f">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_a438d704-841a-4c8b-8449-f949cf6f415f">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_53e8416e-7e7e-49d0-b865-7553f1f0fc34">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_22f19cfd-f65b-428f-aa3f-9f144340c811">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_0a018bd2-d3d4-4d8f-90e3-83003cd25bdd">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_5688eb14-4882-4de5-a341-14d5c4bed8ed">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_010acecc-6d56-4ef2-b18d-447ce4018ada">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_40850a34-6aa2-45e1-badd-6fc5fa146579">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_fdf8ade6-6244-430b-b58d-d12abcd822d2">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_7f68f133-045e-4133-8b0d-af9f52e66edf">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_22acd21e-d4bd-483e-9b2a-3c5d5afd0a8a">
+                     <semantic:text>&gt; 10000</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_4c5c488c-3686-442b-870f-3ff5be3582c0">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_1bd74fa0-161d-4708-9231-e357570b1e8a">
+                     <semantic:text>"Elevated WBC"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+               <semantic:rule id="_cd8d34e9-0cae-4bc0-ac54-9e0ab4919a29">
+                  <semantic:inputEntry id="_e55e6a8f-d463-4661-8c6a-e9b825fe0de1">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_673476bb-178a-4088-97eb-fa9210bba7b0">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_4424c9cc-887d-45d1-97fa-d0177fff26d2">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_423b2359-3815-4cea-a170-44296de2b893">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_adccb5de-eb1d-401c-af34-61c9bbb569ad">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_8e4fba8a-cef4-493f-9360-94161bbbf23b">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_c291c5f1-05bc-47ba-99de-e0e2b3b2ae6e">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_8189938c-1f1e-4db4-be80-dc12839e4665">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_a888e148-687e-4aed-9510-b99782d372b0">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_c5aaa2c0-0454-45b3-bbff-38428a57b001">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_790cf3f4-6b5c-42ee-96f6-21286426fd97">
+                     <semantic:text>-</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:inputEntry id="_cc02db16-a5e7-45bb-8368-4eee03caed9f">
+                     <semantic:text>&gt; 300</semantic:text>
+                  </semantic:inputEntry>
+                  <semantic:outputEntry id="_90942b57-6b21-4bec-ad21-a23ae07749d7">
+                     <semantic:text>"Elevated Ferritin"</semantic:text>
+                  </semantic:outputEntry>
+                  <semantic:annotationEntry>
+                     <semantic:text/>
+                  </semantic:annotationEntry>
+               </semantic:rule>
+            </semantic:decisionTable>
+         </semantic:contextEntry>
+         <semantic:contextEntry id="_6eef520a-b1df-4906-b906-f310704cd6c4">
+            <semantic:literalExpression id="_8ca1a037-7100-44bf-b352-6cf6e02c4934">
+               <semantic:text>count(Abnormal Labs)</semantic:text>
+            </semantic:literalExpression>
+         </semantic:contextEntry>
+      </semantic:context>
+   </semantic:decision>
+   <semantic:decision id="_cf7e47cd-edeb-4e3a-8be4-90f8dd87395d"
+                      name="Current Creatinine - Value of">
+      <semantic:variable id="_e97ffdbc-69a7-49bb-be5b-96ae17a4f2b8"
+                         name="Current Creatinine - Value of"
+                         typeRef="Situational Data Definitions.tCreatinineValue"/>
+      <semantic:informationRequirement id="_2411e758-4553-4240-9ad5-1ee7575a3215">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_9719a86e-0fab-4e00-a05f-d5a9bf0a4984"
+                                  typeRef="Situational Data Definitions.tCreatinineValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentCreatinineValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_e0b2ac71-317c-4e2f-99fc-387bbbfceb0e"
+                      name="Current ALT - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent ALT (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e"
+                      tag="dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e">
+               <id:uuid>dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_3bb126d1-d402-4af2-977e-2126cdd8acfb"
+                         name="Current ALT - Value of"
+                         typeRef="Situational Data Definitions.tALTValue"/>
+      <semantic:informationRequirement id="_84e059ff-a4b5-48c4-9071-1dbcabb6ef81">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_351ba817-2d57-45c8-a627-6fcb2127da80"
+                                  typeRef="Situational Data Definitions.tALTValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentALTValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_7e0f7c76-3d72-4700-88d4-e2f18fdf120a"
+                      name="Current AST - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent AST (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f"
+                      tag="c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f">
+               <id:uuid>c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_91618309-9f4d-40e5-aad8-410a238c7ac2"
+                         name="Current AST - Value of"
+                         typeRef="Situational Data Definitions.tASTValue"/>
+      <semantic:informationRequirement id="_4e718cce-d618-44c1-92fc-a47b2230cf45">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_a2ec8b64-b8f2-4d15-9ea6-49548c8a1162"
+                                  typeRef="Situational Data Definitions.tASTValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentASTValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_9e966a71-43c8-428f-8547-5de8d6e44c38"
+                      name="Current WBC Count - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_57a58a43-8ff3-42ac-b1a1-ece0f58bf5cc"
+                         name="Current WBC Count - Value of"
+                         typeRef="Situational Data Definitions.tWBCCountValue"/>
+      <semantic:informationRequirement id="_a060ffb7-18e6-487b-859d-048d5bba9ebe">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_53197ac1-0ebf-45d0-bc46-53ecf1200cc7"
+                                  typeRef="Situational Data Definitions.tWBCCountValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentWBCCountValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_537b76a4-8c06-44e8-84ca-5928553c4bfb"
+                      name="Current Neutrophils Count - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent Neutrophils (#) (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/9547fdae-e53d-36d2-8c8d-546b2822d40f"
+                      tag="9547fdae-e53d-36d2-8c8d-546b2822d40f">
+               <id:uuid>9547fdae-e53d-36d2-8c8d-546b2822d40f</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_a80f6e66-5ead-4f3d-b477-f1c76e61c12e"
+                         name="Current Neutrophils Count - Value of"
+                         typeRef="Situational Data Definitions.tNeutrophilsCountValue"/>
+      <semantic:informationRequirement id="_1fc3e938-91b8-45b2-add1-f439cccfe8d1">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_a49354bc-539f-4cb7-bd1f-631e82a51df1"
+                                  typeRef="Situational Data Definitions.tNeutrophilsCountValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentNeutrophilsCountValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_0a282d85-41e4-44ee-ba06-0118be7ab810"
+                      name="Current Platelet Count - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent Platelets (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/256c1862-05d1-3c22-bfd8-b34c40206eb5"
+                      tag="256c1862-05d1-3c22-bfd8-b34c40206eb5">
+               <id:uuid>256c1862-05d1-3c22-bfd8-b34c40206eb5</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_48a201a4-d992-4bd8-bebc-fe9d0ade7cab"
+                         name="Current Platelet Count - Value of"
+                         typeRef="Situational Data Definitions.tPlateletCountValue"/>
+      <semantic:informationRequirement id="_894b03e9-ead2-4a8a-9835-ce81ea02a66a">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_78683b0d-a2a3-4121-9ca4-d7d165a38da6"
+                                  typeRef="Situational Data Definitions.tPlateletCountValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentPlateletCountValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_8cc50e32-fa70-40e8-9a4c-90a1ab053b33"
+                      name="Current Ferritin - Value of">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Most Recent Ferritin (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/cfb06246-ab5b-3871-8385-120d5664f14f"
+                      tag="cfb06246-ab5b-3871-8385-120d5664f14f">
+               <id:uuid>cfb06246-ab5b-3871-8385-120d5664f14f</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20201101">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_b29b3be7-dbc0-45da-92f0-c08fd0a8be46"
+                         name="Current Ferritin - Value of"
+                         typeRef="Situational Data Definitions.tFerritinValue"/>
+      <semantic:informationRequirement id="_58728165-3671-4cf8-b320-b67e88a4b422">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_05458487-751a-4fcc-a8ff-ec5473c0e5ea"
+                                  typeRef="Situational Data Definitions.tFerritinValue">
+         <semantic:text>Situational Data Definitions.Covid19 Diagnostic Features.currentFerritinValue</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <dmndi:DMNDI>
+      <dmndi:DMNDiagram id="_7a2aa6e4-7014-4da6-b30f-b376509b04fd" name="Page 1">
+         <di:extension/>
+         <dmndi:Size height="1135" width="4397.796283650409"/>
+         <dmndi:DMNShape dmnElementRef="_099bccf8-e325-4490-86ea-681ab1268250"
+                         id="_8035ae6e-679c-40e3-b806-0bf2c0b90ea6">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1466.7098950087477"
+                       y="575.5454468884988"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_2723005f-a26b-49ae-89d6-7aebef1ed1db"
+                         id="_4a51d233-c02f-41ef-b4d2-a66aa09d7da5">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1629.7436061363055"
+                       y="612.9999961853027"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_a3e10eee-33c1-44a4-be3d-f35c8c3aea80"
+                         id="_6570e003-4b7f-4071-91f3-943e5019b86b">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1388.709838475338"
+                       y="392.7878820885443"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_de728a62-0a66-4c75-b507-a649a7b30873"
+                         id="_6bfc1a44-5bfc-45fb-bedb-354816019121">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1874.802032292498"
+                       y="786.9999961853027"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_54cf8cf3-45ba-45b9-8f57-e9f6329c3f13"
+                         id="_75e5907c-859b-456e-bd6c-cafdc91a0dff">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1990.8267231853865"
+                       y="899.9999961853027"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_9a401377-1b7c-4c02-b795-f266aeb1100c"
+                         id="_e60f5c9a-62e4-4b1f-844b-ec1e1b72b4e5">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1765.7279572590805"
+                       y="696.9999961853027"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_5676ea56-407f-40f4-a4aa-cb8e793392b7"
+                         id="_a7f386de-e947-4460-95bb-9b944629181c">
+            <dc:Bounds height="60.00000762939459"
+                       width="135.48234176635765"
+                       x="1252.1981716396851"
+                       y="276.7878820885442"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_149192c0-4e09-4d00-85f4-19f39c1c45cb"
+                         id="_b2775a82-0c69-42c0-947e-0c2523f43215">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1104.713331041916"
+                       y="216.78788208854428"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_87a79ccc-35fe-4339-a62b-d2c4ae0144fd"
+                         id="_afd21e35-8383-48aa-93f1-940c65c1aa6d">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635754"
+                       x="924.895150488075"
+                       y="189.18180569735475"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_8483b507-3001-439e-a2ce-febfe7f9006f"
+                         id="_623a4c1a-89a7-474c-af68-5e78081c5abc">
+            <dc:Bounds height="60.000000000000014"
+                       width="153"
+                       x="1555.046896430958"
+                       y="43.55748912292381"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_ef3ffada-98af-4dae-8e11-faede3359d0f"
+                         id="_9f2def5e-b084-4515-aa23-7025eeee2967">
+            <dc:Bounds height="60"
+                       width="153"
+                       x="2024.9847770194842"
+                       y="231.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_cf7e47cd-edeb-4e3a-8be4-90f8dd87395d"
+                         id="_cbf4bd18-7a2e-4aab-80e4-c6e8e89a3912">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2218.3684180505415"
+                       y="836.9862992015916"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_e0b2ac71-317c-4e2f-99fc-387bbbfceb0e"
+                         id="_7432cb51-42ab-4e17-8fd9-aa53989bc41f">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2245.8478699621687"
+                       y="709.8904072515825"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_7e0f7c76-3d72-4700-88d4-e2f18fdf120a"
+                         id="_83a30996-d49c-4075-8955-8fff60f41edc">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2281.2587695119473"
+                       y="563.2166800873379"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_9e966a71-43c8-428f-8547-5de8d6e44c38"
+                         id="_7208a862-1e63-4b67-ba4f-071fa82c5335">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2303.1766367633295"
+                       y="417.99998526377254"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_537b76a4-8c06-44e8-84ca-5928553c4bfb"
+                         id="_492bd8ba-7174-41f9-a647-0560104c6835">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2364.436910807516"
+                       y="302.2191740527433"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_0a282d85-41e4-44ee-ba06-0118be7ab810"
+                         id="_2c162f85-0702-4bdd-9961-c83f6812fdcf">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2504.2588291168213"
+                       y="202.78788208854428"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_8cc50e32-fa70-40e8-9a4c-90a1ab053b33"
+                         id="_6f3e21d9-f2a2-460a-b2f7-902c08013bc6">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2684.2588291168213"
+                       y="122.78788208854428"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include1:_ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"
+                         id="_be59d012-1c91-4369-8dc4-5ed95c9fbbd1">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1025.2588291168213"
+                       y="417.99999618530273"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include1:_ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"
+                         id="_d0e1b1f7-ca0f-43f4-93d9-d2dc47073abe">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="1650.2588291168213"
+                       y="1049.9999923706055"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="include1:_ad63b6d4-2cf6-40c2-9aa8-75349bd3052f"
+                         id="_ca9d8520-11ba-4ff1-9907-3f0c7cc687ce">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="2708.121840990066"
+                       y="595.3972531306317"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNEdge dmnElementRef="_a1bddc43-ba3b-42b0-8ce3-a6c2e148f8e1"
+                        id="_138d24c5-bd9c-480b-bb77-6fc16cb1b1fb">
+            <di:waypoint x="1012.6331227475966" y="189.18180569735475"/>
+            <di:waypoint x="1555.046896430958" y="73.55748912292383"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_bb4688df-b15c-4609-8551-a1ae63cd8d9b"
+                        id="_e125a2a6-d92e-421f-804c-af0f30bd7221">
+            <di:waypoint x="1152.4513033014375" y="216.78788208854428"/>
+            <di:waypoint x="1571.546896430958" y="103.55748912292383"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_dbafdd81-d1f6-45e5-b59c-190616ed07cd"
+                        id="_8a797fa0-6652-4042-af0e-c12903d4cacc">
+            <di:waypoint x="1339.9361438992069" y="276.7878820885442"/>
+            <di:waypoint x="1611.546896430958" y="103.55748912292383"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_25f10392-a0e7-4491-ab83-050631125e4b"
+                        id="_d053a9c9-0f76-4af7-9b43-75920417434b">
+            <di:waypoint x="1456.4478107348596" y="392.7878820885443"/>
+            <di:waypoint x="1631.546896430958" y="103.55748912292383"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_93bdc70f-af31-471e-a20b-24794c40a8bc"
+                        id="_8d218489-e33f-44dc-b2dd-343b82ba013b">
+            <di:waypoint x="2101.484777019484" y="231.78788590324154"/>
+            <di:waypoint x="1708.046896430958" y="83.55748912292383"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_eef712be-d2c7-4e3f-8d13-cca7273d0f3b"
+                        id="_f2f66e77-ca25-4221-ac5e-028d475b35ba">
+            <di:waypoint x="1524.4478672682692" y="575.5454468884988"/>
+            <di:waypoint x="2041.4847770194842" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_c6fb1206-3637-4e67-9c75-6b0246d04e3a"
+                        id="_626cf420-957a-4b61-82c0-c564e7eb177e">
+            <di:waypoint x="1707.481578395827" y="612.9999961853027"/>
+            <di:waypoint x="2051.484777019484" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_6b5ce9e7-20de-4ac7-a814-7934f1205044"
+                        id="_f977df0a-7a89-474b-bfc9-0b69409cfa8c">
+            <di:waypoint x="1823.465929518602" y="696.9999961853027"/>
+            <di:waypoint x="2071.484777019484" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_b89788d3-9e1c-4f22-8602-f941bdda69b9"
+                        id="_fe960b99-7dd8-42a2-b2f5-2a23e5768f41">
+            <di:waypoint x="1942.5400045520196" y="786.9999961853027"/>
+            <di:waypoint x="2081.484777019484" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_82633780-5f76-43a7-858c-4f4f7407562e"
+                        id="_0f1a1269-f6a2-40e5-8fa5-c5301360d45c">
+            <di:waypoint x="2038.564695444908" y="899.9999961853027"/>
+            <di:waypoint x="2101.484777019484" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_4f3e5601-9b69-489a-b660-a130436aac34"
+                        id="_a9f18704-f529-4f4c-85eb-06e0f2bdd183">
+            <di:waypoint x="2256.106390310063" y="836.9862992015916"/>
+            <di:waypoint x="2111.484777019484" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_664320a3-1404-44fa-8f06-4149f1f66e08"
+                        id="_32e4910b-1b82-4607-b20a-3f1d745f5906">
+            <di:waypoint x="2303.58584222169" y="709.8904072515825"/>
+            <di:waypoint x="2121.484777019484" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_752c46ea-424d-4f3f-afd0-703db93bc10b"
+                        id="_d368abdd-01c5-408c-876b-990de79cc325">
+            <di:waypoint x="2338.996741771469" y="563.2166800873379"/>
+            <di:waypoint x="2141.484777019484" y="291.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_13d97279-251a-4720-8555-1349f2df8b98"
+                        id="_26e8952d-de19-4c72-b146-0819dd877bca">
+            <di:waypoint x="2506.496801376343" y="242.78788208854428"/>
+            <di:waypoint x="2177.984777019484" y="251.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_40515e4e-d8b6-49e7-9258-1f4df3802ce1"
+                        id="_6f298a10-31c6-456f-8173-411b3b44efcf">
+            <di:waypoint x="2392.1748830670376" y="302.2191740527433"/>
+            <di:waypoint x="2177.984777019484" y="261.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_47fa507d-8861-4fe7-bef1-995306fb088f"
+                        id="_5fa8ba9a-5d27-4756-86d2-87cf1fec9ef8">
+            <di:waypoint x="2310.414609022851" y="427.99998526377254"/>
+            <di:waypoint x="2177.984777019484" y="271.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_017c5a64-58e1-4aa3-a6e0-684d26a5f7cc"
+                        id="_6a9bb022-7808-4d7d-8a0c-4bb1d512acdf">
+            <di:waypoint x="2684.496801376343" y="152.78788208854428"/>
+            <di:waypoint x="2177.984777019484" y="241.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_a029c2b3-6f28-4106-8a57-b3121d7282aa"
+                        id="_0818be47-5fe5-489a-acd7-2353f035a45e">
+            <di:waypoint x="1072.9968013763428" y="417.99999618530273"/>
+            <di:waypoint x="992.6363213712539" y="249.18181332674928"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_991e6252-c672-4124-b7f6-247a73164434"
+                        id="_00030547-08eb-48a8-8be1-7b9e98a73b40">
+            <di:waypoint x="1092.9968013763428" y="417.99999618530273"/>
+            <di:waypoint x="1163.5994469076857" y="276.7878897179388"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_723b8a5c-190f-4509-bf45-715ca5b87027"
+                        id="_ef5003df-3ad3-4450-8dd9-8cacd4bb1919">
+            <di:waypoint x="1122.9968013763428" y="417.99999618530273"/>
+            <di:waypoint x="1311.084287505455" y="336.7878897179388"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_1d6c5146-cd8c-4730-9683-a0f84d94c9b8"
+                        id="_5f24c459-290b-4dcf-b692-d6b93a626115">
+            <di:waypoint x="1160.7411708831787" y="447.99999618530273"/>
+            <di:waypoint x="1388.709838475338" y="422.78788590324154"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_a9694a9d-1bba-42db-b3b8-d2d3cd928c9c"
+                        id="_d413e366-7a2e-4630-901d-6217379d3fb1">
+            <di:waypoint x="1657.4968013763428" y="1059.9999923706055"/>
+            <di:waypoint x="1534.4510658919264" y="635.5454545178933"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_d4383c9b-50dd-4dd9-aa55-265f56369864"
+                        id="_9ac5e7ef-31fe-49f0-b45f-e755614b4e99">
+            <di:waypoint x="1687.9968013763428" y="1049.9999923706055"/>
+            <di:waypoint x="1688.6297220020751" y="673.0000038146973"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_9146857a-d658-4854-b2d6-2d4ac1ad5143"
+                        id="_c9fdeadb-f174-4a86-b08e-e3016ea7888c">
+            <di:waypoint x="1707.9968013763428" y="1049.9999923706055"/>
+            <di:waypoint x="1815.7590181074413" y="757.0000038146973"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_92756f32-800d-4164-b93b-f5501c1af355"
+                        id="_2f7cc56d-c585-4726-a0c8-2079872f5290">
+            <di:waypoint x="1727.9968013763428" y="1049.9999923706055"/>
+            <di:waypoint x="1933.6881481582677" y="847.0000038146973"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_203aacf7-861c-417e-a68c-a2ab9c249118"
+                        id="_b7ef1802-9606-423a-8ebe-c5d42724bb14">
+            <di:waypoint x="1747.9968013763428" y="1049.9999923706055"/>
+            <di:waypoint x="2049.712839051156" y="960.0000038146973"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_58728165-3671-4cf8-b320-b67e88a4b422"
+                        id="_bdc2a592-e54c-43ad-8402-e414e39d31d9">
+            <di:waypoint x="2815.8598132495877" y="595.3972531306317"/>
+            <di:waypoint x="2752" y="182.7878897179388"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_894b03e9-ead2-4a8a-9835-ce81ea02a66a"
+                        id="_30e05c96-7236-449a-ad0f-2255a3c2d6fb">
+            <di:waypoint x="2795.8598132495877" y="595.3972531306317"/>
+            <di:waypoint x="2580.855055017409" y="262.7878897179388"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_1fc3e938-91b8-45b2-add1-f439cccfe8d1"
+                        id="_c0dac7cb-469b-4cde-af04-ff296fcae674">
+            <di:waypoint x="2775.8598132495877" y="595.3972531306317"/>
+            <di:waypoint x="2499.9192525738736" y="332.2191778674406"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_a060ffb7-18e6-487b-859d-048d5bba9ebe"
+                        id="_c75f4614-0e05-4f2c-96e7-510534cb14e1">
+            <di:waypoint x="2755.8598132495877" y="595.3972531306317"/>
+            <di:waypoint x="2438.658978529687" y="447.9999890784698"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_4e718cce-d618-44c1-92fc-a47b2230cf45"
+                        id="_a5e8dcb8-0f4b-431c-8a35-b28cbe955df4">
+            <di:waypoint x="2710.3598132495877" y="615.3972531306317"/>
+            <di:waypoint x="2416.7411112783047" y="593.2166839020351"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_84e059ff-a4b5-48c4-9071-1dbcabb6ef81"
+                        id="_e2ed7c82-d824-49fb-b839-6b3680d4850b">
+            <di:waypoint x="2708.3598132495877" y="625.3972531306317"/>
+            <di:waypoint x="2381.330211728526" y="739.8904110662797"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_2411e758-4553-4240-9ad5-1ee7575a3215"
+                        id="_75ff669e-7bcc-44a5-aa95-de887fef81fa">
+            <di:waypoint x="2715.3598132495877" y="645.3972531306317"/>
+            <di:waypoint x="2353.850759816899" y="866.9863030162888"/>
+            <dmndi:DMNLabel sharedStyle="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+         </dmndi:DMNEdge>
+      </dmndi:DMNDiagram>
+      <dmndi:DMNStyle fontBold="false"
+                      fontFamily="arial,helvetica,sans-serif"
+                      fontItalic="false"
+                      fontSize="11"
+                      fontStrikeThrough="false"
+                      fontUnderline="false"
+                      id="LS_92fb6274-efd5-4df8-b231-2c570617cd0f_0"/>
+   </dmndi:DMNDI>
+</semantic:definitions>

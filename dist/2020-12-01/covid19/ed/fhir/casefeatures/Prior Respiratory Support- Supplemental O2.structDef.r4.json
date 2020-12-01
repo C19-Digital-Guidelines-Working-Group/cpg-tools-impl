@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Prior Respiratory Support- Supplemental O2",
+        "language": "text/cql",
+        "expression": "Prior Respiratory Support- Supplemental O2 -  ServiceRequest"
+      }
+    }
+  ],
+  "name": "Prior Respiratory Support- Supplemental O2",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": " ServiceRequest",
+  "derivation": "constraint"
+}

@@ -1,0 +1,543 @@
+{
+  "resourceType": "Questionnaire",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "name": "Diagnostic Disposition",
+  "title": "Diagnostic Disposition",
+  "status": "draft",
+  "item": [
+    {
+      "text": "Covid Care Setting Disposition - Kind of",
+      "type": "group",
+      "item": [
+        {
+          "text": "Current Covid19 Severity - Kind of",
+          "type": "group",
+          "item": [
+            {
+              "text": "Current Severity of Covid19 - Kind of -- Diagnostics",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "Has RV Enlargement - Is",
+                  "code": [
+                    {
+                      "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                      "code": "af583d30-4a8e-330d-a864-926fd59a0d0f",
+                      "display": "Has RV enlargement (Descr. of)"
+                    }
+                  ],
+                  "text": "Has RV Enlargement - Is",
+                  "type": "boolean"
+                },
+                {
+                  "linkId": "Has Bilateral Pneumonia - Is",
+                  "code": [
+                    {
+                      "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                      "code": "a5a5c081-4462-3dc8-99f3-e1471d1b4d4f",
+                      "display": "Has Bilateral Pneumonia (Descr. of)"
+                    }
+                  ],
+                  "text": "Has Bilateral Pneumonia - Is",
+                  "type": "boolean"
+                },
+                {
+                  "linkId": "Current CXR Score - Value of",
+                  "text": "Current CXR Score - Value of",
+                  "type": "quantity"
+                },
+                {
+                  "linkId": "Current Lactate - Value of",
+                  "text": "Current Lactate - Value of",
+                  "type": "quantity"
+                },
+                {
+                  "text": "Abnormal Labs - Count of",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "Current Troponin - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "4becaa45-8d21-383b-89b7-8e17f06e6712",
+                          "display": "Most Recent Troponin I (Descr. of)"
+                        }
+                      ],
+                      "text": "Current Troponin - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current D-Dimer - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "5959cf6f-9a5d-3640-947a-e81012372314",
+                          "display": "Most Recent D-dimer (Descr. of)"
+                        }
+                      ],
+                      "text": "Current D-Dimer - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current Lymphocyte Count - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "fc070a93-5c12-34c2-8b3f-3cc7115e1059",
+                          "display": "Most Recent Lymphocytes (#) (Descr. of)"
+                        }
+                      ],
+                      "text": "Current Lymphocyte Count - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current LDH - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "95bfa631-4574-3a2b-8c16-e6b08ab7c989",
+                          "display": "Most Recent Lactate Dehydrogenase (Descr. of)"
+                        }
+                      ],
+                      "text": "Current LDH - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current CRP - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "1a5f251e-6304-3d4c-b207-6fe2a5961eaa",
+                          "display": "Most Recent C-Reactive Peptide (Descr. of)"
+                        }
+                      ],
+                      "text": "Current CRP - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "text": "Current Creatinine - Value of",
+                      "type": "group"
+                    },
+                    {
+                      "linkId": "Current ALT - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e",
+                          "display": "Most Recent ALT (Descr. of)"
+                        }
+                      ],
+                      "text": "Current ALT - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current AST - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f",
+                          "display": "Most Recent AST (Descr. of)"
+                        }
+                      ],
+                      "text": "Current AST - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current Platelet Count - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "256c1862-05d1-3c22-bfd8-b34c40206eb5",
+                          "display": "Most Recent Platelets (Descr. of)"
+                        }
+                      ],
+                      "text": "Current Platelet Count - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current Neutrophils Count - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "9547fdae-e53d-36d2-8c8d-546b2822d40f",
+                          "display": "Most Recent Neutrophils (#) (Descr. of)"
+                        }
+                      ],
+                      "text": "Current Neutrophils Count - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current WBC Count - Value of",
+                      "text": "Current WBC Count - Value of",
+                      "type": "quantity"
+                    },
+                    {
+                      "linkId": "Current Ferritin - Value of",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "cfb06246-ab5b-3871-8385-120d5664f14f",
+                          "display": "Most Recent Ferritin (Descr. of)"
+                        }
+                      ],
+                      "text": "Current Ferritin - Value of",
+                      "type": "quantity"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Current Severity of Covid19 - Kind of -- Clinical",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Current Severity of Covid19 - Kind of - Manifestations",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "Current Severity of Covid19 - Kind of -- qCSI",
+                      "type": "group",
+                      "item": [
+                        {
+                          "text": "Current qCSI Score - Value of",
+                          "type": "group",
+                          "item": [
+                            {
+                              "linkId": "Current Documented Respiratory Rate - Value of",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "79919c0e-1a3d-38ea-a212-e5db8ab30fca",
+                                  "display": "Current Respiratory Rate (Descr. of)"
+                                }
+                              ],
+                              "text": "Current Documented Respiratory Rate - Value of",
+                              "type": "quantity"
+                            },
+                            {
+                              "text": "Current NC O2 Flow Setpoint - Value of",
+                              "type": "group"
+                            },
+                            {
+                              "text": "Recent Documented SpO2 - Min Value of",
+                              "type": "group"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Current Severity of Covid19 - Kind of -- Vitals",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "Current Documented Systolic Blood Pressure - Value of",
+                          "code": [
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "98a2ce86-4178-3b16-b22e-d0471aca7a49",
+                              "display": "Current Systolic BP (Descr. of)"
+                            }
+                          ],
+                          "text": "Current Documented Systolic Blood Pressure - Value of",
+                          "type": "quantity"
+                        },
+                        {
+                          "linkId": "Current Documented Heart Rate - Value of",
+                          "code": [
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "84a8ab48-fc39-307a-9f4f-99a89db68d73",
+                              "display": "Current Heart Rate (Descr. of)"
+                            }
+                          ],
+                          "text": "Current Documented Heart Rate - Value of",
+                          "type": "quantity"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Current Severity of Covid-19 - Kind of -- Symptoms",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "Has Altered LOC - Is",
+                          "code": [
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "0d631b60-7489-3b5e-b816-dd4dd5d3b243",
+                              "display": "Current Mental Status (Descr. of)"
+                            }
+                          ],
+                          "text": "Has Altered LOC - Is",
+                          "type": "boolean"
+                        },
+                        {
+                          "linkId": "Has Hemoptysis - Is",
+                          "code": [
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "a3a8db59-2649-3876-9bf8-61f81878bef9",
+                              "display": "Has Hemoptysis (Descr. of)"
+                            }
+                          ],
+                          "text": "Has Hemoptysis - Is",
+                          "type": "boolean"
+                        },
+                        {
+                          "linkId": "Has Dyspnea - Is",
+                          "code": [
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "78380b3f-a38e-39fe-ae3e-5ecfd7e8b086",
+                              "display": "Current Persistent Dyspnea (Descr. of)"
+                            }
+                          ],
+                          "text": "Has Dyspnea - Is",
+                          "type": "boolean"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Current Severity of Covid19 - Kind of -- Risk Factors",
+                      "type": "group",
+                      "item": [
+                        {
+                          "text": "Has Exacerbating Factor of Covid19 - Count of",
+                          "type": "group",
+                          "item": [
+                            {
+                              "linkId": "Patient Sex - Kind of",
+                              "text": "Patient Sex - Kind of",
+                              "type": "open-choice"
+                            },
+                            {
+                              "linkId": "Current Patient Age - Value of",
+                              "text": "Current Patient Age - Value of",
+                              "type": "quantity"
+                            },
+                            {
+                              "linkId": "Patient Race - Kind of",
+                              "text": "Patient Race - Kind of",
+                              "type": "open-choice"
+                            },
+                            {
+                              "linkId": "Has Diabetes Mellitus - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5",
+                                  "display": "Has Diabetes Mellitus Type 1 (Descr. of)"
+                                },
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "8d45f1b7-8513-3589-bd37-fe16739d9d89",
+                                  "display": "Has Diabetes Mellitus Type 2 (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Diabetes Mellitus - Is",
+                              "type": "boolean"
+                            },
+                            {
+                              "linkId": "Has Cardiovascular Disease - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "6ef655d9-01f8-3763-a7d4-ad3e54504357",
+                                  "display": "Has Cardiovascular Disease (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Cardiovascular Disease - Is",
+                              "type": "boolean"
+                            },
+                            {
+                              "linkId": "Has Hypertension - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "01da3ef2-5313-3ba8-bd4e-2123c9ae77eb",
+                                  "display": "Has Hypertension (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Hypertension - Is",
+                              "type": "boolean"
+                            },
+                            {
+                              "linkId": "Has Kidney Disease - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "4c5ef2ec-4498-3af9-91bb-f7556e025b41",
+                                  "display": "Has Renal Disease (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Kidney Disease - Is",
+                              "type": "boolean"
+                            },
+                            {
+                              "linkId": "Has Chronic Obstructive Pulmonary Disease - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "3dd9edb0-933b-39cf-b279-4bf515e224dc",
+                                  "display": "Has Chronic Obstructive Pulmonary Disease (COPD) (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Chronic Obstructive Pulmonary Disease - Is",
+                              "type": "boolean"
+                            },
+                            {
+                              "linkId": "Has Malignancy - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "986a4f4e-4179-3e81-9dc8-b2a297aa8c87",
+                                  "display": "Has Malignancy (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Malignancy - Is",
+                              "type": "boolean"
+                            },
+                            {
+                              "linkId": "Has Obesity - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "9f825141-6f7e-3717-aa63-f96f1f10d7ac",
+                                  "display": "Has Obesity (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Obesity - Is",
+                              "type": "boolean"
+                            },
+                            {
+                              "linkId": "Has Cerebrovascular Disease - Is",
+                              "code": [
+                                {
+                                  "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                                  "code": "9fdb23fd-68c3-3b78-a52f-019db75d6f6e",
+                                  "display": "Has Cerebrovascular disease (Descr. of)"
+                                }
+                              ],
+                              "text": "Has Cerebrovascular Disease - Is",
+                              "type": "boolean"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Current Covid Severity - Kind of -- Social Factors",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "Long Term Care Resident - Is",
+                          "code": [
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "955c689f-130b-33ab-b64a-3c43dc6d6f81",
+                              "display": "Current Long Term Care Facility Resident (Descr. of)"
+                            }
+                          ],
+                          "text": "Long Term Care Resident - Is",
+                          "type": "boolean"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "text": "On Hemodynamic Support - Is",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "On Advanced Respiratory Support - Is",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "Currently Used Breathing Support Equipment - Kind of",
+                          "code": [
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+                              "display": "Prior Respiratory Support- High Flow Nasal Canula (Descr. of)"
+                            },
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                              "display": "Prior Respiratory Support- Mechanical Ventilation (Descr. of)"
+                            },
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                              "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation (Descr. of)"
+                            },
+                            {
+                              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                              "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+                              "display": "Prior Respiratory Support- Supplemental O2 (Descr. of)"
+                            }
+                          ],
+                          "text": "Currently Used Breathing Support Equipment - Kind of",
+                          "type": "open-choice"
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "On Vasopressors - Is",
+                      "code": [
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "e491dfcc-cf77-35ef-b4c9-fde4027f33df",
+                          "display": "On Dobutamine  (Descr. of)"
+                        },
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "39e38c19-caa5-39eb-a485-2fea6166e9fd",
+                          "display": "On Epinephrine (Descr. of)"
+                        },
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "f7ac0c35-613d-3796-b45c-13fa031adcdb",
+                          "display": "On Norepinephrine (Descr. of)"
+                        },
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4",
+                          "display": "On Vasopressin (Descr. of)"
+                        },
+                        {
+                          "system": "https://opencpg.org/taxonomy/covid19/ed/",
+                          "code": "d7e7bc21-3b84-3a95-9946-ff0d9cb165cb",
+                          "display": "On Dopamine (Descr. of)"
+                        },
+                        {
+                          "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+                          "code": "AssessmentDecision",
+                          "display": "Assessment Decision"
+                        }
+                      ],
+                      "text": "On Vasopressors - Is",
+                      "type": "boolean"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

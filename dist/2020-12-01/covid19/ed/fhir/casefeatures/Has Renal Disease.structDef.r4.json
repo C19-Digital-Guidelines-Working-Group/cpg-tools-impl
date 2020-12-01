@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Has Renal Disease",
+        "language": "text/cql",
+        "expression": "Has Renal Disease - Condition"
+      }
+    }
+  ],
+  "name": "Has Renal Disease",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Condition",
+  "derivation": "constraint"
+}

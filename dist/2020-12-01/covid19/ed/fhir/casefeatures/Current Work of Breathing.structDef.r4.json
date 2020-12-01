@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Current Work of Breathing",
+        "language": "text/cql",
+        "expression": "Current Work of Breathing - Observation"
+      }
+    }
+  ],
+  "name": "Current Work of Breathing",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Observation",
+  "derivation": "constraint"
+}

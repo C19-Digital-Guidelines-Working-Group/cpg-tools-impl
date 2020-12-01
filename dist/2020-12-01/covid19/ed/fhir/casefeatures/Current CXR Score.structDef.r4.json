@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Current CXR Score",
+        "language": "text/cql",
+        "expression": "Current CXR Score -  DiagnosticReport"
+      }
+    }
+  ],
+  "name": "Current CXR Score",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": " DiagnosticReport",
+  "derivation": "constraint"
+}

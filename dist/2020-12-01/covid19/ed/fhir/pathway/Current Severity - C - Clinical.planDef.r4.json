@@ -1,0 +1,132 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#https://clinicalknowledgemanagement.mayo.edu/artifacts/5d4c6b73-330e-46d9-a8b6-b89a74ada510",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20201118-154414",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:75692ecd-0724-4661-9270-78a3d4c47620"
+    }
+  ],
+  "version": "TODO",
+  "name": "Current Severity - C - Clinical",
+  "title": "Current Severity - C - Clinical",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "310adb96-1a21-3100-90eb-c7ef4fe270e7",
+        "display": "Decision Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "#afbed7fa-e20d-440f-879a-2e74f18ab25a",
+      "title": "Current Severity of Covid19 - Kind of -- Clinical",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#8cbc8259-3f4a-4abf-b23b-5cc85711c4e2",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#be7e21f0-b07f-43dc-bc9d-9b65c73da774",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#8cbc8259-3f4a-4abf-b23b-5cc85711c4e2",
+      "title": "Current Severity of Covid19 - Kind of - Manifestations",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#5f52c28a-ff2e-40e2-bfe2-ee50dbeea7e3",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#7fd9b144-c827-42a6-b559-45198a9e2263",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#b0325b61-9eaf-4a2d-bebe-8a0b2017945d",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#31634752-ddb7-4d61-b34a-449cd765bf4b",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#783c05d6-d906-48e0-aabe-7cc3a7680112",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "be7e21f0-b07f-43dc-bc9d-9b65c73da774",
+      "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/c101ba4a-2875-402b-865b-59ed2cb86ed5"
+    },
+    {
+      "id": "5f52c28a-ff2e-40e2-bfe2-ee50dbeea7e3",
+      "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/6fd72751-c356-496a-880a-e8a70d9ee62f"
+    },
+    {
+      "id": "7fd9b144-c827-42a6-b559-45198a9e2263",
+      "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/6fd72751-c356-496a-880a-e8a70d9ee62f"
+    },
+    {
+      "id": "b0325b61-9eaf-4a2d-bebe-8a0b2017945d",
+      "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a"
+    },
+    {
+      "id": "31634752-ddb7-4d61-b34a-449cd765bf4b",
+      "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a"
+    },
+    {
+      "id": "783c05d6-d906-48e0-aabe-7cc3a7680112",
+      "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/b75cdb09-aa5d-45d1-88e1-a7fa9cd48564"
+    }
+  ]
+}

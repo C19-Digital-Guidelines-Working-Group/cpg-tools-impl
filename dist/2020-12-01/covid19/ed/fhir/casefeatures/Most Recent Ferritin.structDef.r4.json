@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Most Recent Ferritin",
+        "language": "text/cql",
+        "expression": "Most Recent Ferritin - Observation"
+      }
+    }
+  ],
+  "name": "Most Recent Ferritin",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Observation",
+  "derivation": "constraint"
+}

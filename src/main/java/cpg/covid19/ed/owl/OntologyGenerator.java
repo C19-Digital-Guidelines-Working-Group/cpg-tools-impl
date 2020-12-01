@@ -1,12 +1,13 @@
 package cpg.covid19.ed.owl;
 
+import static cpg.util.fhir.IOUtil.saveOntology;
+
+import cpg.covid19.ed.AbstractOntologyDrivenGenerator;
 import edu.mayo.kmdp.terms.TermsHelper;
 import edu.mayo.kmdp.util.NameUtils;
 import edu.mayo.kmdp.util.Util;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.URI;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +20,6 @@ import org.apache.jena.vocabulary.RDFS;
 import org.apache.jena.vocabulary.SKOS;
 import org.omg.spec.api4kp._20200801.id.Term;
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.AddImport;
 import org.semanticweb.owlapi.model.IRI;
@@ -32,8 +32,12 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyID;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.vocab.OWL2Datatype;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
+
+  Logger logger = LoggerFactory.getLogger(OntologyGenerator.class);
 
   private static final String SCT_NS = "http://snomed.info/id/";
   private static final String SCT_ASSOC_FINDING = SCT_NS + "246090004";
@@ -56,22 +60,9 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
   private static final String CSO_MOST_REC_LAB =
       CSO_NAMESPACE + "897c9bc1-3578-4d01-b1f5-74e8b29a65d7";
 
-  //TODO FIXME - Replace after publishing the ontology of Interrogatives
-  enum Interrogatives {
-    IS("Is", " - Present"),
-    KIND_OF("KindOf", " - Kind Of"),
-    VALUE_OF("ValueOf", " - Value Of");
-
-    public final String code;
-    public final String label;
-
-    Interrogatives(String code, String label) {
-      this.code = code;
-      this.label = label;
-    }
-  }
 
   public void run(Path srcPath, Path tgtPath) {
+    logger.info("Generate OWL Ontology from Data Glossary...");
     List<SemanticDataElementInfo> elements = readDataElements(srcPath);
     try {
       createOntology(elements, tgtPath);
@@ -79,7 +70,6 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
       e.printStackTrace();
     }
   }
-
 
   private void createOntology(
       List<SemanticDataElementInfo> elements, Path tgtPath)
@@ -117,7 +107,7 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
   }
 
   private void addCommonContent(OWLOntology onto, OWLDataFactory df) {
-    declareAsSnomed(TermsHelper.sct("Supected","415684004"),onto,df);
+    declareAsSnomed(TermsHelper.sct("Suspected","415684004"),onto,df);
   }
 
 
@@ -176,7 +166,7 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
             )
         ));
 
-    pun(label, Interrogatives.IS, csUri, onto, df, concepts);
+    pun(label, Interrogatives.IS, csUri, onto, df, concepts, term);
 
     concepts.put(csUri, label);
   }
@@ -194,7 +184,7 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
         SCT_ASSOC_FINDING,
         onto, df);
 
-    pun(label, Interrogatives.VALUE_OF, csUri, onto, df, concepts);
+    pun(label, Interrogatives.VALUE_OF, csUri, onto, df, concepts, term);
 
     concepts.put(csUri, label);
   }
@@ -211,7 +201,7 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
         df
     );
 
-    pun(label, Interrogatives.IS, csUri, onto, df, concepts);
+    pun(label, Interrogatives.IS, csUri, onto, df, concepts, term);
 
     concepts.put(csUri, label);
   }
@@ -226,7 +216,7 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
         SCT_ASSOC_PROCEDR,
         onto, df);
 
-    pun(label, Interrogatives.KIND_OF, csUri, onto, df, concepts);
+    pun(label, Interrogatives.KIND_OF, csUri, onto, df, concepts, term);
 
     concepts.put(csUri, label);
   }
@@ -255,14 +245,8 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
     onto.addAxiom(
         df.getOWLDeclarationAxiom(csoClass)
     );
-    onto.addAxiom(
-        df.getOWLAnnotationAssertionAxiom(
-            csoClass.getIRI(),
-            df.getOWLAnnotation(
-                df.getOWLAnnotationProperty(RDFS.label.getURI()),
-                df.getOWLLiteral(label)
-            ))
-    );
+    addLabel(csoClass.getIRI(), label, df, onto);
+
 
     Term focalConcept = termInfo.focalConcept;
     if (focalConcept != null) {
@@ -293,7 +277,8 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
 
 
   private URI pun(String label, Interrogatives suffix, URI csoUri,
-      OWLOntology onto, OWLDataFactory df, Map<URI, String> concepts) {
+      OWLOntology onto, OWLDataFactory df, Map<URI, String> concepts,
+      SemanticDataElementInfo mappings) {
 
     UUID csoUUID = Util.ensureUUID(NameUtils.getTrailingPart(csoUri.toString()))
         .orElseThrow();
@@ -314,14 +299,8 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
             IRI.create(csoUri)
         )
     );
-    onto.addAxiom(
-        df.getOWLAnnotationAssertionAxiom(
-            csoConcept.getIRI(),
-            df.getOWLAnnotation(
-                df.getOWLAnnotationProperty(RDFS.label.getURI()),
-                df.getOWLLiteral(csoLabel)
-            ))
-    );
+    addLabel(csoConcept.getIRI(), csoLabel, df, onto);
+
     onto.addAxiom(
         df.getOWLDataPropertyAssertionAxiom(
             df.getOWLDataProperty(SKOS.notation.getURI()),
@@ -329,10 +308,7 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
             df.getOWLLiteral(csoUUID.toString()))
     );
 
-    onto.addAxiom(df.getOWLClassAssertionAxiom(
-        df.getOWLClass(IRI.create(
-            SKOS.Concept.getURI())),
-        csoConcept));
+    asSkosConcept(csoConcept, df, onto);
 
     String pcoLabel = label + suffix.label;
     OWLNamedIndividual pcoConcept = df
@@ -343,14 +319,8 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
     onto.addAxiom(
         df.getOWLDeclarationAxiom(pcoConcept)
     );
-    onto.addAxiom(
-        df.getOWLAnnotationAssertionAxiom(
-            pcoConcept.getIRI(),
-            df.getOWLAnnotation(
-                df.getOWLAnnotationProperty(RDFS.label.getURI()),
-                df.getOWLLiteral(pcoLabel)
-            ))
-    );
+    addLabel(pcoConcept.getIRI(), pcoLabel, df, onto);
+
     onto.addAxiom(df.getOWLObjectPropertyAssertionAxiom(
         df.getOWLObjectProperty(IRI.create(SKOS.broader.getURI())),
         pcoConcept,
@@ -364,11 +334,75 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
             df.getOWLLiteral(csoUUID.toString() + ":" + suffix.code))
     );
 
+    asSkosConcept(pcoConcept, df, onto);
+
+    assertMappings(csoConcept, mappings, df, onto);
+
+    return pcoConcept.getIRI().toURI();
+  }
+
+  private void asSkosConcept(OWLNamedIndividual concept, OWLDataFactory df, OWLOntology onto) {
+    OWLNamedIndividual conceptScheme = df.getOWLNamedIndividual(IRI.create(C19ED_TAXONOMY_SCHEME));
+    OWLNamedIndividual topConcept = df.getOWLNamedIndividual(IRI.create(C19ED_TAXONOMY_TOP));
+
+    // These axioms should be asserted one-time
+    onto.addAxiom(df.getOWLClassAssertionAxiom(
+        df.getOWLClass(IRI.create(
+            SKOS.ConceptScheme.getURI())),
+        conceptScheme));
+    addLabel(conceptScheme.getIRI(), "C19 ED Concept Scheme", df, onto);
+
     onto.addAxiom(df.getOWLClassAssertionAxiom(
         df.getOWLClass(IRI.create(
             SKOS.Concept.getURI())),
-        pcoConcept));
-    return pcoConcept.getIRI().toURI();
+        topConcept));
+    addLabel(topConcept.getIRI(), "C19 ED Concept", df, onto);
+
+
+    onto.addAxiom(df.getOWLObjectPropertyAssertionAxiom(
+        df.getOWLObjectProperty(IRI.create(SKOS.inScheme.getURI())),
+        topConcept,
+        conceptScheme));
+
+    onto.addAxiom(df.getOWLObjectPropertyAssertionAxiom(
+        df.getOWLObjectProperty(IRI.create(SKOS.hasTopConcept.getURI())),
+        conceptScheme,
+        topConcept));
+
+    // These are per-individual concept
+
+    onto.addAxiom(df.getOWLClassAssertionAxiom(
+        df.getOWLClass(IRI.create(
+            SKOS.Concept.getURI())),
+        concept));
+
+    onto.addAxiom(df.getOWLObjectPropertyAssertionAxiom(
+        df.getOWLObjectProperty(IRI.create(SKOS.inScheme.getURI())),
+        concept,
+        conceptScheme));
+
+    onto.addAxiom(df.getOWLObjectPropertyAssertionAxiom(
+        df.getOWLObjectProperty(IRI.create(SKOS.broader.getURI())),
+        concept,
+        topConcept));
+
+  }
+
+  private void assertMappings(OWLNamedIndividual csoConcept, SemanticDataElementInfo mappings,
+      OWLDataFactory df, OWLOntology onto) {
+    mappings.allConcepts().forEach(trm ->
+        onto.addAxiom(df.getOWLObjectPropertyAssertionAxiom(
+            df.getOWLObjectProperty(IRI.create(SKOS.broadMatch.getURI())),
+            csoConcept,
+            df.getOWLNamedIndividual(IRI.create(trm.getResourceId()))
+        ))
+    );
+    if (mappings.focalConcept != null) {
+      onto.addAxiom(df.getOWLObjectPropertyAssertionAxiom(
+          df.getOWLObjectProperty(IRI.create(SKOS.broadMatch.getURI())),
+          csoConcept,
+          df.getOWLNamedIndividual(IRI.create(mappings.focalConcept.getResourceId()))));
+    }
   }
 
 
@@ -383,24 +417,17 @@ public class OntologyGenerator extends AbstractOntologyDrivenGenerator {
         df.getOWLClass(IRI.create(
             CSO_CLINICAL_ENTITY))
     ));
+    addLabel(sctClass.getIRI(),sct.getLabel(), df, onto);
+  }
+
+  private void addLabel(IRI entity, String label, OWLDataFactory df, OWLOntology onto) {
     onto.addAxiom(
         df.getOWLAnnotationAssertionAxiom(
-            sctClass.getIRI(),
+            entity,
             df.getOWLAnnotation(
                 df.getOWLAnnotationProperty(RDFS.label.getURI()),
-                df.getOWLLiteral(sct.getLabel())
-            ))
-    );
+                df.getOWLLiteral(label)
+            )));
   }
 
-
-  private void saveOntology(OWLOntology onto, Path tgtPath)
-      throws IOException, OWLOntologyStorageException {
-    if (!Files.exists(tgtPath.getParent())) {
-      Files.createDirectories(tgtPath.getParent());
-    }
-    try (OutputStream fos = Files.newOutputStream(tgtPath)) {
-      onto.saveOntology(new RDFXMLDocumentFormat(), fos);
-    }
-  }
 }

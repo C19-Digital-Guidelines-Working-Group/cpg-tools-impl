@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Age",
+        "language": "text/cql",
+        "expression": "Age - Patient"
+      }
+    }
+  ],
+  "name": "Age",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Patient",
+  "derivation": "constraint"
+}

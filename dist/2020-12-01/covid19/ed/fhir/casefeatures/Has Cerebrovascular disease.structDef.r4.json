@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Has Cerebrovascular disease",
+        "language": "text/cql",
+        "expression": "Has Cerebrovascular disease - Condition"
+      }
+    }
+  ],
+  "name": "Has Cerebrovascular disease",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Condition",
+  "derivation": "constraint"
+}

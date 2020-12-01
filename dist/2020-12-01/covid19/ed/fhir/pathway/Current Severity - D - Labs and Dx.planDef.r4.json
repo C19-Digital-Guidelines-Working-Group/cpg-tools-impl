@@ -1,0 +1,1318 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#https://clinicalknowledgemanagement.mayo.edu/artifacts/92fb6274-efd5-4df8-b231-2c570617cd0f",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20201118-154414",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:9e04d6d7-4f53-454a-83e9-238fb30a3462"
+    }
+  ],
+  "version": "TODO",
+  "name": "Current Severity - D - Labs and Dx",
+  "title": "Current Severity - D - Labs and Dx",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "310adb96-1a21-3100-90eb-c7ef4fe270e7",
+        "display": "Decision Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "#099bccf8-e325-4490-86ea-681ab1268250",
+      "title": "Current Troponin - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "4becaa45-8d21-383b-89b7-8e17f06e6712",
+              "display": "Most Recent Troponin I (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "4becaa45-8d21-383b-89b7-8e17f06e6712",
+                "display": "Most Recent Troponin I"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "4becaa45-8d21-383b-89b7-8e17f06e6712",
+                  "display": "Most Recent Troponin I"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Troponin I - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Troponin I - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#2723005f-a26b-49ae-89d6-7aebef1ed1db",
+      "title": "Current D-Dimer - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "5959cf6f-9a5d-3640-947a-e81012372314",
+              "display": "Most Recent D-dimer (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "5959cf6f-9a5d-3640-947a-e81012372314",
+                "display": "Most Recent D-dimer"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "5959cf6f-9a5d-3640-947a-e81012372314",
+                  "display": "Most Recent D-dimer"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent D-dimer - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent D-dimer - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#a3e10eee-33c1-44a4-be3d-f35c8c3aea80",
+      "title": "Current Lactate - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "#de728a62-0a66-4c75-b507-a649a7b30873",
+      "title": "Current LDH - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "95bfa631-4574-3a2b-8c16-e6b08ab7c989",
+              "display": "Most Recent Lactate Dehydrogenase (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "95bfa631-4574-3a2b-8c16-e6b08ab7c989",
+                "display": "Most Recent Lactate Dehydrogenase"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "95bfa631-4574-3a2b-8c16-e6b08ab7c989",
+                  "display": "Most Recent Lactate Dehydrogenase"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Lactate Dehydrogenase - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Lactate Dehydrogenase - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#54cf8cf3-45ba-45b9-8f57-e9f6329c3f13",
+      "title": "Current CRP - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "1a5f251e-6304-3d4c-b207-6fe2a5961eaa",
+              "display": "Most Recent C-Reactive Peptide (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "1a5f251e-6304-3d4c-b207-6fe2a5961eaa",
+                "display": "Most Recent C-Reactive Peptide"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "1a5f251e-6304-3d4c-b207-6fe2a5961eaa",
+                  "display": "Most Recent C-Reactive Peptide"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent C-Reactive Peptide - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent C-Reactive Peptide - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#9a401377-1b7c-4c02-b795-f266aeb1100c",
+      "title": "Current Lymphocyte Count - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "fc070a93-5c12-34c2-8b3f-3cc7115e1059",
+              "display": "Most Recent Lymphocytes (#) (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "fc070a93-5c12-34c2-8b3f-3cc7115e1059",
+                "display": "Most Recent Lymphocytes (#)"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "fc070a93-5c12-34c2-8b3f-3cc7115e1059",
+                  "display": "Most Recent Lymphocytes (#)"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Lymphocytes (#) - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Lymphocytes (#) - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#5676ea56-407f-40f4-a4aa-cb8e793392b7",
+      "title": "Current CXR Score - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "#149192c0-4e09-4d00-85f4-19f39c1c45cb",
+      "title": "Has Bilateral Pneumonia - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "a5a5c081-4462-3dc8-99f3-e1471d1b4d4f",
+              "display": "Has Bilateral Pneumonia (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "a5a5c081-4462-3dc8-99f3-e1471d1b4d4f",
+                "display": "Has Bilateral Pneumonia"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "a5a5c081-4462-3dc8-99f3-e1471d1b4d4f",
+                  "display": "Has Bilateral Pneumonia"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "a5a5c081-4462-3dc8-99f3-e1471d1b4d4f",
+                "display": "Has Bilateral Pneumonia"
+              }
+            }
+          ],
+          "type": "DiagnosticReport",
+          "profile": [
+            "http://hl7.org/fhir/DiagnosticReport"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "a5a5c081-4462-3dc8-99f3-e1471d1b4d4f",
+                  "display": "Has Bilateral Pneumonia"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Bilateral Pneumonia - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Bilateral Pneumonia - Observation - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Bilateral Pneumonia - DiagnosticReport"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Bilateral Pneumonia - DiagnosticReport - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#87a79ccc-35fe-4339-a62b-d2c4ae0144fd",
+      "title": "Has RV Enlargement - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "af583d30-4a8e-330d-a864-926fd59a0d0f",
+              "display": "Has RV enlargement (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "af583d30-4a8e-330d-a864-926fd59a0d0f",
+                "display": "Has RV enlargement"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "af583d30-4a8e-330d-a864-926fd59a0d0f",
+                  "display": "Has RV enlargement"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "af583d30-4a8e-330d-a864-926fd59a0d0f",
+                "display": "Has RV enlargement"
+              }
+            }
+          ],
+          "type": "DiagnosticReport",
+          "profile": [
+            "http://hl7.org/fhir/DiagnosticReport"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "af583d30-4a8e-330d-a864-926fd59a0d0f",
+                  "display": "Has RV enlargement"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has RV enlargement - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has RV enlargement - Observation - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has RV enlargement - DiagnosticReport"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has RV enlargement - DiagnosticReport - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#8483b507-3001-439e-a2ce-febfe7f9006f",
+      "title": "Current Severity of Covid19 - Kind of -- Diagnostics",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#87a79ccc-35fe-4339-a62b-d2c4ae0144fd",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#149192c0-4e09-4d00-85f4-19f39c1c45cb",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#5676ea56-407f-40f4-a4aa-cb8e793392b7",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#a3e10eee-33c1-44a4-be3d-f35c8c3aea80",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#ef3ffada-98af-4dae-8e11-faede3359d0f",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#ef3ffada-98af-4dae-8e11-faede3359d0f",
+      "title": "Abnormal Labs - Count of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#099bccf8-e325-4490-86ea-681ab1268250",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#2723005f-a26b-49ae-89d6-7aebef1ed1db",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#9a401377-1b7c-4c02-b795-f266aeb1100c",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#de728a62-0a66-4c75-b507-a649a7b30873",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#54cf8cf3-45ba-45b9-8f57-e9f6329c3f13",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#cf7e47cd-edeb-4e3a-8be4-90f8dd87395d",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#e0b2ac71-317c-4e2f-99fc-387bbbfceb0e",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#7e0f7c76-3d72-4700-88d4-e2f18fdf120a",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#0a282d85-41e4-44ee-ba06-0118be7ab810",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#537b76a4-8c06-44e8-84ca-5928553c4bfb",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#9e966a71-43c8-428f-8547-5de8d6e44c38",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#8cc50e32-fa70-40e8-9a4c-90a1ab053b33",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#cf7e47cd-edeb-4e3a-8be4-90f8dd87395d",
+      "title": "Current Creatinine - Value of"
+    },
+    {
+      "id": "#e0b2ac71-317c-4e2f-99fc-387bbbfceb0e",
+      "title": "Current ALT - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e",
+              "display": "Most Recent ALT (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e",
+                "display": "Most Recent ALT"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e",
+                  "display": "Most Recent ALT"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent ALT - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent ALT - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#7e0f7c76-3d72-4700-88d4-e2f18fdf120a",
+      "title": "Current AST - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f",
+              "display": "Most Recent AST (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f",
+                "display": "Most Recent AST"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f",
+                  "display": "Most Recent AST"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent AST - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent AST - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#9e966a71-43c8-428f-8547-5de8d6e44c38",
+      "title": "Current WBC Count - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "#537b76a4-8c06-44e8-84ca-5928553c4bfb",
+      "title": "Current Neutrophils Count - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "9547fdae-e53d-36d2-8c8d-546b2822d40f",
+              "display": "Most Recent Neutrophils (#) (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "9547fdae-e53d-36d2-8c8d-546b2822d40f",
+                "display": "Most Recent Neutrophils (#)"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "9547fdae-e53d-36d2-8c8d-546b2822d40f",
+                  "display": "Most Recent Neutrophils (#)"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Neutrophils (#) - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Neutrophils (#) - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#0a282d85-41e4-44ee-ba06-0118be7ab810",
+      "title": "Current Platelet Count - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "256c1862-05d1-3c22-bfd8-b34c40206eb5",
+              "display": "Most Recent Platelets (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "256c1862-05d1-3c22-bfd8-b34c40206eb5",
+                "display": "Most Recent Platelets"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "256c1862-05d1-3c22-bfd8-b34c40206eb5",
+                  "display": "Most Recent Platelets"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Platelets - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Platelets - Observation - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#8cc50e32-fa70-40e8-9a4c-90a1ab053b33",
+      "title": "Current Ferritin - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "cfb06246-ab5b-3871-8385-120d5664f14f",
+              "display": "Most Recent Ferritin (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "cfb06246-ab5b-3871-8385-120d5664f14f",
+                "display": "Most Recent Ferritin"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "cfb06246-ab5b-3871-8385-120d5664f14f",
+                  "display": "Most Recent Ferritin"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Ferritin - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Most Recent Ferritin - Observation - Quantity Of"
+          }
+        }
+      ]
+    }
+  ]
+}

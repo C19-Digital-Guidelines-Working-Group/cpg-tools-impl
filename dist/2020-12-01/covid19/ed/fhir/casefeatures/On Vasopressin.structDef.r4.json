@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "On Vasopressin",
+        "language": "text/cql",
+        "expression": "On Vasopressin -  MedicationRequest"
+      }
+    }
+  ],
+  "name": "On Vasopressin",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": " MedicationRequest",
+  "derivation": "constraint"
+}

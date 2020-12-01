@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "On Norepinephrine",
+        "language": "text/cql",
+        "expression": "On Norepinephrine -  MedicationRequest"
+      }
+    }
+  ],
+  "name": "On Norepinephrine",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": " MedicationRequest",
+  "derivation": "constraint"
+}

@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Has Bilateral Pneumonia",
+        "language": "text/cql",
+        "expression": "Has Bilateral Pneumonia -  DiagnosticReport"
+      }
+    }
+  ],
+  "name": "Has Bilateral Pneumonia",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": " DiagnosticReport",
+  "derivation": "constraint"
+}

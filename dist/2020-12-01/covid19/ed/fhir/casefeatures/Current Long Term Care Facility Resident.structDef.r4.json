@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Current Long Term Care Facility Resident",
+        "language": "text/cql",
+        "expression": "Current Long Term Care Facility Resident - Observation"
+      }
+    }
+  ],
+  "name": "Current Long Term Care Facility Resident",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Observation",
+  "derivation": "constraint"
+}

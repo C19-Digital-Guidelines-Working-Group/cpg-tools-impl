@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Has COVID-19 diagnosis (confirmed)",
+        "language": "text/cql",
+        "expression": "Has COVID-19 diagnosis (confirmed) - Condition"
+      }
+    }
+  ],
+  "name": "Has COVID-19 diagnosis (confirmed)",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Condition",
+  "derivation": "constraint"
+}

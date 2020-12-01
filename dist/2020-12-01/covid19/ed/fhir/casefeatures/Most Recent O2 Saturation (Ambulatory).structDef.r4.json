@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Most Recent O2 Saturation (Ambulatory)",
+        "language": "text/cql",
+        "expression": "Most Recent O2 Saturation (Ambulatory) - Observation"
+      }
+    }
+  ],
+  "name": "Most Recent O2 Saturation (Ambulatory)",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": "Observation",
+  "derivation": "constraint"
+}

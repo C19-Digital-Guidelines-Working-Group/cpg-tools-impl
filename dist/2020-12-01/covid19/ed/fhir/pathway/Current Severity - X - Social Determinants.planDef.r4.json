@@ -1,0 +1,150 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#https://clinicalknowledgemanagement.mayo.edu/artifacts/b75cdb09-aa5d-45d1-88e1-a7fa9cd48564",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20201118-154414",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:98ec45eb-c06f-4356-aa17-2a18c8e11b2f"
+    }
+  ],
+  "version": "TODO",
+  "name": "Current Severity - X - Social Determinants",
+  "title": "Current Severity - X - Social Determinants",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "310adb96-1a21-3100-90eb-c7ef4fe270e7",
+        "display": "Decision Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "#9fb216c4-7353-4839-b5e0-a81ac29e7752",
+      "title": "Long Term Care Resident - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "955c689f-130b-33ab-b64a-3c43dc6d6f81",
+              "display": "Current Long Term Care Facility Resident (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20201101",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "955c689f-130b-33ab-b64a-3c43dc6d6f81",
+                "display": "Current Long Term Care Facility Resident"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "955c689f-130b-33ab-b64a-3c43dc6d6f81",
+                  "display": "Current Long Term Care Facility Resident"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effectiveDateTime",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Current Long Term Care Facility Resident - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Current Long Term Care Facility Resident - Observation - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#783c05d6-d906-48e0-aabe-7cc3a7680112",
+      "title": "Current Covid Severity - Kind of -- Social Factors",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#9fb216c4-7353-4839-b5e0-a81ac29e7752",
+          "relationship": "after"
+        }
+      ]
+    }
+  ]
+}

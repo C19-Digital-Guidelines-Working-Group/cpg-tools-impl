@@ -1,0 +1,68 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20201118-154414",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:17d15c36-7fed-427a-86b4-56091ee28619"
+    }
+  ],
+  "version": "TODO",
+  "name": "Situational Data Definitions",
+  "title": "Situational Data Definitions",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "310adb96-1a21-3100-90eb-c7ef4fe270e7",
+        "display": "Decision Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "#caf3fdce-df75-4a9c-8e01-b5edffcd5db9",
+      "title": "Covid19 ED Case",
+      "input": [
+        {
+          "type": "TODO Data Shape - Base Resource type",
+          "profile": [
+            "http://todo.me/datashape/profile123"
+          ]
+        },
+        {
+          "type": "TODO Data Shape - Base Resource type",
+          "profile": [
+            "http://todo.me/datashape/profile123"
+          ]
+        },
+        {
+          "type": "TODO Data Shape - Base Resource type",
+          "profile": [
+            "http://todo.me/datashape/profile123"
+          ]
+        }
+      ]
+    }
+  ]
+}

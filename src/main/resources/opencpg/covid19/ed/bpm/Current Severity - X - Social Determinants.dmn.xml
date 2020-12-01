@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                      xmlns="https://clinicalknowledgemanagement.mayo.edu/artifacts/b75cdb09-aa5d-45d1-88e1-a7fa9cd48564"
+                      xmlns:assets="https://clinicalknowledgemanagement.mayo.edu/assets"
+                      xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+                      xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+                      xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+                      xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/"
+                      xmlns:include1="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"
+                      xmlns:openapi="https://openapis.org/omg/extension/1.0"
+                      xmlns:rss="http://purl.org/rss/2.0/"
+                      xmlns:surr="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                      xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      id="_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564"
+                      name="Current Severity - X - Social Determinants"
+                      namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/b75cdb09-aa5d-45d1-88e1-a7fa9cd48564"
+                      xsi:schemaLocation="https://www.omg.org/spec/API4KP/20200801/surrogate xsd/API4KP/surrogate/surrogate.xsd https://www.omg.org/spec/DMN/1.2/ http://www.omg.org/spec/DMN/20180521/MODEL/">
+   <semantic:extensionElements/>
+   <semantic:import importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                    name="Situational Data Definitions"
+                    namespace="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546"/>
+   <semantic:decisionService id="_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_DS"
+                             name="Whole Model Decision Service">
+      <semantic:variable id="_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_DS_VAR"
+                         name="Whole Model Decision Service"
+                         typeRef="Any"/>
+      <semantic:outputDecision href="#_783c05d6-d906-48e0-aabe-7cc3a7680112"/>
+      <semantic:encapsulatedDecision href="#_9fb216c4-7353-4839-b5e0-a81ac29e7752"/>
+   </semantic:decisionService>
+   <semantic:decisionService id="_1ecc5fad-f014-4e22-b2c8-84e03f00ba42_DS" name="Diagram Page 1">
+      <semantic:variable id="_1ecc5fad-f014-4e22-b2c8-84e03f00ba42_DS_VAR"
+                         name="Diagram Page 1"
+                         typeRef="Any"/>
+      <semantic:outputDecision href="#_783c05d6-d906-48e0-aabe-7cc3a7680112"/>
+      <semantic:encapsulatedDecision href="#_9fb216c4-7353-4839-b5e0-a81ac29e7752"/>
+   </semantic:decisionService>
+   <semantic:decision id="_9fb216c4-7353-4839-b5e0-a81ac29e7752"
+                      name="Long Term Care Resident - Is">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="defines"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/defines"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      tag="defines"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#e5ce0278-0309-3c37-ae63-626f7fc5c76b"
+                      versionTag="20201118-154414">
+               <id:uuid>e5ce0278-0309-3c37-ae63-626f7fc5c76b</id:uuid>
+            </surr:rel>
+            <surr:ref name="Current Long Term Care Facility Resident (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/955c689f-130b-33ab-b64a-3c43dc6d6f81"
+                      tag="955c689f-130b-33ab-b64a-3c43dc6d6f81">
+               <id:uuid>955c689f-130b-33ab-b64a-3c43dc6d6f81</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2020-11-01T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20201101#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20201101">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_56a238fa-ad2a-4fa4-813a-c8db98b60946"
+                         name="Long Term Care Resident - Is"
+                         typeRef="boolean"/>
+      <semantic:informationRequirement id="_a4e722b4-bb18-482f-9933-f6b1fe6b7012">
+         <semantic:requiredInput href="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546#6112c890-1989-47db-84e7-f5b66e4132a6"/>
+      </semantic:informationRequirement>
+      <semantic:literalExpression id="_63a1a4bd-df4f-4844-90ec-31b620d9d93b" typeRef="boolean">
+         <semantic:text>Situational Data Definitions.Covid19 Clinical Features.isLongTermCareResident</semantic:text>
+      </semantic:literalExpression>
+   </semantic:decision>
+   <semantic:decision id="_783c05d6-d906-48e0-aabe-7cc3a7680112"
+                      name="Current Covid Severity - Kind of -- Social Factors">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:rel establishedOn="2020-11-18T00:00:00"
+                      name="captures"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType"
+                      referentId="https://www.omg.org/spec/API4KP/api4kp/captures"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      tag="captures"
+                      versionId="https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType/versions/20201118-154414#8856ffdd-044d-37cd-8124-a6be5dcea329"
+                      versionTag="20201118-154414">
+               <id:uuid>8856ffdd-044d-37cd-8124-a6be5dcea329</id:uuid>
+            </surr:rel>
+            <surr:ref establishedOn="2020-11-18T00:00:00"
+                      name="Assessment Decision"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/KAO/DecisionType"
+                      referentId="http://ontology.mayo.edu/ontologies/decisionmodels/AssessmentDecision"
+                      resourceId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      tag="AssessmentDecision"
+                      versionId="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/versions/20201118-154433#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"
+                      versionTag="20201118-154433">
+               <id:uuid>d03ea564-0d31-3e72-a98b-cb93aa4c5cce</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:variable id="_d8f5a87d-c2f2-4e1c-8da5-5275c20dce41"
+                         name="Current Covid Severity - Kind of -- Social Factors"
+                         typeRef="Situational Data Definitions.tCovid19Severity"/>
+      <semantic:informationRequirement id="_77866cc6-82ce-4505-a255-dd9c6c37022f">
+         <semantic:requiredDecision href="#_9fb216c4-7353-4839-b5e0-a81ac29e7752"/>
+      </semantic:informationRequirement>
+      <semantic:decisionTable hitPolicy="UNIQUE"
+                              id="_6dbcc523-483f-4dea-ae16-8131998d1124"
+                              outputLabel="Current Covid Severity - Kind of -- Social Factors"
+                              typeRef="Situational Data Definitions.tCovid19Severity">
+         <semantic:input id="_b64f0819-22b2-4ad4-bbb2-cb9e83ce2a8d"
+                         label="Long Term Care Resident - Is">
+            <semantic:inputExpression typeRef="boolean">
+               <semantic:text>Long Term Care Resident - Is</semantic:text>
+            </semantic:inputExpression>
+         </semantic:input>
+         <semantic:output id="_43b67f8d-0043-40a3-ba12-72370fcf2b49"/>
+         <semantic:annotation name="Description"/>
+         <semantic:rule id="_e06559d2-149e-49c5-ac8e-035dbdc4c9d2">
+            <semantic:inputEntry id="_8d67095b-6087-4691-8aa5-80ee87bfac56">
+               <semantic:text>true</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_2307bfa6-3c4a-4c04-aa75-7ca11043efbf">
+               <semantic:text>"Moderate"</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+         <semantic:rule id="_bb1f9f57-c99a-49ec-96c1-5fc2ae41c2ca">
+            <semantic:inputEntry id="_f42e0765-45bf-472b-a921-dc6d11a76d22">
+               <semantic:text>false</semantic:text>
+            </semantic:inputEntry>
+            <semantic:outputEntry id="_977cf6f6-cfb2-4f66-8e52-50af37c94b51">
+               <semantic:text>null</semantic:text>
+            </semantic:outputEntry>
+            <semantic:annotationEntry>
+               <semantic:text/>
+            </semantic:annotationEntry>
+         </semantic:rule>
+      </semantic:decisionTable>
+   </semantic:decision>
+   <dmndi:DMNDI>
+      <dmndi:DMNDiagram id="_1ecc5fad-f014-4e22-b2c8-84e03f00ba42" name="Page 1">
+         <di:extension/>
+         <dmndi:Size height="1050" width="1485"/>
+         <dmndi:DMNShape dmnElementRef="include1:_6112c890-1989-47db-84e7-f5b66e4132a6"
+                         id="_e3159165-b170-4b9e-b945-839864db99ad">
+            <dc:Bounds height="60.00000762939453"
+                       width="135.48234176635742"
+                       x="560.2588291168213"
+                       y="352.99999618530273"/>
+            <dmndi:DMNLabel sharedStyle="LS_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_9fb216c4-7353-4839-b5e0-a81ac29e7752"
+                         id="_0c80d529-346d-43fe-9371-efd4c85c200a">
+            <dc:Bounds height="60" width="153" x="551.5" y="218"/>
+            <dmndi:DMNLabel sharedStyle="LS_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNShape dmnElementRef="_783c05d6-d906-48e0-aabe-7cc3a7680112"
+                         id="_fb07e6e5-4eec-40ae-8f3e-4f0e3dc9dcc6">
+            <dc:Bounds height="60" width="153" x="551.5" y="80"/>
+            <dmndi:DMNLabel sharedStyle="LS_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_0"/>
+         </dmndi:DMNShape>
+         <dmndi:DMNEdge dmnElementRef="_a4e722b4-bb18-482f-9933-f6b1fe6b7012"
+                        id="_ae05693b-5771-469a-8513-4f0267aec0e8">
+            <di:waypoint x="627.9968013763428" y="352.99999618530273"/>
+            <di:waypoint x="628" y="278"/>
+            <dmndi:DMNLabel sharedStyle="LS_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_0"/>
+         </dmndi:DMNEdge>
+         <dmndi:DMNEdge dmnElementRef="_77866cc6-82ce-4505-a255-dd9c6c37022f"
+                        id="_ac5ebade-e91e-4e0d-8025-2ef12a354282">
+            <di:waypoint x="628" y="218"/>
+            <di:waypoint x="628" y="140"/>
+            <dmndi:DMNLabel sharedStyle="LS_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_0"/>
+         </dmndi:DMNEdge>
+      </dmndi:DMNDiagram>
+      <dmndi:DMNStyle fontBold="false"
+                      fontFamily="arial,helvetica,sans-serif"
+                      fontItalic="false"
+                      fontSize="11"
+                      fontStrikeThrough="false"
+                      fontUnderline="false"
+                      id="LS_b75cdb09-aa5d-45d1-88e1-a7fa9cd48564_0"/>
+   </dmndi:DMNDI>
+</semantic:definitions>

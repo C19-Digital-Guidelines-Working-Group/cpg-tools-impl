@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-inferenceExpression",
+      "valueExpression": {
+        "name": "Has RV enlargement",
+        "language": "text/cql",
+        "expression": "Has RV enlargement -  DiagnosticReport"
+      }
+    }
+  ],
+  "name": "Has RV enlargement",
+  "kind": "resource",
+  "abstract": false,
+  "baseDefinition": " DiagnosticReport",
+  "derivation": "constraint"
+}

@@ -1,0 +1,170 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#https://clinicalknowledgemanagement.mayo.edu/artifacts/23d712f2-0798-4fb0-acbe-42c722864a9a",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20201118-154414",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:90d60194-2093-410e-a130-5b09efe250c7"
+    }
+  ],
+  "version": "TODO",
+  "name": "Inclusion Criteria",
+  "title": "Inclusion Criteria",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "310adb96-1a21-3100-90eb-c7ef4fe270e7",
+        "display": "Decision Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "#97f7824b-1c9d-491f-8aba-7dc314d92ab2",
+      "title": "Eligible for Covid ED Management - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#0fd31ebd-ca25-4d21-8d79-6668c00fb9f6",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#283ce1aa-8fdb-4d11-8c2d-752335ea2711",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#0fd31ebd-ca25-4d21-8d79-6668c00fb9f6",
+      "title": "Age - Value of"
+    },
+    {
+      "id": "#283ce1aa-8fdb-4d11-8c2d-752335ea2711",
+      "title": "Having Covid19 - Belief in",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "efd4ddff-ab84-30a9-9b02-796d87f769a3",
+              "display": "Has COVID-19 diagnosis (suspected) (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#7c0ac6d6-82f5-4927-9bbf-c47725df5498",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#e24386cb-792e-47a3-ab81-fb3d41a3e18c",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#5f808c25-bee1-47a8-846f-5906dc790a8b",
+      "title": "Confirmed Covid19 - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "cfe98e01-a3dc-33f9-b6a5-94d1f28f99bc",
+              "display": "Has COVID-19 diagnosis (confirmed) (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20201118-154433",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#283ce1aa-8fdb-4d11-8c2d-752335ea2711",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#7c0ac6d6-82f5-4927-9bbf-c47725df5498",
+      "title": "Has Pending Covid19 Test - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "18ba15e1-65ae-3f63-b08c-42dd43e3676e",
+              "display": "Most Recent SARS-CoV-2 test (Descr. of)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "#e24386cb-792e-47a3-ab81-fb3d41a3e18c",
+      "title": "Has Positive Covd19 Test - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "18ba15e1-65ae-3f63-b08c-42dd43e3676e",
+              "display": "Most Recent SARS-CoV-2 test (Descr. of)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
