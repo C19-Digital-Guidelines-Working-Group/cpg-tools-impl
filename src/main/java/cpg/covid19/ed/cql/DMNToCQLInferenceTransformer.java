@@ -154,26 +154,22 @@ public class DMNToCQLInferenceTransformer {
     switch (table.getHitPolicy()) {
       case COLLECT:
         exprName = table.getOutputLabel();
-        expr = new StringBuilder()
-            .append("\n define \"").append(exprName).append("\" :\n\t")
-            .append(rules.keySet().stream()
-                .map(x -> "\"" + x + "\"")
-                .collect(Collectors.joining(mapAggregate(table.getAggregation()))))
-            .append("\n\n")
-            .toString();
+        expr = "\n define \"" + exprName + "\" :\n\t"
+            + rules.keySet().stream()
+            .map(x -> "\"" + x + "\"")
+            .collect(Collectors.joining(mapAggregate(table.getAggregation())))
+            + "\n\n";
         rules.put(exprName, expr);
         break;
       case FIRST:
       case PRIORITY:
         exprName = table.getOutputLabel();
-        expr = new StringBuilder()
-            .append("\n define \"").append(exprName).append("\" :\n\t")
-            .append("Coalesce( ")
-            .append(rules.keySet().stream()
-                .map(x -> "\"" + x + "\"")
-                .collect(Collectors.joining(",")))
-            .append(" )\n\n")
-            .toString();
+        expr = "\n define \"" + exprName + "\" :\n\t"
+            + "Coalesce( "
+            + rules.keySet().stream()
+            .map(x -> "\"" + x + "\"")
+            .collect(Collectors.joining(","))
+            + " )\n\n";
         rules.put(exprName, expr);
         break;
       case ANY:
@@ -190,7 +186,7 @@ public class DMNToCQLInferenceTransformer {
       TDecisionTable table) {
     StringBuilder lib = new StringBuilder();
 
-    rules.keySet().stream()
+    rules.keySet()
         .forEach(k -> lib.append(rules.get(k)));
     return lib.toString();
   }
@@ -215,10 +211,8 @@ public class DMNToCQLInferenceTransformer {
   }
 
   protected String toCQLInferences(TDecisionRule r, List<TOutputClause> out, TDecisionTable table) {
-    StringBuilder expr = new StringBuilder();
-    expr.append("\n define \"" + resultName(r, table) + "\": \n\t");
-    expr.append(toCQLExpression(r, out, table));
-    return expr.toString();
+    return "\n define \"" + resultName(r, table) + "\": \n\t"
+        + toCQLExpression(r, out, table);
   }
 
   protected String toCQLExpression(TDecisionRule r, List<TOutputClause> out, TDecisionTable table) {
@@ -250,7 +244,7 @@ public class DMNToCQLInferenceTransformer {
   }
 
   protected String zeroOf(TDecisionRule r, List<TOutputClause> out, TDecisionTable table) {
-    if (out.size() == 0) {
+    if (! out.isEmpty()) {
       return zeroOf(r, out.get(0), table);
     } else {
       return "null";
@@ -273,12 +267,12 @@ public class DMNToCQLInferenceTransformer {
     if (out.size() == 1) {
       return r.getOutputEntry().get(table.getOutput().indexOf(out.get(0))).getText();
     } else {
-      StringBuilder sb = new StringBuilder();
-      sb.append(" Tuple { \n");
-      sb.append(IntStream.range(0,out.size())
-          .mapToObj(i -> "\t\t" + out.get(i).getName() + " : " + r.getOutputEntry().get(i).getText()).collect(Collectors.joining(",\n")));
-      sb.append("\n\t}\n");
-      return sb.toString();
+      return " Tuple { \n"
+          + IntStream.range(0, out.size())
+          .mapToObj(
+              i -> "\t\t" + out.get(i).getName() + " : " + r.getOutputEntry().get(i).getText())
+          .collect(Collectors.joining(",\n"))
+          + "\n\t}\n";
     }
   }
 
@@ -293,7 +287,7 @@ public class DMNToCQLInferenceTransformer {
     }
     if (txt.startsWith("[")) {
       String range = txt.substring(1, txt.length() - 1);
-      Double low = Double.parseDouble(range.substring(0,range.indexOf("..")));
+      double low = Double.parseDouble(range.substring(0,range.indexOf("..")));
       Double high = Double.parseDouble(range.substring(range.indexOf("..") + 2));
       return left + " between " + low + " and " + high;
     }

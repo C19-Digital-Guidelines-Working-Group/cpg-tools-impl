@@ -323,15 +323,15 @@ public abstract class AbstractOntologyDrivenGenerator {
       case MEDICATIONSTATEMENT:
       case DIAGNOSTICREPORT:
       case OBSERVATION:
-        return "effectiveDateTime";
+        return "effective";
       case PROCEDURE:
-        return "performedDateTime";
+        return "performed";
       case CONDITION:
-        return "onsetDateTime";
+        return "onset";
       case DEVICEREQUEST:
       case MEDICATIONREQUEST:
       case SERVICEREQUEST:
-        return "occurrenceDateTime";
+        return "occurrence";
       default:
         throw new UnsupportedOperationException("Cannot define a temporal filter on " + resource);
     }

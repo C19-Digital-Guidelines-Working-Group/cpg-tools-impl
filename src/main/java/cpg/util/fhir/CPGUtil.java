@@ -3,6 +3,7 @@ package cpg.util.fhir;
 import edu.mayo.kmdp.util.NameUtils;
 import edu.mayo.kmdp.util.NameUtils.IdentifierType;
 import edu.mayo.kmdp.util.Util;
+import java.net.URI;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -48,6 +49,10 @@ public class CPGUtil {
     return codeSystemRegistry.get(code);
   }
 
+  public static String lookupCodeSystem(URI codeSystemUri) {
+    return lookupCodeSystem(codeSystemUri.toString());
+  }
+
   public static String lookupCodeSystem(String codeSystemUri) {
     Optional<String> code = codeSystemRegistry.entrySet().stream()
         .filter(entry -> codeSystemUri.equals(entry.getValue()))
@@ -64,12 +69,17 @@ public class CPGUtil {
       return trm.getLabel();
     }
     if (Util.isUUID(trm.getTag())) {
-      return lookupCodeSystem(trm.getNamespaceUri().toString())
-          + "_" + trm.getTag();
+      return sanitizeCQLIdentifier(lookupCodeSystem(trm.getNamespaceUri()))
+          + "_" + trm.getTag().replaceAll("-","_");
     } else {
-      return lookupCodeSystem(trm.getNamespaceUri().toString())
+      return sanitizeCQLIdentifier(lookupCodeSystem(trm.getNamespaceUri()))
           + "_"
-          + NameUtils.nameToIdentifier(trm.getTag(), IdentifierType.CONSTANT);
+          + sanitizeCQLIdentifier(trm.getTag());
     }
   }
+
+  public static String sanitizeCQLIdentifier(String codeSystem) {
+    return NameUtils.nameToIdentifier(codeSystem, IdentifierType.CONSTANT);
+  }
+
 }

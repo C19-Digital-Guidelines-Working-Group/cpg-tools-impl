@@ -94,7 +94,7 @@ public class CPGAssetDownloader {
         .orElseThrow(IllegalStateException::new);
     KnowledgeCarrier wovenModel
         = assetRepository
-        .getCanonicalKnowledgeAssetCarrier(assetPtr.getUuid(), assetPtr.getVersionTag())
+        .getKnowledgeAssetVersionCanonicalCarrier(assetPtr.getUuid(), assetPtr.getVersionTag())
         .orElseThrow(IllegalStateException::new);
 
     String name = surrogate.getName();
