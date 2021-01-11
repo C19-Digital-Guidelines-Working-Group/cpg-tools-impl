@@ -117,22 +117,24 @@ public abstract class AbstractCQLRetrievesGenerator extends AbstractOntologyDriv
     String baseExpr =  getDefaultRetrieveName(info.label(), resourceType);
 
     interrogatives.forEach(interr -> {
-      def.append("define "
-          + "\"" + getDefaultLiftName(baseExpr, interr.label) + "\" : " + "\n"
-          + "\t");
+      def.append(needsBlockComment(info));
+      def.append("define " + "\"")
+          .append(getDefaultLiftName(baseExpr, interr.label))
+          .append("\" : ").append("\n\t");
       switch (interr) {
         case IS:
-          def.append("Exists( \"" + baseExpr + "\") " + "\n" );
+          def.append("Exists( \"").append(baseExpr).append("\") ").append("\n");
           break;
         case KIND_OF:
-          def.append("\"" + baseExpr + "\".code " + "\n");
+          def.append("\"").append(baseExpr).append("\".code ").append("\n");
           break;
         case VALUE_OF:
-          def.append("\"" + baseExpr + "\".value " + "\n");
+          def.append("\"").append(baseExpr).append("\".value ").append("\n");
           break;
         default:
           throw new UnsupportedOperationException();
       }
+      def.append(needsCloseBlockComment(info));
       def.append("\n");
     });
 
@@ -157,7 +159,8 @@ public abstract class AbstractCQLRetrievesGenerator extends AbstractOntologyDriv
       return "";
     }
 
-    String def = "//"
+    String def = needsBlockComment(info) + "\n";
+    def += "//"
         + getSituationUri(info)
         + "\n";
     def += "define "
@@ -185,30 +188,31 @@ public abstract class AbstractCQLRetrievesGenerator extends AbstractOntologyDriv
         + "sort by "
         + getDefaultTimeFilter(FHIRAllTypes.fromCode(resourceType))
         + " desc";
-    def += "\n";
+    def += needsCloseBlockComment(info) + "\n";
     return def;
   }
+
 
   protected String getValidityFilters(FHIRAllTypes resourceType) {
     switch (resourceType) {
       case MEDICATIONSTATEMENT:
-        return "X.status in { 'active' }";
+        return "X.status.value in { 'active' }";
       case DIAGNOSTICREPORT:
-        return "X.status in { 'final', 'registered' }";
+        return "X.status.value in { 'final', 'registered' }";
       case OBSERVATION:
-        return "X.status in { 'final', 'registered', 'amended' }";
+        return "X.status.value in { 'final', 'registered', 'amended' }";
       case PROCEDURE:
-        return "X.status in { 'completed' }";
+        return "X.status.value in { 'completed' }";
       case CONDITION:
-        return "X.clinicalStatus in { 'active', 'recurrence', 'relapse' }"
+        return "X.clinicalStatus.value in { 'active', 'recurrence', 'relapse' }"
             + " and "
-            + " X.verificationStatus in { 'confirmed' }";
+            + " X.verificationStatus.value in { 'confirmed' }";
       case DEVICEREQUEST:
-        return "X.status in { 'active', 'completed' } ";
+        return "X.status.value in { 'active', 'completed' } ";
       case MEDICATIONREQUEST:
-        return "X.status in { 'active', 'completed' } ";
+        return "X.status.value in { 'active', 'completed' } ";
       case SERVICEREQUEST:
-        return "X.status in { 'active', 'completed' } ";
+        return "X.status.value in { 'active', 'completed' } ";
       default:
         throw new UnsupportedOperationException("Cannot define a status filter on " + resourceType);
     }
@@ -231,5 +235,17 @@ public abstract class AbstractCQLRetrievesGenerator extends AbstractOntologyDriv
 
   protected abstract String getLibraryName();
 
+
+  protected String needsBlockComment(SemanticDataElementInfo info) {
+    return info.isEmpty() ? "/*" : "";
+  }
+
+  protected String needsCloseBlockComment(SemanticDataElementInfo info) {
+    return info.isEmpty() ? "*/" : "";
+  }
+
+  protected String needsLineComment(SemanticDataElementInfo trm) {
+    return trm.isEmpty() ? "// " : "";
+  }
 
 }

@@ -19,7 +19,7 @@ public class CQLPreMappedRetrievesGenerator extends AbstractCQLRetrievesGenerato
 
   @Override
   protected String toConceptDeclaration(SemanticDataElementInfo trm) {
-    return "concept "
+    return needsLineComment(trm) + "concept "
         + "\"" + trm.dataElement + "\""
         + " : "
         + "{ "

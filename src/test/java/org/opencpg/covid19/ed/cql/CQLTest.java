@@ -20,7 +20,7 @@ public class CQLTest {
 
   @Test
   void testValidateRetrieve() {
-    InputStream is = CQLTest.class.getResourceAsStream("/opencpg/covid19/ed/cql/retrieves.cql");
+    InputStream is = CQLTest.class.getResourceAsStream("/opencpg/covid19/ed/cql/retrieves.premapped.cql");
     KnowledgeCarrier kc = AbstractCarrier.of(is)
         .withRepresentation(rep(HL7_CQL_1_4_1, TXT, defaultCharset(), Encodings.DEFAULT));
 

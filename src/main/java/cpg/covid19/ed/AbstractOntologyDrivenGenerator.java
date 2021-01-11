@@ -167,6 +167,10 @@ public abstract class AbstractOntologyDrivenGenerator {
       return allTerms.stream();
     }
 
+    public boolean isEmpty() {
+      return allConcepts().findAny().isEmpty();
+    }
+
     public String label() {
       switch (kind) {
         case PROCEDURE:

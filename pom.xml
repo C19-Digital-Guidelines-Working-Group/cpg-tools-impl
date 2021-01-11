@@ -6,7 +6,7 @@
   <parent>
     <groupId>edu.mayo.kmdp</groupId>
     <artifactId>kmdp-bom</artifactId>
-    <version>9.0.3-SNAPSHOT</version>
+    <version>9.0.4-SNAPSHOT</version>
   </parent>
 
   <groupId>edu.mayo.kmdp.kdcaci.knew</groupId>
@@ -16,8 +16,8 @@
   <name>CPG :: Tools :: Implementation</name>
 
   <properties>
-    <kmdp.servers.version>4.9.3-SNAPSHOT</kmdp.servers.version>
-    <ttw.version>5.0.0-SNAPSHOT</ttw.version>
+    <kmdp.servers.version>4.9.4-SNAPSHOT</kmdp.servers.version>
+    <ttw.version>5.1.2-SNAPSHOT</ttw.version>
     <s>${file.separator}</s>
 
     <cpg.dir>covid19${s}ed</cpg.dir>

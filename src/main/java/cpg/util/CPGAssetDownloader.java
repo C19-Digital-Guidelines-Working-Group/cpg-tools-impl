@@ -12,8 +12,7 @@ import static org.omg.spec.api4kp._20200801.taxonomy.parsinglevel._20200801.Pars
 
 import cpg.covid19.ed.Main;
 import edu.mayo.kmdp.kdcaci.knew.trisotech.TrisotechAssetRepository;
-import edu.mayo.kmdp.kdcaci.knew.trisotech.preprocess.MetadataExtractor;
-import edu.mayo.kmdp.kdcaci.knew.trisotech.preprocess.Weaver;
+import edu.mayo.kmdp.kdcaci.knew.trisotech.components.weavers.Weaver;
 import edu.mayo.kmdp.language.parsers.cmmn.v1_1.CMMN11Parser;
 import edu.mayo.kmdp.language.parsers.dmn.v1_2.DMN12Parser;
 import edu.mayo.kmdp.language.parsers.surrogate.v2.Surrogate2Parser;
@@ -38,6 +37,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.messaging.rsocket.MetadataExtractor;
 
 /*
   Use this class to re-initialize the test models in the /resources folder
