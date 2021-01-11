@@ -13,17 +13,17 @@
  */
 package cpg.api4kp.common.cql;
 
+import cpg.covid19.ed.cql.CQLConceptsGenerator;
+import cpg.covid19.ed.cql.CQLPreMappedConceptsGenerator;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Optional;
 import javax.xml.bind.JAXB;
 import org.cqframework.cql.cql2elm.CqlTranslator;
-import org.cqframework.cql.cql2elm.FhirLibrarySourceProvider;
-import org.cqframework.cql.cql2elm.FhirModelInfoProvider;
 import org.cqframework.cql.cql2elm.LibraryManager;
 import org.cqframework.cql.cql2elm.LibrarySourceProvider;
 import org.cqframework.cql.cql2elm.ModelInfoLoader;
-import org.cqframework.cql.cql2elm.ModelInfoProvider;
 import org.cqframework.cql.cql2elm.ModelManager;
 import org.fhir.ucum.UcumEssenceService;
 import org.fhir.ucum.UcumService;
@@ -41,21 +41,20 @@ public class CQL2ELMHelper {
   private ModelManager modelManager;
   private UcumService ucumService;
 
-  private static final String BASE_PATH = "/org/opencds/cqf/tooling/modelinfo/";
+  public static final String BASE_SYSTEM_PATH = "/org/opencds/cqf/tooling/modelinfo/";
 
   public CQL2ELMHelper() {
     try {
       ModelInfoLoader.registerModelInfoProvider(
           new VersionedIdentifier().withId("FHIR").withVersion("4.0.1"),
           () -> JAXB.unmarshal(
-              CQL2ELMHelper.class.getResourceAsStream(BASE_PATH + "FHIR-modelinfo-4.0.1.xml"),
+              CQL2ELMHelper.class.getResourceAsStream(BASE_SYSTEM_PATH + "FHIR-modelinfo-4.0.1.xml"),
               ModelInfo.class)
       );
       modelManager = new ModelManager();
       libraryManager = new LibraryManager(modelManager);
-      libraryManager.getLibrarySourceLoader().registerProvider(vid ->
-          CQL2ELMHelper.class.getResourceAsStream(
-          String.format( BASE_PATH + "%s-%s.cql", vid.getId(), vid.getVersion())));
+      libraryManager.getLibrarySourceLoader()
+          .registerProvider(new CQLLibraryLoader());
       ucumService = new UcumEssenceService(
           UcumEssenceService.class.getResourceAsStream("/ucum-essence.xml"));
     } catch (Exception e) {
@@ -71,6 +70,46 @@ public class CQL2ELMHelper {
             libraryManager,
             ucumService);
   }
+
+  public static class CQLLibraryLoader implements LibrarySourceProvider {
+
+    public static final String BASE_MODEL_PATH = "/opencpg/covid19/ed/cql/";
+
+    @Override
+    public InputStream getLibrarySource(VersionedIdentifier vid) {
+      return resolveAsSytem(vid)
+          .or(() -> resolveAsModel(vid))
+          .orElseThrow(() -> err(vid));
+    }
+
+    private IllegalStateException err(VersionedIdentifier vid) {
+      return new IllegalStateException(
+          "Unable to resolve CQL library " + vid.getId() + " " + vid.getVersion());
+    }
+
+    private Optional<InputStream> resolveAsSytem(VersionedIdentifier vid) {
+      String systemPath = String.format( BASE_SYSTEM_PATH + "%s-%s.cql", alias(vid.getId()), vid.getVersion());
+      return Optional
+          .ofNullable(CQLLibraryLoader.class.getResourceAsStream(systemPath));
+    }
+
+    private Optional<InputStream> resolveAsModel(VersionedIdentifier vid) {
+      String modelPath = String.format( BASE_MODEL_PATH + "%s-%s.cql", alias(vid.getId()), vid.getVersion());
+      return Optional
+          .ofNullable(CQLLibraryLoader.class.getResourceAsStream(modelPath));
+    }
+
+    private String alias(String vid) {
+      if (CQLConceptsGenerator.LIBRARY_NAME.equals(vid)) {
+        return CQLConceptsGenerator.NAME;
+      }
+      if (CQLPreMappedConceptsGenerator.LIBRARY_NAME.equals(vid)) {
+        return CQLPreMappedConceptsGenerator.NAME;
+      }
+      return vid;
+    }
+  }
+
 }
 
 

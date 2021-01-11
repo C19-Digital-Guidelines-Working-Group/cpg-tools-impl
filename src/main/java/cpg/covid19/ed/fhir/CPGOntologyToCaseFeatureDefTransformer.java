@@ -1,7 +1,9 @@
 package cpg.covid19.ed.fhir;
 
+import static cpg.covid19.ed.cql.CQLRetrieveGenerator.getDefaultRetrieveName;
+
 import cpg.covid19.ed.AbstractOntologyDrivenGenerator;
-import cpg.covid19.ed.cql.CQLRetrievesGenerator;
+import cpg.covid19.ed.cql.CQLConceptsGenerator;
 import cpg.util.fhir.IOUtil;
 import java.nio.file.Path;
 import java.util.List;
@@ -10,7 +12,6 @@ import org.hl7.fhir.r4.model.Expression;
 import org.hl7.fhir.r4.model.StructureDefinition;
 import org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionKind;
 import org.hl7.fhir.r4.model.StructureDefinition.TypeDerivationRule;
-import org.semanticweb.owlapi.model.OWLClass;
 
 public class CPGOntologyToCaseFeatureDefTransformer extends AbstractOntologyDrivenGenerator {
 
@@ -43,7 +44,7 @@ public class CPGOntologyToCaseFeatureDefTransformer extends AbstractOntologyDriv
     sd.setBaseDefinition(kResource);
 
     Expression expr = new Expression();
-    expr.setExpression(CQLRetrievesGenerator.getDefaultRetrieveName(kLabel,kResource));
+    expr.setExpression(getDefaultRetrieveName(kLabel,kResource));
     expr.setName(kLabel);
     expr.setLanguage("text/cql");
 

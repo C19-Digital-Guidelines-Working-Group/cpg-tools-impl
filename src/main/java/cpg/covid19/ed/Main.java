@@ -3,8 +3,9 @@ package cpg.covid19.ed;
 import static cpg.util.CPGDistPublisher.clearAll;
 import static cpg.util.CPGDistPublisher.publish;
 
-import cpg.covid19.ed.cql.CQLPreMappedRetrievesGenerator;
-import cpg.covid19.ed.cql.CQLRetrievesGenerator;
+import cpg.covid19.ed.cql.CQLPreMappedConceptsGenerator;
+import cpg.covid19.ed.cql.CQLConceptsGenerator;
+import cpg.covid19.ed.cql.CQLRetrieveGenerator;
 import cpg.covid19.ed.cql.DMNToCQLInferenceTransformer;
 import cpg.covid19.ed.fhir.CPGOntologyToCaseFeatureDefTransformer;
 import cpg.covid19.ed.fhir.DMNToQuestionnaireGenerator;
@@ -83,8 +84,9 @@ public class Main {
   public static class GlossaryMain {
     public static void main(String... args) {
 
-      new CQLRetrievesGenerator().run(dataElementSheet, cqlPath);
-      new CQLPreMappedRetrievesGenerator().run(dataElementSheet, cqlPath);
+      new CQLRetrieveGenerator().run(dataElementSheet, cqlPath);
+      new CQLConceptsGenerator().run(dataElementSheet, cqlPath);
+      new CQLPreMappedConceptsGenerator().run(dataElementSheet, cqlPath);
       new CPGOntologyToCaseFeatureDefTransformer().run(dataElementSheet, fhirDataReqPath);
 
     }

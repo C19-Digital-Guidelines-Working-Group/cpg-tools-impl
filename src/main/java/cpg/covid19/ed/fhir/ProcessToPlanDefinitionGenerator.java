@@ -1,7 +1,7 @@
 package cpg.covid19.ed.fhir;
 
-import static cpg.covid19.ed.cql.CQLRetrievesGenerator.getDefaultLiftName;
-import static cpg.covid19.ed.cql.CQLRetrievesGenerator.getDefaultRetrieveName;
+import static cpg.covid19.ed.cql.CQLRetrieveGenerator.getDefaultLiftName;
+import static cpg.covid19.ed.cql.CQLRetrieveGenerator.getDefaultRetrieveName;
 import static cpg.util.fhir.IOUtil.readCMMNModels;
 import static cpg.util.fhir.IOUtil.readDMNModels;
 import static cpg.util.fhir.IOUtil.save;

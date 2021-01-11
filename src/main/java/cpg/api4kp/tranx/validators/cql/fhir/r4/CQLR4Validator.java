@@ -63,19 +63,25 @@ public class CQLR4Validator implements _applyValidate {
     ErrorLevels level = getLevel(cfg);
 
     if (level.ordinal() >= ErrorLevels.ERROR.ordinal()) {
-      translator.getErrors().stream()
-          .map(CqlTranslatorException::getMessage)
-          .forEach(err -> sb.append("ERR : ").append(err).append("\n"));
+      translator.getErrors()
+          .forEach(err -> sb.append("ERR #")
+              .append(err.getLocator().getStartLine())
+              .append(" :")
+              .append(err.getMessage()).append("\n"));
     }
     if (level.ordinal() >= ErrorLevels.EXCEPTION.ordinal()) {
-      translator.getExceptions().stream()
-          .map(CqlTranslatorException::getMessage)
-          .forEach(err -> sb.append("EXC : ").append(err).append("\n"));
+      translator.getExceptions()
+          .forEach(err -> sb.append("EXC #")
+          .append(err.getLocator().getStartLine())
+          .append(" :")
+          .append(err.getMessage()).append("\n"));
     }
     if (level.ordinal() >= ErrorLevels.MESSAGE.ordinal()) {
-      translator.getMessages().stream()
-          .map(CqlTranslatorException::getMessage)
-          .forEach(err -> sb.append("MSG : ").append(err).append("\n"));
+      translator.getMessages().
+          forEach(err -> sb.append("MSG #")
+          .append(err.getLocator().getStartLine())
+          .append(" :")
+          .append(err.getMessage()).append("\n"));
     }
     String str = sb.toString();
     return Util.isEmpty(str) ? Optional.empty() : Optional.of(str);

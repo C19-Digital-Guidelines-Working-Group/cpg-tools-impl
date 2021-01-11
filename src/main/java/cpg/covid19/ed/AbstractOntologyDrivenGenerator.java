@@ -53,9 +53,10 @@ public abstract class AbstractOntologyDrivenGenerator {
   }
 
   public enum Interrogatives {
-    IS("Is", " - Present"),
-    KIND_OF("KindOf", " - Kind Of"),
-    VALUE_OF("ValueOf", " - Value Of");
+    IS("Is", "Present"),
+    KIND_OF("KindOf", "Kind Of"),
+    VALUE_OF("ValueOf", "Value Of"),
+    LAST("Last", "Last");
 
     public final String code;
     public final String label;
