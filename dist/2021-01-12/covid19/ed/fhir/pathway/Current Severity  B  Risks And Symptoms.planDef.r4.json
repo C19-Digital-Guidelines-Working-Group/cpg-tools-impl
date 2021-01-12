@@ -1,0 +1,1380 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#https://clinicalknowledgemanagement.mayo.edu/artifacts/7c03388f-9495-4ffe-ab8b-d9e24e79442a",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20210112-045897",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:4877fb9a-c030-4296-8396-fca52919012d"
+    }
+  ],
+  "version": "TODO",
+  "name": "Current Severity  B  Risks And Symptoms",
+  "title": "Current Severity - B - Risks and Symptoms",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "310adb96-1a21-3100-90eb-c7ef4fe270e7",
+        "display": "Decision Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "#b0325b61-9eaf-4a2d-bebe-8a0b2017945d",
+      "title": "Current Severity of Covid-19 - Kind of -- Symptoms",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20210112-045800",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#b2b0b2b3-5f90-48a8-91b6-36fe2515f496",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#b4a4ff8f-2e01-46a1-b90e-07e6ab2d4be7",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#ad22eac1-2f56-4368-bca5-2f27772451cc",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#34bc0640-1a8d-4787-9fa4-0a21bb728b78",
+      "title": "Has Exacerbating Factor of Covid19 - Count of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20210112-045800",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#9e9ea902-eb37-481b-8034-e49908ab33df",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#bc6c3684-5076-4a72-9f47-22b9cd2514e6",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#e6a85680-6e1c-43e3-8eac-50a9fe272bff",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#08edb37b-43a1-4838-8e4e-793e8c202009",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#cca5d61c-f96c-4273-9215-14cc0b67e17f",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#52dfdbaa-4cc3-4068-ad2b-5937d6dc1ad5",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#79235e75-88bf-47ba-9c00-a609c8e4671c",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#f8047db8-1382-4e87-aa04-a6019375274c",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#3d8c7be7-3f44-4438-8f94-c58dbed5f1d0",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#0e1b983a-2d31-4b09-9b0a-1452cf2df721",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#9f444b38-8b92-48bc-8df9-79daba78bfc1",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#9e9ea902-eb37-481b-8034-e49908ab33df",
+      "title": "Patient Sex - Kind of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "019ec313-2cdf-3ee0-b2e2-a75cf5d3e459",
+              "display": "Gender (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "add005e9-a3da-4ed0-bc1d-a8fdcae507ef",
+              "display": "Kind Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "019ec313-2cdf-3ee0-b2e2-a75cf5d3e459",
+                "display": "Gender"
+              }
+            }
+          ],
+          "type": "Patient",
+          "profile": [
+            "http://hl7.org/fhir/Patient"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "019ec313-2cdf-3ee0-b2e2-a75cf5d3e459",
+                  "display": "Gender"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Gender - Patient"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Gender - Patient - Kind Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#bc6c3684-5076-4a72-9f47-22b9cd2514e6",
+      "title": "Current Patient Age - Value of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "9d8d2d5a-b12b-3151-82a5-05f54db7f538",
+              "display": "Age (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "17a65ac7-d110-41e6-9f8a-13b801ee473d",
+              "display": "Quantity Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "9d8d2d5a-b12b-3151-82a5-05f54db7f538",
+                "display": "Age"
+              }
+            }
+          ],
+          "type": "Patient",
+          "profile": [
+            "http://hl7.org/fhir/Patient"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "9d8d2d5a-b12b-3151-82a5-05f54db7f538",
+                  "display": "Age"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Age - Patient"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Age - Patient - Quantity Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#e6a85680-6e1c-43e3-8eac-50a9fe272bff",
+      "title": "Patient Race - Kind of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "4e221fc0-84bb-39a8-a315-a154d6dd7879",
+              "display": "Race (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "add005e9-a3da-4ed0-bc1d-a8fdcae507ef",
+              "display": "Kind Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "4e221fc0-84bb-39a8-a315-a154d6dd7879",
+                "display": "Race"
+              }
+            }
+          ],
+          "type": "Patient",
+          "profile": [
+            "http://hl7.org/fhir/Patient"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "4e221fc0-84bb-39a8-a315-a154d6dd7879",
+                  "display": "Race"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Race - Patient"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Race - Patient - Kind Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#08edb37b-43a1-4838-8e4e-793e8c202009",
+      "title": "Has Diabetes Mellitus - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5",
+              "display": "Has Diabetes Mellitus Type 1 (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "8d45f1b7-8513-3589-bd37-fe16739d9d89",
+              "display": "Has Diabetes Mellitus Type 2 (Descr. of)"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5",
+                "display": "Has Diabetes Mellitus Type 1"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5",
+                  "display": "Has Diabetes Mellitus Type 1"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "8d45f1b7-8513-3589-bd37-fe16739d9d89",
+                "display": "Has Diabetes Mellitus Type 2"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "8d45f1b7-8513-3589-bd37-fe16739d9d89",
+                  "display": "Has Diabetes Mellitus Type 2"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Diabetes Mellitus Type 1 - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Diabetes Mellitus Type 1 - Condition - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Diabetes Mellitus Type 2 - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Diabetes Mellitus Type 2 - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#cca5d61c-f96c-4273-9215-14cc0b67e17f",
+      "title": "Has Cardiovascular Disease - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "6ef655d9-01f8-3763-a7d4-ad3e54504357",
+              "display": "Has Cardiovascular Disease (Descr. of)"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "6ef655d9-01f8-3763-a7d4-ad3e54504357",
+                "display": "Has Cardiovascular Disease"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "6ef655d9-01f8-3763-a7d4-ad3e54504357",
+                  "display": "Has Cardiovascular Disease"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Cardiovascular Disease - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Cardiovascular Disease - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#52dfdbaa-4cc3-4068-ad2b-5937d6dc1ad5",
+      "title": "Has Hypertension - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "01da3ef2-5313-3ba8-bd4e-2123c9ae77eb",
+              "display": "Has Hypertension (Descr. of)"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "01da3ef2-5313-3ba8-bd4e-2123c9ae77eb",
+                "display": "Has Hypertension"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "01da3ef2-5313-3ba8-bd4e-2123c9ae77eb",
+                  "display": "Has Hypertension"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Hypertension - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Hypertension - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#79235e75-88bf-47ba-9c00-a609c8e4671c",
+      "title": "Has Kidney Disease - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "4c5ef2ec-4498-3af9-91bb-f7556e025b41",
+              "display": "Has Renal Disease (Descr. of)"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "4c5ef2ec-4498-3af9-91bb-f7556e025b41",
+                "display": "Has Renal Disease"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "4c5ef2ec-4498-3af9-91bb-f7556e025b41",
+                  "display": "Has Renal Disease"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Renal Disease - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Renal Disease - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#f8047db8-1382-4e87-aa04-a6019375274c",
+      "title": "Has Chronic Obstructive Pulmonary Disease - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "3dd9edb0-933b-39cf-b279-4bf515e224dc",
+              "display": "Has Chronic Obstructive Pulmonary Disease (COPD) (Descr. of)"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "3dd9edb0-933b-39cf-b279-4bf515e224dc",
+                "display": "Has Chronic Obstructive Pulmonary Disease (COPD)"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "3dd9edb0-933b-39cf-b279-4bf515e224dc",
+                  "display": "Has Chronic Obstructive Pulmonary Disease (COPD)"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Chronic Obstructive Pulmonary Disease (COPD) - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Chronic Obstructive Pulmonary Disease (COPD) - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#3d8c7be7-3f44-4438-8f94-c58dbed5f1d0",
+      "title": "Has Malignancy - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "986a4f4e-4179-3e81-9dc8-b2a297aa8c87",
+              "display": "Has Malignancy (Descr. of)"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "986a4f4e-4179-3e81-9dc8-b2a297aa8c87",
+                "display": "Has Malignancy"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "986a4f4e-4179-3e81-9dc8-b2a297aa8c87",
+                  "display": "Has Malignancy"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Malignancy - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Malignancy - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#0e1b983a-2d31-4b09-9b0a-1452cf2df721",
+      "title": "Has Obesity - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "9f825141-6f7e-3717-aa63-f96f1f10d7ac",
+              "display": "Has Obesity (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "9f825141-6f7e-3717-aa63-f96f1f10d7ac",
+                "display": "Has Obesity"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "9f825141-6f7e-3717-aa63-f96f1f10d7ac",
+                  "display": "Has Obesity"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Obesity - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Obesity - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#9f444b38-8b92-48bc-8df9-79daba78bfc1",
+      "title": "Has Cerebrovascular Disease - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "9fdb23fd-68c3-3b78-a52f-019db75d6f6e",
+              "display": "Has Cerebrovascular disease (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "9fdb23fd-68c3-3b78-a52f-019db75d6f6e",
+                "display": "Has Cerebrovascular disease"
+              }
+            }
+          ],
+          "type": "Condition",
+          "profile": [
+            "http://hl7.org/fhir/Condition"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "9fdb23fd-68c3-3b78-a52f-019db75d6f6e",
+                  "display": "Has Cerebrovascular disease"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "onset",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Cerebrovascular disease - Condition"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Cerebrovascular disease - Condition - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#ad22eac1-2f56-4368-bca5-2f27772451cc",
+      "title": "Has Dyspnea - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "78380b3f-a38e-39fe-ae3e-5ecfd7e8b086",
+              "display": "Current Persistent Dyspnea (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "78380b3f-a38e-39fe-ae3e-5ecfd7e8b086",
+                "display": "Current Persistent Dyspnea"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "78380b3f-a38e-39fe-ae3e-5ecfd7e8b086",
+                  "display": "Current Persistent Dyspnea"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effective",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Current Persistent Dyspnea - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Current Persistent Dyspnea - Observation - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#b4a4ff8f-2e01-46a1-b90e-07e6ab2d4be7",
+      "title": "Has Hemoptysis - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "a3a8db59-2649-3876-9bf8-61f81878bef9",
+              "display": "Has Hemoptysis (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "a3a8db59-2649-3876-9bf8-61f81878bef9",
+                "display": "Has Hemoptysis"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "a3a8db59-2649-3876-9bf8-61f81878bef9",
+                  "display": "Has Hemoptysis"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effective",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Hemoptysis - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Has Hemoptysis - Observation - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#b2b0b2b3-5f90-48a8-91b6-36fe2515f496",
+      "title": "Has Altered LOC - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "0d631b60-7489-3b5e-b816-dd4dd5d3b243",
+              "display": "Current Mental Status (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "0d631b60-7489-3b5e-b816-dd4dd5d3b243",
+                "display": "Current Mental Status"
+              }
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "http://hl7.org/fhir/Observation"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "0d631b60-7489-3b5e-b816-dd4dd5d3b243",
+                  "display": "Current Mental Status"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effective",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Current Mental Status - Observation"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Current Mental Status - Observation - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#31634752-ddb7-4d61-b34a-449cd765bf4b",
+      "title": "Current Severity of Covid19 - Kind of -- Risk Factors",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20210112-045800",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#34bc0640-1a8d-4787-9fa4-0a21bb728b78",
+          "relationship": "after"
+        }
+      ]
+    }
+  ]
+}

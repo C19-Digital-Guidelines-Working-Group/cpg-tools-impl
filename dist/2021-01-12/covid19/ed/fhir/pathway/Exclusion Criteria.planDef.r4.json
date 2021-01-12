@@ -1,0 +1,1314 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#https://clinicalknowledgemanagement.mayo.edu/artifacts/c101ba4a-2875-402b-865b-59ed2cb86ed5",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20210112-045897",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:cf9d4dfe-0368-4862-81ed-d6a1be255909"
+    }
+  ],
+  "version": "TODO",
+  "name": "Exclusion Criteria",
+  "title": "Exclusion Criteria",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "310adb96-1a21-3100-90eb-c7ef4fe270e7",
+        "display": "Decision Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "#c90d94d1-ed47-4d47-a42d-f176edf1b458",
+      "title": "On Advanced Respiratory Support - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20210112-045800",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#e0917295-5977-4b8e-9f30-36aeb5e02fd9",
+          "relationship": "after"
+        }
+      ]
+    },
+    {
+      "id": "#c2c42026-3903-4b13-88b9-ccb3962bdc97",
+      "title": "On Vasopressors - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "ce7fbe26-2214-408f-8172-72a4936ea212",
+              "display": "Is"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "39e38c19-caa5-39eb-a485-2fea6166e9fd",
+              "display": "On Epinephrine (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "f7ac0c35-613d-3796-b45c-13fa031adcdb",
+              "display": "On Norepinephrine (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4",
+              "display": "On Vasopressin (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "d7e7bc21-3b84-3a95-9946-ff0d9cb165cb",
+              "display": "On Dopamine (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20210112-045800",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "39e38c19-caa5-39eb-a485-2fea6166e9fd",
+                "display": "On Epinephrine"
+              }
+            }
+          ],
+          "type": "MedicationStatement",
+          "profile": [
+            "http://hl7.org/fhir/MedicationStatement"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "39e38c19-caa5-39eb-a485-2fea6166e9fd",
+                  "display": "On Epinephrine"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effective",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "39e38c19-caa5-39eb-a485-2fea6166e9fd",
+                "display": "On Epinephrine"
+              }
+            }
+          ],
+          "type": "MedicationRequest",
+          "profile": [
+            "http://hl7.org/fhir/MedicationRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "39e38c19-caa5-39eb-a485-2fea6166e9fd",
+                  "display": "On Epinephrine"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "f7ac0c35-613d-3796-b45c-13fa031adcdb",
+                "display": "On Norepinephrine"
+              }
+            }
+          ],
+          "type": "MedicationStatement",
+          "profile": [
+            "http://hl7.org/fhir/MedicationStatement"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "f7ac0c35-613d-3796-b45c-13fa031adcdb",
+                  "display": "On Norepinephrine"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effective",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "f7ac0c35-613d-3796-b45c-13fa031adcdb",
+                "display": "On Norepinephrine"
+              }
+            }
+          ],
+          "type": "MedicationRequest",
+          "profile": [
+            "http://hl7.org/fhir/MedicationRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "f7ac0c35-613d-3796-b45c-13fa031adcdb",
+                  "display": "On Norepinephrine"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4",
+                "display": "On Vasopressin"
+              }
+            }
+          ],
+          "type": "MedicationStatement",
+          "profile": [
+            "http://hl7.org/fhir/MedicationStatement"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4",
+                  "display": "On Vasopressin"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effective",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4",
+                "display": "On Vasopressin"
+              }
+            }
+          ],
+          "type": "MedicationRequest",
+          "profile": [
+            "http://hl7.org/fhir/MedicationRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4",
+                  "display": "On Vasopressin"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "d7e7bc21-3b84-3a95-9946-ff0d9cb165cb",
+                "display": "On Dopamine"
+              }
+            }
+          ],
+          "type": "MedicationStatement",
+          "profile": [
+            "http://hl7.org/fhir/MedicationStatement"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "d7e7bc21-3b84-3a95-9946-ff0d9cb165cb",
+                  "display": "On Dopamine"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "effective",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "d7e7bc21-3b84-3a95-9946-ff0d9cb165cb",
+                "display": "On Dopamine"
+              }
+            }
+          ],
+          "type": "MedicationRequest",
+          "profile": [
+            "http://hl7.org/fhir/MedicationRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "d7e7bc21-3b84-3a95-9946-ff0d9cb165cb",
+                  "display": "On Dopamine"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Epinephrine - MedicationStatement"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Epinephrine - MedicationStatement - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Epinephrine - MedicationRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Epinephrine - MedicationRequest - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Norepinephrine - MedicationStatement"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Norepinephrine - MedicationStatement - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Norepinephrine - MedicationRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Norepinephrine - MedicationRequest - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Vasopressin - MedicationStatement"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Vasopressin - MedicationStatement - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Vasopressin - MedicationRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Vasopressin - MedicationRequest - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Dopamine - MedicationStatement"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Dopamine - MedicationStatement - Is"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Dopamine - MedicationRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "On Dopamine - MedicationRequest - Is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#e0917295-5977-4b8e-9f30-36aeb5e02fd9",
+      "title": "Currently Used Breathing Support Equipment - Kind of",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+              "display": "Prior Respiratory Support- High Flow Nasal Canula (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+              "display": "Prior Respiratory Support- Mechanical Ventilation (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+              "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://opencpg.org/taxonomy/covid19/ed/",
+              "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+              "display": "Prior Respiratory Support- Supplemental O2 (Descr. of)"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives",
+              "version": "20210112-045852",
+              "code": "add005e9-a3da-4ed0-bc1d-a8fdcae507ef",
+              "display": "Kind Of"
+            }
+          ]
+        }
+      ],
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+                "display": "Prior Respiratory Support- High Flow Nasal Canula"
+              }
+            }
+          ],
+          "type": "Procedure",
+          "profile": [
+            "http://hl7.org/fhir/Procedure"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+                  "display": "Prior Respiratory Support- High Flow Nasal Canula"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "performed",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+                "display": "Prior Respiratory Support- High Flow Nasal Canula"
+              }
+            }
+          ],
+          "type": "DeviceRequest",
+          "profile": [
+            "http://hl7.org/fhir/DeviceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+                  "display": "Prior Respiratory Support- High Flow Nasal Canula"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+                "display": "Prior Respiratory Support- High Flow Nasal Canula"
+              }
+            }
+          ],
+          "type": "ServiceRequest",
+          "profile": [
+            "http://hl7.org/fhir/ServiceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+                  "display": "Prior Respiratory Support- High Flow Nasal Canula"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                "display": "Prior Respiratory Support- Mechanical Ventilation"
+              }
+            }
+          ],
+          "type": "Procedure",
+          "profile": [
+            "http://hl7.org/fhir/Procedure"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                  "display": "Prior Respiratory Support- Mechanical Ventilation"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "performed",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                "display": "Prior Respiratory Support- Mechanical Ventilation"
+              }
+            }
+          ],
+          "type": "DeviceRequest",
+          "profile": [
+            "http://hl7.org/fhir/DeviceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                  "display": "Prior Respiratory Support- Mechanical Ventilation"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                "display": "Prior Respiratory Support- Mechanical Ventilation"
+              }
+            }
+          ],
+          "type": "ServiceRequest",
+          "profile": [
+            "http://hl7.org/fhir/ServiceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+                  "display": "Prior Respiratory Support- Mechanical Ventilation"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation"
+              }
+            }
+          ],
+          "type": "Procedure",
+          "profile": [
+            "http://hl7.org/fhir/Procedure"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                  "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "performed",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation"
+              }
+            }
+          ],
+          "type": "DeviceRequest",
+          "profile": [
+            "http://hl7.org/fhir/DeviceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                  "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation"
+              }
+            }
+          ],
+          "type": "ServiceRequest",
+          "profile": [
+            "http://hl7.org/fhir/ServiceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+                  "display": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+                "display": "Prior Respiratory Support- Supplemental O2"
+              }
+            }
+          ],
+          "type": "Procedure",
+          "profile": [
+            "http://hl7.org/fhir/Procedure"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+                  "display": "Prior Respiratory Support- Supplemental O2"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "performed",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+                "display": "Prior Respiratory Support- Supplemental O2"
+              }
+            }
+          ],
+          "type": "DeviceRequest",
+          "profile": [
+            "http://hl7.org/fhir/DeviceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+                  "display": "Prior Respiratory Support- Supplemental O2"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://www.w3.org/ns/lemon/ontolex#denotes",
+              "valueCoding": {
+                "system": "https://opencpg.org/ontology/covid19/ed/",
+                "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+                "display": "Prior Respiratory Support- Supplemental O2"
+              }
+            }
+          ],
+          "type": "ServiceRequest",
+          "profile": [
+            "http://hl7.org/fhir/ServiceRequest"
+          ],
+          "subjectCodeableConcept": {
+            "coding": [
+              {
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          },
+          "codeFilter": [
+            {
+              "code": [
+                {
+                  "system": "https://opencpg.org/ontology/covid19/ed/",
+                  "code": "f6e6247c-50c3-39f1-beba-de8703a55294",
+                  "display": "Prior Respiratory Support- Supplemental O2"
+                }
+              ]
+            }
+          ],
+          "sort": [
+            {
+              "path": "occurrence",
+              "direction": "descending"
+            }
+          ]
+        }
+      ],
+      "dynamicValue": [
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- High Flow Nasal Canula - Procedure"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- High Flow Nasal Canula - Procedure - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- High Flow Nasal Canula - DeviceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- High Flow Nasal Canula - DeviceRequest - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- High Flow Nasal Canula - ServiceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- High Flow Nasal Canula - ServiceRequest - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Mechanical Ventilation - Procedure"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Mechanical Ventilation - Procedure - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Mechanical Ventilation - DeviceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Mechanical Ventilation - DeviceRequest - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Mechanical Ventilation - ServiceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Mechanical Ventilation - ServiceRequest - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation - Procedure"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation - Procedure - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation - DeviceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation - DeviceRequest - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation - ServiceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation - ServiceRequest - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Supplemental O2 - Procedure"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Supplemental O2 - Procedure - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Supplemental O2 - DeviceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Supplemental O2 - DeviceRequest - Kind Of"
+          }
+        },
+        {
+          "path": "input",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Supplemental O2 - ServiceRequest"
+          }
+        },
+        {
+          "path": "output",
+          "expression": {
+            "language": "text/cql-expressions",
+            "expression": "Prior Respiratory Support- Supplemental O2 - ServiceRequest - Kind Of"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#be7e21f0-b07f-43dc-bc9d-9b65c73da774",
+      "title": "On Hemodynamic Support - Is",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://ontology.mayo.edu/taxonomies/KAO/DecisionType",
+              "version": "20210112-045800",
+              "code": "d03ea564-0d31-3e72-a98b-cb93aa4c5cce",
+              "display": "Assessment Decision"
+            }
+          ]
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "#c90d94d1-ed47-4d47-a42d-f176edf1b458",
+          "relationship": "after"
+        },
+        {
+          "actionId": "#c2c42026-3903-4b13-88b9-ccb3962bdc97",
+          "relationship": "after"
+        }
+      ]
+    }
+  ]
+}

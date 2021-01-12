@@ -1,0 +1,285 @@
+{
+  "id" : "https://opencpg.org/taxonomy/covid19/ed/288293fc-1079-46a1-b644-95ddf1264414",
+  "title" : "Covid-19 ED CPG - 288293fc-1079-46a1-b644-95ddf1264414",
+  "children" : [ {
+    "id" : "https://opencpg.org/ontology/covid19/ed/0d631b60-7489-3b5e-b816-dd4dd5d3b243",
+    "title" : "Current Mental Status",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/0f783f73-2d10-3dbf-b0f2-55f311e83e67",
+    "title" : "Current GCS",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/7d8d47da-454d-3f38-bee9-6e87d7e2657a",
+    "title" : "Current Work of Breathing",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/78380b3f-a38e-39fe-ae3e-5ecfd7e8b086",
+    "title" : "Current Persistent Dyspnea",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/a3a8db59-2649-3876-9bf8-61f81878bef9",
+    "title" : "Has Hemoptysis",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/5ae3dc37-3287-398d-bf85-d8fdbfa36ba1",
+    "title" : "Current O2 Saturation",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/e9c846d0-1f96-3181-8150-fb0ed1c149b1",
+    "title" : "Most Recent O2 Saturation (Ambulatory)",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/79919c0e-1a3d-38ea-a212-e5db8ab30fca",
+    "title" : "Current Respiratory Rate",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/84a8ab48-fc39-307a-9f4f-99a89db68d73",
+    "title" : "Current Heart Rate",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/98a2ce86-4178-3b16-b22e-d0471aca7a49",
+    "title" : "Current Systolic BP",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/84aa13c4-6e2b-3997-9a98-8b16dc2ffdf3",
+    "title" : "Current Diastolic BP",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/019ec313-2cdf-3ee0-b2e2-a75cf5d3e459",
+    "title" : "Gender",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/9d8d2d5a-b12b-3151-82a5-05f54db7f538",
+    "title" : "Age",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/4e221fc0-84bb-39a8-a315-a154d6dd7879",
+    "title" : "Race",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/3bffa372-b64e-31de-8412-2300ceaf5910",
+    "title" : "Current FiO2",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/f6e6247c-50c3-39f1-beba-de8703a55294",
+    "title" : "Prior Respiratory Support- Supplemental O2",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/7ac71826-bd37-3fc3-a8bf-2ecbe377e9fd",
+    "title" : "Prior Respiratory Support- High Flow Nasal Canula",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/2b07c564-a2e2-393b-9fa4-99bce1f865c2",
+    "title" : "Prior Respiratory Support- Non Invasive Positive Pressure Ventilation",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/270c354c-22ae-3077-8e0e-7f0ab0a2b483",
+    "title" : "Prior Respiratory Support- Mechanical Ventilation",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/311eb6b1-c1c8-389c-8826-d8673cc4d623",
+    "title" : "On Dobutamine",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/39e38c19-caa5-39eb-a485-2fea6166e9fd",
+    "title" : "On Epinephrine",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/f7ac0c35-613d-3796-b45c-13fa031adcdb",
+    "title" : "On Norepinephrine",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4",
+    "title" : "On Vasopressin",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/d7e7bc21-3b84-3a95-9946-ff0d9cb165cb",
+    "title" : "On Dopamine",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/18ba15e1-65ae-3f63-b08c-42dd43e3676e",
+    "title" : "Most Recent SARS-CoV-2 test",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/4becaa45-8d21-383b-89b7-8e17f06e6712",
+    "title" : "Most Recent Troponin I",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/5959cf6f-9a5d-3640-947a-e81012372314",
+    "title" : "Most Recent D-dimer",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/c434158d-0aa9-3676-b699-ea3d00be1e1b",
+    "title" : "Most Recent Lactate",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/95bfa631-4574-3a2b-8c16-e6b08ab7c989",
+    "title" : "Most Recent Lactate Dehydrogenase",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/1a5f251e-6304-3d4c-b207-6fe2a5961eaa",
+    "title" : "Most Recent C-Reactive Peptide",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/9547fdae-e53d-36d2-8c8d-546b2822d40f",
+    "title" : "Most Recent Neutrophils (#)",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/fc070a93-5c12-34c2-8b3f-3cc7115e1059",
+    "title" : "Most Recent Lymphocytes (#)",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/136be6a5-dd5c-3e80-bba9-aa1dd3c9b056",
+    "title" : "Most Recent Lymphocyte (%)",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/cfb06246-ab5b-3871-8385-120d5664f14f",
+    "title" : "Most Recent Ferritin",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/256c1862-05d1-3c22-bfd8-b34c40206eb5",
+    "title" : "Most Recent Platelets",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/dfbfc9cc-7a23-3560-b04c-b1a5faf1ec3e",
+    "title" : "Most Recent ALT",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/c77bb0f6-9e2a-30e0-86a8-dc7f0da9320f",
+    "title" : "Most Recent AST",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/efd4ddff-ab84-30a9-9b02-796d87f769a3",
+    "title" : "Has COVID-19 diagnosis (suspected)",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/cfe98e01-a3dc-33f9-b6a5-94d1f28f99bc",
+    "title" : "Has COVID-19 diagnosis (confirmed)",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5",
+    "title" : "Has Diabetes Mellitus Type 1",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/8d45f1b7-8513-3589-bd37-fe16739d9d89",
+    "title" : "Has Diabetes Mellitus Type 2",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/6ff5edf8-399a-3cfa-a52f-ab8f9069c90c",
+    "title" : "Has Heart Failure",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/01da3ef2-5313-3ba8-bd4e-2123c9ae77eb",
+    "title" : "Has Hypertension",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/3dd9edb0-933b-39cf-b279-4bf515e224dc",
+    "title" : "Has Chronic Obstructive Pulmonary Disease (COPD)",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/6ef655d9-01f8-3763-a7d4-ad3e54504357",
+    "title" : "Has Cardiovascular Disease",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/9fdb23fd-68c3-3b78-a52f-019db75d6f6e",
+    "title" : "Has Cerebrovascular disease",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/9f825141-6f7e-3717-aa63-f96f1f10d7ac",
+    "title" : "Has Obesity",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/a1fcb0e0-c8f5-3d8c-a7ff-8a244b625669",
+    "title" : "Current Obese",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/2c31b3cd-5258-36b2-b5e9-b49434ed3e3d",
+    "title" : "Current BMI",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/4c5ef2ec-4498-3af9-91bb-f7556e025b41",
+    "title" : "Has Renal Disease",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/955c689f-130b-33ab-b64a-3c43dc6d6f81",
+    "title" : "Current Long Term Care Facility Resident",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/986a4f4e-4179-3e81-9dc8-b2a297aa8c87",
+    "title" : "Has Malignancy",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/f9a1cd68-c82a-3361-bdc6-58e7fe11c0c3",
+    "title" : "Current CXR Score",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/a5a5c081-4462-3dc8-99f3-e1471d1b4d4f",
+    "title" : "Has Bilateral Pneumonia",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/1e63bbb8-709a-300a-94e7-d47fcd830d85",
+    "title" : "Has RV dilatation",
+    "type" : "entity",
+    "drag" : "item"
+  }, {
+    "id" : "https://opencpg.org/ontology/covid19/ed/af583d30-4a8e-330d-a864-926fd59a0d0f",
+    "title" : "Has RV enlargement",
+    "type" : "entity",
+    "drag" : "item"
+  } ]
+}

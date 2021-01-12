@@ -1,0 +1,318 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "#9cac560c-5ca8-4bc1-95dc-2a54fcc94067",
+  "extension": [
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "execbutable"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://ontology.mayo.edu/taxonomies/KMDO/SemanticAnnotationRelType",
+            "version": "20210112-045897",
+            "code": "4ac82113-9fdd-3050-85e7-5cca8f26d1c6",
+            "display": "is identified by"
+          }
+        ]
+      },
+      "value": "urn:uuid:36f9ccf7-d70a-4fcc-b689-ec6d012d2b40"
+    }
+  ],
+  "version": "TODO",
+  "name": "ED Covid19 Case",
+  "title": "ED Covid19 Case",
+  "type": {
+    "coding": [
+      {
+        "system": "https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType",
+        "version": "20190801",
+        "code": "434e06c0-e3df-3e57-9862-144f7c7857c4",
+        "display": "Care Process Model"
+      }
+    ]
+  },
+  "action": [
+    {
+      "id": "_9633a5c6-9d31-4903-b26a-07bff550ec5c",
+      "title": "Covid19 ED Case",
+      "type": {
+        "coding": [
+          {
+            "system": "TODO",
+            "code": "Stage"
+          }
+        ]
+      },
+      "groupingBehavior": "logical-group",
+      "requiredBehavior": "could",
+      "precheckBehavior": "no",
+      "cardinalityBehavior": "single",
+      "action": [
+        {
+          "id": "PID__d306a367-cde1-4d5b-bd3b-bbdc59ea7415",
+          "title": "Diagnostic Workup",
+          "relatedAction": [
+            {
+              "actionId": "PID__b280a251-f006-452c-a064-c2eb0d5f5be1",
+              "relationship": "after"
+            }
+          ],
+          "type": {
+            "coding": [
+              {
+                "system": "TODO",
+                "code": "Stage"
+              }
+            ]
+          },
+          "groupingBehavior": "logical-group",
+          "requiredBehavior": "could",
+          "precheckBehavior": "no",
+          "cardinalityBehavior": "single",
+          "action": [
+            {
+              "id": "PID__94baef81-87ed-4b1d-86dd-3120bb2cde88",
+              "title": "Diagnostic Assessment",
+              "trigger": [
+                {
+                  "type": "data-changed",
+                  "name": "C19Case Diagnostic Data"
+                },
+                {
+                  "type": "named-event",
+                  "name": "Start Diagnostic Assessment"
+                },
+                {
+                  "type": "named-event",
+                  "name": "Start Diagnostic Assessment"
+                }
+              ],
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "DecisionTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "could",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "multiple",
+              "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/85dc127e-c1ce-47ec-9f42-a52f4faf0baa"
+            },
+            {
+              "id": "PID__9e2284e6-0d4c-41f8-931c-8e91029f5563",
+              "title": "Final Disposition",
+              "relatedAction": [
+                {
+                  "actionId": "PID__1c38cf68-8f02-470c-95ae-85c2c59ae0a7",
+                  "relationship": "after"
+                },
+                {
+                  "actionId": "PID__94baef81-87ed-4b1d-86dd-3120bb2cde88",
+                  "relationship": "after"
+                }
+              ],
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "DecisionTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "must-unless-documented",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "multiple",
+              "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/85dc127e-c1ce-47ec-9f42-a52f4faf0baa"
+            },
+            {
+              "id": "PID__1c38cf68-8f02-470c-95ae-85c2c59ae0a7",
+              "title": "Clinical Assessment",
+              "trigger": [
+                {
+                  "type": "data-changed",
+                  "name": "C19Case \nClinical Data"
+                }
+              ],
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "DecisionTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "could",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "multiple",
+              "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/5d4c6b73-330e-46d9-a8b6-b89a74ada510"
+            },
+            {
+              "id": "PID__6c324c9e-2a19-4006-8eff-3764453a81d8",
+              "title": "Perform Dx Test",
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "HumanTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "could",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "multiple"
+            }
+          ]
+        },
+        {
+          "id": "PID__b280a251-f006-452c-a064-c2eb0d5f5be1",
+          "title": "Initial Assessment",
+          "trigger": [
+            {
+              "type": "named-event",
+              "name": "Patient\nED Admission"
+            },
+            {
+              "type": "named-event",
+              "name": "Patient\nED Admission"
+            }
+          ],
+          "type": {
+            "coding": [
+              {
+                "system": "TODO",
+                "code": "Stage"
+              }
+            ]
+          },
+          "groupingBehavior": "logical-group",
+          "requiredBehavior": "must-unless-documented",
+          "precheckBehavior": "no",
+          "cardinalityBehavior": "single",
+          "action": [
+            {
+              "id": "PID__d841a6fe-ead6-4e4f-9141-f902dfc128c9",
+              "title": "Initial Disposition",
+              "relatedAction": [
+                {
+                  "actionId": "PID__262f8042-9919-4a01-80d6-0f64cb7c1fc7",
+                  "relationship": "after"
+                }
+              ],
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "DecisionTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "must-unless-documented",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "multiple",
+              "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/e47beae0-6139-4e5e-a6fb-948e02d39250"
+            },
+            {
+              "id": "PID__262f8042-9919-4a01-80d6-0f64cb7c1fc7",
+              "title": "Clinical Assessment",
+              "trigger": [
+                {
+                  "type": "data-changed",
+                  "name": "C19Case \nClinical Data"
+                },
+                {
+                  "type": "named-event",
+                  "name": "Start Clinical Assessment"
+                },
+                {
+                  "type": "named-event",
+                  "name": "Start Clinical Assessment"
+                }
+              ],
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "DecisionTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "must-unless-documented",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "multiple",
+              "definitionCanonical": "https://clinicalknowledgemanagement.mayo.edu/artifacts/5d4c6b73-330e-46d9-a8b6-b89a74ada510"
+            },
+            {
+              "id": "PID__1a05b40c-3eb3-4e2f-abba-3a0b190e50f9",
+              "title": "Perform Covid19 Nucleic Test",
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "HumanTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "could",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "single"
+            },
+            {
+              "id": "PID__f2e1950d-cef1-4b5e-a248-2309bdfea5ac",
+              "title": "Examine Patient",
+              "type": {
+                "coding": [
+                  {
+                    "system": "TODO",
+                    "code": "HumanTask"
+                  }
+                ]
+              },
+              "requiredBehavior": "could",
+              "precheckBehavior": "no",
+              "cardinalityBehavior": "multiple"
+            }
+          ]
+        },
+        {
+          "id": "PID__5ee41f3c-1532-4a3e-8b36-a360be35ecc1",
+          "title": "Discharge to Care Setting",
+          "relatedAction": [
+            {
+              "actionId": "PID__b280a251-f006-452c-a064-c2eb0d5f5be1",
+              "relationship": "after"
+            },
+            {
+              "actionId": "PID__d306a367-cde1-4d5b-bd3b-bbdc59ea7415",
+              "relationship": "after"
+            },
+            {
+              "actionId": "PID__b280a251-f006-452c-a064-c2eb0d5f5be1",
+              "relationship": "after"
+            }
+          ],
+          "type": {
+            "coding": [
+              {
+                "system": "TODO",
+                "code": "HumanTask"
+              }
+            ]
+          },
+          "requiredBehavior": "must-unless-documented",
+          "precheckBehavior": "no",
+          "cardinalityBehavior": "single"
+        }
+      ]
+    }
+  ]
+}
