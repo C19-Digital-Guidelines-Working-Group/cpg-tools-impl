@@ -172,6 +172,34 @@
       </semantic:allowedValues>
    </semantic:itemDefinition>
    <semantic:itemDefinition isCollection="false" label="tRespRateValue" name="tRespRateValue">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Current Respiratory Rate (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/79919c0e-1a3d-38ea-a212-e5db8ab30fca"
+                      tag="79919c0e-1a3d-38ea-a212-e5db8ab30fca">
+               <id:uuid>79919c0e-1a3d-38ea-a212-e5db8ab30fca</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20210112-045852">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
       <semantic:typeRef>number</semantic:typeRef>
       <semantic:allowedValues>
          <semantic:extensionElements>
@@ -187,6 +215,34 @@
       </semantic:allowedValues>
    </semantic:itemDefinition>
    <semantic:itemDefinition isCollection="false" label="tSBPValue" name="tSBPValue">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Current Systolic BP (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/98a2ce86-4178-3b16-b22e-d0471aca7a49"
+                      tag="98a2ce86-4178-3b16-b22e-d0471aca7a49">
+               <id:uuid>98a2ce86-4178-3b16-b22e-d0471aca7a49</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20210112-045852">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
       <semantic:typeRef>number</semantic:typeRef>
       <semantic:allowedValues>
          <semantic:extensionElements>
@@ -202,6 +258,34 @@
       </semantic:allowedValues>
    </semantic:itemDefinition>
    <semantic:itemDefinition isCollection="false" label="tHeartRateValue" name="tHeartRateValue">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Current Heart Rate (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/84a8ab48-fc39-307a-9f4f-99a89db68d73"
+                      tag="84a8ab48-fc39-307a-9f4f-99a89db68d73">
+               <id:uuid>84a8ab48-fc39-307a-9f4f-99a89db68d73</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20210112-045852">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
       <semantic:typeRef>number</semantic:typeRef>
       <semantic:allowedValues>
          <semantic:extensionElements>
@@ -242,34 +326,34 @@
          <semantic:typeRef>tisLongTermCareResident</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_478fde5f-fbc5-4d29-9e1d-6cf22ff39f8d" name="hasDispneaPresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasDispneaPresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_137fc5b0-27fe-4d07-ad8c-cf3783303263" name="hasHemoptysisPresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasHemoptysisPresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_c776ae48-b000-47b4-a22c-75d1972867c4" name="hasAlteredLOC">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasAlteredLOC</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_237883fe-490a-4e5f-88d8-f956c997a830" name="hasObesityPresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasObesityPresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_cee8bfd4-0c30-4f43-a5b3-93dda7f5fa0b" name="hasMalignancyPresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasMalignancyPresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_d0736657-3047-4de9-b0ba-1470af4792ca" name="hasCOPDPresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasCOPDPresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_e149e0d6-8bc8-4c05-bc15-b2e7c7a4416e"
                               name="hasKidneyDiseasePresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasKidneyDiseasePresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_8fb61284-f993-4427-aede-6968685debe8"
                               name="hasHypertensionPresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasHypertensionPresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_cd3d94fc-1384-4714-90c6-a7a28aa547a1"
                               name="hasCerebrovascularDiseasePresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasCerebrovascularDiseasePresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_6c8de75b-e8c5-4689-b242-b035cbcc769d"
                               name="hasCardioVascularDiseasePresent">
@@ -277,11 +361,11 @@
       </semantic:itemComponent>
       <semantic:itemComponent id="_4dd7b553-c496-4b7a-b82f-e9b93c17b8d0"
                               name="hasDIabetesMellitusPresent">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasDIabetesMellitusPresent</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_3ba0700b-9da2-416f-aff9-bfdbb5871784"
                               name="currentlyIsOnVasopressors">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>tcurrentlyIsOnVasopressors</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_6ab51469-9b4e-4c38-9a2b-d004953f4553"
                               name="currentlyUsedBreathingEquipment">
@@ -296,21 +380,21 @@
          </semantic:itemComponent>
       </semantic:itemComponent>
       <semantic:itemComponent id="_3007756d-25be-4382-97b2-37a3a83997a2" name="isBreathingNormally">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>tisBreathingNormally</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_9fe86a20-df5e-4c7a-8144-4267b1564617" name="isBloodPressureUsual">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>tisBloodPressureUsual</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_ca31f00d-1d54-42e8-9a45-d3f791f53607" name="isGenerallyHealthy">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>tisGenerallyHealthy</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_184b4584-f8b7-47f1-b981-289b39e90af9"
                               name="hasConditionWarrantingAdmission">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasConditionWarrantingAdmission</semantic:typeRef>
       </semantic:itemComponent>
       <semantic:itemComponent id="_7c0c6816-7567-49c8-83df-e87c9ac9ea69"
                               name="hasConditionWarrantingWorkup">
-         <semantic:typeRef>boolean</semantic:typeRef>
+         <semantic:typeRef>thasConditionWarrantingWorkup</semantic:typeRef>
       </semantic:itemComponent>
    </semantic:itemDefinition>
    <semantic:itemDefinition isCollection="false" label="tAge" name="tAge">
@@ -582,6 +666,23 @@
       </semantic:allowedValues>
    </semantic:itemDefinition>
    <semantic:itemDefinition isCollection="false" label="tLactateValue" name="tLactateValue">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20210112-045852">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
       <semantic:typeRef>number</semantic:typeRef>
       <semantic:allowedValues>
          <semantic:extensionElements>
@@ -610,6 +711,34 @@
       </semantic:allowedValues>
    </semantic:itemDefinition>
    <semantic:itemDefinition isCollection="false" label="tDDimerValue" name="tDDimerValue">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Most Recent D-dimer (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/5959cf6f-9a5d-3640-947a-e81012372314"
+                      tag="5959cf6f-9a5d-3640-947a-e81012372314">
+               <id:uuid>5959cf6f-9a5d-3640-947a-e81012372314</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20210112-045852">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
       <semantic:typeRef>number</semantic:typeRef>
       <semantic:allowedValues>
          <semantic:extensionElements>
@@ -625,6 +754,34 @@
    <semantic:itemDefinition isCollection="false"
                             label="tLymphocyteCountValue"
                             name="tLymphocyteCountValue">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Most Recent Lymphocytes (#) (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/fc070a93-5c12-34c2-8b3f-3cc7115e1059"
+                      tag="fc070a93-5c12-34c2-8b3f-3cc7115e1059">
+               <id:uuid>fc070a93-5c12-34c2-8b3f-3cc7115e1059</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20210112-045852">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
       <semantic:typeRef>number</semantic:typeRef>
       <semantic:allowedValues>
          <semantic:extensionElements>
@@ -638,6 +795,34 @@
       </semantic:allowedValues>
    </semantic:itemDefinition>
    <semantic:itemDefinition isCollection="false" label="tLDHValue" name="tLDHValue">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Most Recent Lactate Dehydrogenase (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/95bfa631-4574-3a2b-8c16-e6b08ab7c989"
+                      tag="95bfa631-4574-3a2b-8c16-e6b08ab7c989">
+               <id:uuid>95bfa631-4574-3a2b-8c16-e6b08ab7c989</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Quantity Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      tag="quantity"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#17a65ac7-d110-41e6-9f8a-13b801ee473d"
+                      versionTag="20210112-045852">
+               <id:uuid>17a65ac7-d110-41e6-9f8a-13b801ee473d</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
       <semantic:typeRef>number</semantic:typeRef>
       <semantic:allowedValues>
          <semantic:extensionElements>
@@ -1083,6 +1268,456 @@
          </surr:annotation>
       </semantic:extensionElements>
       <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasDispneaPresent"
+                            name="thasDispneaPresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Current Persistent Dyspnea (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/78380b3f-a38e-39fe-ae3e-5ecfd7e8b086"
+                      tag="78380b3f-a38e-39fe-ae3e-5ecfd7e8b086">
+               <id:uuid>78380b3f-a38e-39fe-ae3e-5ecfd7e8b086</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasHemoptysisPresent"
+                            name="thasHemoptysisPresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Hemoptysis (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/a3a8db59-2649-3876-9bf8-61f81878bef9"
+                      tag="a3a8db59-2649-3876-9bf8-61f81878bef9">
+               <id:uuid>a3a8db59-2649-3876-9bf8-61f81878bef9</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false" label="thasAlteredLOC" name="thasAlteredLOC">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Kind Of"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/add005e9-a3da-4ed0-bc1d-a8fdcae507ef"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#add005e9-a3da-4ed0-bc1d-a8fdcae507ef"
+                      tag="kind"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#add005e9-a3da-4ed0-bc1d-a8fdcae507ef"
+                      versionTag="20210112-045852">
+               <id:uuid>add005e9-a3da-4ed0-bc1d-a8fdcae507ef</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Current Mental Status (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/0d631b60-7489-3b5e-b816-dd4dd5d3b243"
+                      tag="0d631b60-7489-3b5e-b816-dd4dd5d3b243">
+               <id:uuid>0d631b60-7489-3b5e-b816-dd4dd5d3b243</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasObesityPresent"
+                            name="thasObesityPresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Obesity (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/9f825141-6f7e-3717-aa63-f96f1f10d7ac"
+                      tag="9f825141-6f7e-3717-aa63-f96f1f10d7ac">
+               <id:uuid>9f825141-6f7e-3717-aa63-f96f1f10d7ac</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasMalignancyPresent"
+                            name="thasMalignancyPresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Malignancy (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/986a4f4e-4179-3e81-9dc8-b2a297aa8c87"
+                      tag="986a4f4e-4179-3e81-9dc8-b2a297aa8c87">
+               <id:uuid>986a4f4e-4179-3e81-9dc8-b2a297aa8c87</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false" label="thasCOPDPresent" name="thasCOPDPresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Chronic Obstructive Pulmonary Disease (COPD) (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/3dd9edb0-933b-39cf-b279-4bf515e224dc"
+                      tag="3dd9edb0-933b-39cf-b279-4bf515e224dc">
+               <id:uuid>3dd9edb0-933b-39cf-b279-4bf515e224dc</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasKidneyDiseasePresent"
+                            name="thasKidneyDiseasePresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Renal Disease (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/4c5ef2ec-4498-3af9-91bb-f7556e025b41"
+                      tag="4c5ef2ec-4498-3af9-91bb-f7556e025b41">
+               <id:uuid>4c5ef2ec-4498-3af9-91bb-f7556e025b41</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasHypertensionPresent"
+                            name="thasHypertensionPresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Hypertension (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/01da3ef2-5313-3ba8-bd4e-2123c9ae77eb"
+                      tag="01da3ef2-5313-3ba8-bd4e-2123c9ae77eb">
+               <id:uuid>01da3ef2-5313-3ba8-bd4e-2123c9ae77eb</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasCerebrovascularDiseasePresent"
+                            name="thasCerebrovascularDiseasePresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Cerebrovascular disease (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/9fdb23fd-68c3-3b78-a52f-019db75d6f6e"
+                      tag="9fdb23fd-68c3-3b78-a52f-019db75d6f6e">
+               <id:uuid>9fdb23fd-68c3-3b78-a52f-019db75d6f6e</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasDIabetesMellitusPresent"
+                            name="thasDIabetesMellitusPresent">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Diabetes Mellitus Type 1 (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5"
+                      tag="e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5">
+               <id:uuid>e4f842e1-d5c7-3b8c-9819-31c6aaeaddc5</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="Has Diabetes Mellitus Type 2 (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/8d45f1b7-8513-3589-bd37-fe16739d9d89"
+                      tag="8d45f1b7-8513-3589-bd37-fe16739d9d89">
+               <id:uuid>8d45f1b7-8513-3589-bd37-fe16739d9d89</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="tcurrentlyIsOnVasopressors"
+                            name="tcurrentlyIsOnVasopressors">
+      <semantic:extensionElements>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="On Vasopressin (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4"
+                      tag="7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4">
+               <id:uuid>7a1c6d5b-f54f-39cc-bb36-e6843a58d1e4</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref establishedOn="2021-01-12T00:00:00"
+                      name="Is"
+                      namespaceUri="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives"
+                      referentId="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212"
+                      resourceId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      tag="is"
+                      versionId="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/versions/20210112-045852#ce7fbe26-2214-408f-8172-72a4936ea212"
+                      versionTag="20210112-045852">
+               <id:uuid>ce7fbe26-2214-408f-8172-72a4936ea212</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="On Epinephrine (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/39e38c19-caa5-39eb-a485-2fea6166e9fd"
+                      tag="39e38c19-caa5-39eb-a485-2fea6166e9fd">
+               <id:uuid>39e38c19-caa5-39eb-a485-2fea6166e9fd</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="On Dopamine (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/d7e7bc21-3b84-3a95-9946-ff0d9cb165cb"
+                      tag="d7e7bc21-3b84-3a95-9946-ff0d9cb165cb">
+               <id:uuid>d7e7bc21-3b84-3a95-9946-ff0d9cb165cb</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+         <surr:annotation xmlns:api="https://www.omg.org/spec/API4KP/20200801/services"
+                          xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+                          xmlns:idx="https://www.omg.org/spec/API4KP/20200801/id/resources"
+                          xmlns:surrx="https://www.omg.org/spec/API4KP/20200801/surrogate/resources">
+            <surr:ref name="On Norepinephrine (Descr. of)"
+                      namespaceUri="https://opencpg.org/taxonomy/covid19/ed/"
+                      resourceId="https://opencpg.org/taxonomy/covid19/ed/f7ac0c35-613d-3796-b45c-13fa031adcdb"
+                      tag="f7ac0c35-613d-3796-b45c-13fa031adcdb">
+               <id:uuid>f7ac0c35-613d-3796-b45c-13fa031adcdb</id:uuid>
+            </surr:ref>
+         </surr:annotation>
+      </semantic:extensionElements>
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="tisBreathingNormally"
+                            name="tisBreathingNormally">
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="tisBloodPressureUsual"
+                            name="tisBloodPressureUsual">
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="tisGenerallyHealthy"
+                            name="tisGenerallyHealthy">
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasConditionWarrantingAdmission"
+                            name="thasConditionWarrantingAdmission">
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false"
+                            label="thasConditionWarrantingWorkup"
+                            name="thasConditionWarrantingWorkup">
+      <semantic:typeRef>boolean</semantic:typeRef>
+   </semantic:itemDefinition>
+   <semantic:itemDefinition isCollection="false" label="tExertSPO2Value" name="tExertSPO2Value">
+      <semantic:typeRef>number</semantic:typeRef>
+      <semantic:allowedValues>
+         <semantic:extensionElements>
+            <triso:constraintDetails xmlns:triso="http://www.trisotech.com/2015/triso/modeling"
+                                     max="100"
+                                     maxIncluded="false"
+                                     min="10"
+                                     minIncluded="false">
+               <triso:display>(10..100)</triso:display>
+            </triso:constraintDetails>
+            <triso:constraintDetails xmlns:triso="http://www.trisotech.com/2015/triso/modeling"
+                                     max="100"
+                                     maxIncluded="false"
+                                     min="10"
+                                     minIncluded="false">
+               <triso:display>(10..100)</triso:display>
+            </triso:constraintDetails>
+         </semantic:extensionElements>
+         <semantic:text>(10..100)</semantic:text>
+      </semantic:allowedValues>
    </semantic:itemDefinition>
    <semantic:inputData id="_22e385ac-9dc1-4789-8a1d-2301b54577b1" name="Covid19 Patient">
       <semantic:variable id="_39e907b5-66c6-49ec-a93d-ab9922aef60f"

@@ -87,7 +87,7 @@
             <surr:rel referentId="https://www.omg.org/spec/API4KP/api4kp-rel/imports" resourceId="https://www.omg.org/spec/API4KP/20200801/taxonomy/DependencyRelType#a6878bf5-d858-3676-83a1-ef2871d36f47" versionId="https://www.omg.org/spec/API4KP/20200801/taxonomy/DependencyRelType/versions/20210112-045841#a6878bf5-d858-3676-83a1-ef2871d36f47" tag="imports" versionTag="20210112-045841" name="imports" namespaceUri="https://www.omg.org/spec/API4KP/20200801/taxonomy/DependencyRelType" establishedOn="2020-08-01T00:00:00">
                 <id:uuid>a6878bf5-d858-3676-83a1-ef2871d36f47</id:uuid>
             </surr:rel>
-            <surr:href resourceId="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546" versionId="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546/versions/1.0.0+1610471645000" tag="2784cb52-8780-4cb5-ba3a-52607ade5546" versionTag="1.0.0+1610471645000" namespaceUri="https://clinicalknowledgemanagement.mayo.edu/artifacts/" establishedOn="2021-01-12T11:14:05">
+            <surr:href resourceId="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546" versionId="https://clinicalknowledgemanagement.mayo.edu/artifacts/2784cb52-8780-4cb5-ba3a-52607ade5546/versions/1.0.0+1610491070000" tag="2784cb52-8780-4cb5-ba3a-52607ade5546" versionTag="1.0.0+1610491070000" namespaceUri="https://clinicalknowledgemanagement.mayo.edu/artifacts/" establishedOn="2021-01-12T16:37:50">
                 <id:uuid>2784cb52-8780-4cb5-ba3a-52607ade5546</id:uuid>
             </surr:href>
         </surr:links>

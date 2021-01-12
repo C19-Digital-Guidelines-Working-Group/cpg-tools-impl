@@ -4,7 +4,6 @@ import static cpg.covid19.ed.cql.CQLRetrieveGenerator.getDefaultLiftName;
 import static cpg.covid19.ed.cql.CQLRetrieveGenerator.getDefaultRetrieveName;
 import static cpg.util.fhir.IOUtil.readDMNModels;
 
-import com.google.common.io.Files;
 import edu.mayo.kmdp.util.NameUtils;
 import edu.mayo.kmdp.util.StreamUtil;
 import edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogative;
@@ -106,18 +105,18 @@ public class ItemDefinitionToCQLStructTransformer extends AbstractCQLGenerator {
       List<SemanticDataElementInfo> infos) {
     TItemDefinition slotDef = resolveType(slotType, definitions);
 
-    Optional<SemanticDataElementInfo> infoOpt = mapToRetrieve(slotDef, infos);
+    List<SemanticDataElementInfo> infoList = mapToRetrieve(slotDef, infos);
     Optional<ClinicalInterrogative> interrOpt = mapToInterrogative(slotDef);
 
-    if (infoOpt.isEmpty() || interrOpt.isEmpty()) {
+    if (infoList.isEmpty() || interrOpt.isEmpty()) {
       return "null";
     }
 
-    SemanticDataElementInfo info = infoOpt.get();
-    List<String> elements = info.fhirResources.stream()
-        .map(res -> getDefaultRetrieveName(info.label(),res))
-        .map(retrieve -> getDefaultLiftName(retrieve,interrOpt.get().getLabel()))
-        .map(expr -> "\"" + expr + "\"")
+    List<String> elements = infoList.stream()
+        .flatMap(info -> info.fhirResources.stream()
+            .map(res -> getDefaultRetrieveName(info.label(), res))
+            .map(retrieve -> getDefaultLiftName(retrieve, interrOpt.get().getLabel()))
+            .map(expr -> "\"" + expr + "\""))
         .collect(Collectors.toList());
 
     switch (elements.size()) {
@@ -159,7 +158,7 @@ public class ItemDefinitionToCQLStructTransformer extends AbstractCQLGenerator {
         .flatMap(StreamUtil.filterAs(Annotation.class));
   }
 
-  private Optional<SemanticDataElementInfo> mapToRetrieve(
+  private List<SemanticDataElementInfo> mapToRetrieve(
       TItemDefinition slotDef,
       List<SemanticDataElementInfo> infos) {
     return getAnnotations(slotDef)
@@ -167,7 +166,7 @@ public class ItemDefinitionToCQLStructTransformer extends AbstractCQLGenerator {
         .map(ResourceIdentifier::getUuid)
         .map(uuid -> mapToInfo(uuid, infos))
         .flatMap(StreamUtil::trimStream)
-        .findFirst();
+        .collect(Collectors.toList());
   }
 
   private Optional<SemanticDataElementInfo> mapToInfo(UUID uuid,
