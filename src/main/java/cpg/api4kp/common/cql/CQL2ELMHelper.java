@@ -15,6 +15,7 @@ package cpg.api4kp.common.cql;
 
 import cpg.covid19.ed.cql.CQLConceptsGenerator;
 import cpg.covid19.ed.cql.CQLPreMappedConceptsGenerator;
+import cpg.covid19.ed.cql.CQLRetrieveGenerator;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -105,6 +106,9 @@ public class CQL2ELMHelper {
       }
       if (CQLPreMappedConceptsGenerator.LIBRARY_NAME.equals(vid)) {
         return CQLPreMappedConceptsGenerator.NAME;
+      }
+      if (CQLRetrieveGenerator.LIBRARY_NAME.equals(vid)) {
+        return CQLRetrieveGenerator.NAME;
       }
       return vid;
     }

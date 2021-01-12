@@ -52,21 +52,6 @@ public abstract class AbstractOntologyDrivenGenerator {
     PROCEDURE, OBSERVABLE, PROBLEM, MEDICATION, DEMOGRAPHICS, LAB;
   }
 
-  public enum Interrogatives {
-    IS("Is", "Present"),
-    KIND_OF("KindOf", "Kind Of"),
-    VALUE_OF("ValueOf", "Value Of"),
-    LAST("Last", "Last");
-
-    public final String code;
-    public final String label;
-
-    Interrogatives(String code, String label) {
-      this.code = code;
-      this.label = label;
-    }
-  }
-
   public abstract void run(Path srcPath, Path tgtPath);
 
   static Map<String,List<SemanticDataElementInfo>> cache = new HashMap<>();

@@ -20,6 +20,12 @@ import org.omg.spec.api4kp._20200801.services.KnowledgeCarrier;
 public class CQLTest {
 
   @Test
+  void testValidateSituational() {
+    InputStream is = CQLTest.class.getResourceAsStream("/opencpg/covid19/ed/cql/situational_data-0.0.1.cql");
+    validate(is);
+  }
+
+  @Test
   void testValidateRetrieves() {
     InputStream is = CQLTest.class.getResourceAsStream("/opencpg/covid19/ed/cql/retrieves-0.0.1.cql");
     validate(is);

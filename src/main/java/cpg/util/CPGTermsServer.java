@@ -25,18 +25,15 @@ import static org.omg.spec.api4kp._20200801.terms.model.ConceptDescriptor.toConc
 
 import cpg.covid19.ed.Main;
 import edu.mayo.kmdp.language.parsers.owl2.JenaOwlParser;
-import edu.mayo.ontology.taxonomies.clinicalinterrogatives._20201101.ClinicalInterrogative;
-import edu.mayo.ontology.taxonomies.kao.decisiontype.DecisionType;
+import edu.mayo.ontology.taxonomies.clinicalinterrogatives.snapshot.ClinicalInterrogative;
 import edu.mayo.ontology.taxonomies.kao.decisiontype.DecisionTypeSeries;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 import javax.annotation.PostConstruct;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.vocabulary.RDFS;

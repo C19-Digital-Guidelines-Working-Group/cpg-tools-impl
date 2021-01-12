@@ -1,15 +1,17 @@
 package cpg.covid19.ed.cql;
 
-import static cpg.covid19.ed.AbstractOntologyDrivenGenerator.Interrogatives.IS;
-import static cpg.covid19.ed.AbstractOntologyDrivenGenerator.Interrogatives.KIND_OF;
-import static cpg.covid19.ed.AbstractOntologyDrivenGenerator.Interrogatives.LAST;
-import static cpg.covid19.ed.AbstractOntologyDrivenGenerator.Interrogatives.VALUE_OF;
+import static edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogativeSeries.Is;
+import static edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogativeSeries.Kind_Of;
+import static edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogativeSeries.Last;
+import static edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogativeSeries.Quantity_Of;
+import static edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogativeSeries.Value_Of;
+import static edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogativeSeries.asEnum;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 
-import cpg.covid19.ed.AbstractOntologyDrivenGenerator;
 import cpg.covid19.ed.SupportedFHIRTypes;
+import edu.mayo.ontology.taxonomies.clinicalinterrogatives.ClinicalInterrogative;
 import java.util.List;
 import org.hl7.fhir.r4.model.Enumerations.FHIRAllTypes;
 import org.slf4j.Logger;
@@ -210,26 +212,29 @@ public class CQLRetrieveGenerator extends AbstractCQLGenerator {
 
   protected String toLifts(SemanticDataElementInfo info, String resourceType) {
     StringBuilder def = new StringBuilder();
-    List<Interrogatives> interrogatives = getAdmissibleInterrogatives(resourceType);
+    List<ClinicalInterrogative> interrogatives = getAdmissibleInterrogatives(resourceType);
     String baseExpr =  getDefaultRetrieveName(info.label(), resourceType);
 
     interrogatives.forEach(interr -> {
       def.append(needsBlockComment(info));
       def.append("define " + "\"")
-          .append(getDefaultLiftName(baseExpr, interr.label))
+          .append(getDefaultLiftName(baseExpr, interr.getLabel()))
           .append("\" : ").append("\n\t");
-      switch (interr) {
-        case IS:
+      switch (asEnum(interr)) {
+        case Is:
           def.append("Exists( \"").append(baseExpr).append("\" ) ").append("\n");
           break;
-        case LAST:
+        case Last:
           def.append("Last( \"").append(baseExpr).append("\" ) ").append("\n");
           break;
-        case KIND_OF:
-          def.append("\"").append(getDefaultLiftName(baseExpr, LAST.label)).append("\".code ").append("\n");
+        case Kind_Of:
+          def.append("\"").append(getDefaultLiftName(baseExpr, Last.getLabel())).append("\".code ").append("\n");
           break;
-        case VALUE_OF:
-          def.append("\"").append(getDefaultLiftName(baseExpr, LAST.label)).append("\".value ").append("\n");
+        case Value_Of:
+          def.append("\"").append(getDefaultLiftName(baseExpr, Last.getLabel())).append("\".value ").append("\n");
+          break;
+        case Quantity_Of:
+          def.append("\"").append(getDefaultLiftName(baseExpr, Last.getLabel())).append("\".value ").append("\n");
           break;
         default:
           throw new UnsupportedOperationException();
@@ -241,18 +246,18 @@ public class CQLRetrieveGenerator extends AbstractCQLGenerator {
     return def.toString();
   }
 
-  protected List<Interrogatives> getAdmissibleInterrogatives(String resourceType) {
+  protected List<ClinicalInterrogative> getAdmissibleInterrogatives(String resourceType) {
     switch (FHIRAllTypes.fromCode(resourceType)) {
       case OBSERVATION:
-        return asList(IS, LAST, KIND_OF, VALUE_OF);
+        return asList(Is, Last, Kind_Of, Value_Of, Quantity_Of);
       case CONDITION:
-        return asList(IS, LAST, KIND_OF);
+        return asList(Is, Last, Kind_Of);
       case PROCEDURE:
-        return asList(IS, LAST, KIND_OF);
+        return asList(Is, Last, Kind_Of);
       case PATIENT:
         return emptyList();
       default:
-        return singletonList(IS);
+        return singletonList(Is);
     }
   }
 

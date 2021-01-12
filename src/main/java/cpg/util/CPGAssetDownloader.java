@@ -11,6 +11,8 @@ import static org.omg.spec.api4kp._20200801.taxonomy.krlanguage.snapshot.Knowled
 import static org.omg.spec.api4kp._20200801.taxonomy.parsinglevel._20200801.ParsingLevel.Serialized_Knowledge_Expression;
 
 import cpg.covid19.ed.Main;
+import edu.mayo.kmdp.kdcaci.knew.trisotech.TTAssetRepositoryConfig;
+import edu.mayo.kmdp.kdcaci.knew.trisotech.TTAssetRepositoryConfig.TTWParams;
 import edu.mayo.kmdp.kdcaci.knew.trisotech.TrisotechAssetRepository;
 import edu.mayo.kmdp.kdcaci.knew.trisotech.components.weavers.Weaver;
 import edu.mayo.kmdp.language.parsers.cmmn.v1_1.CMMN11Parser;
@@ -65,6 +67,13 @@ public class CPGAssetDownloader {
 
   @Autowired
   TrisotechWrapper wrapper;
+
+  @Bean
+  public TTAssetRepositoryConfig config() {
+    return new TTAssetRepositoryConfig()
+        .with(TTWParams.DOMAIN_TERMS_NAMESPACE_PATTERN,
+            "(.*opencpg.org/taxonomy/covid19/.*)|(.*/clinicalsituations/.*)");
+  }
 
 
   @Bean

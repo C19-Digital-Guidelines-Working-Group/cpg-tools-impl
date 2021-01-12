@@ -12,15 +12,15 @@ context Patient
  */
 
 //https://opencpg.org/ontology/covid19/ed/9d8d2d5a-b12b-3151-82a5-05f54db7f538
-define "Current Patient Age":
+define "Age - Patient - Quantity Of":
    AgeInYears()
 
 //https://opencpg.org/ontology/covid19/ed/019ec313-2cdf-3ee0-b2e2-a75cf5d3e459
-define "Patient BirthSex":
-  Patient.gender = 'male'
+define "Gender - Patient - Kind Of":
+  Patient.gender
 
 //https://opencpg.org/ontology/covid19/ed/4e221fc0-84bb-39a8-a315-a154d6dd7879
-define "Patient Race":
+define "Race - Patient - Kind Of":
   (flatten (
     Patient.extension Extension
       where Extension.url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'
@@ -30,7 +30,7 @@ define "Patient Race":
       or E.url = 'detailed'
     return E.value as Coding
 
-define "Patient Race - Text Of":
+define "Race - Patient - Text Of":
   First((flatten (
     Patient.extension Extension
       where Extension.url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'

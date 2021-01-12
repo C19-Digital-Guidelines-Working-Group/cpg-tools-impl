@@ -7,6 +7,7 @@ import cpg.covid19.ed.cql.CQLPreMappedConceptsGenerator;
 import cpg.covid19.ed.cql.CQLConceptsGenerator;
 import cpg.covid19.ed.cql.CQLRetrieveGenerator;
 import cpg.covid19.ed.cql.DMNToCQLInferenceTransformer;
+import cpg.covid19.ed.cql.ItemDefinitionToCQLStructTransformer;
 import cpg.covid19.ed.fhir.CPGOntologyToCaseFeatureDefTransformer;
 import cpg.covid19.ed.fhir.DMNToQuestionnaireGenerator;
 import cpg.covid19.ed.fhir.ProcessToPlanDefinitionGenerator;
@@ -62,7 +63,13 @@ public class Main {
   public static final Path cqlPath =
       tgtPath.resolve(relativeScope.resolve(Path.of("cql")));
 
-
+  /**
+   * Generators
+   *  - Excel "Glossary" to OWL 'Clinical Situation' Ontology
+   *  - Ontology to FHIR CodeSystem
+   *  - Glossary to FHIR ConceptMap
+   *  - Glossary to Trisotech "Accelerator" (proprietary code system format)
+   */
   public static class OntologyMain {
     public static void main(String... args) {
 
@@ -74,6 +81,9 @@ public class Main {
     }
   }
 
+  /**
+   * Downloads, and caches, the ED BPM+ models from a Trisotech instance
+   */
   public static class BPMPlusMain {
     public static void main(String... args) {
       ConfigurableApplicationContext context = SpringApplication.run(CPGAssetDownloader.class, args);
@@ -81,17 +91,30 @@ public class Main {
     }
   }
 
+  /**
+   * Generates:
+   * - Glossary to CQL 'Concepts/Code/Valueset' header (ontology mediated)
+   * - Glossary to CQL 'Concepts/Code/Valueset' header (pre-mapped to standard code systems)
+   * - Glossary to CQL 'Retrieve' + Lifting operators (Exists, Last, .value, etc)
+   * - Glossary to FHIR DataElement/Definitions (TODO for eCase Report)
+   */
   public static class GlossaryMain {
     public static void main(String... args) {
 
-      new CQLRetrieveGenerator().run(dataElementSheet, cqlPath);
       new CQLConceptsGenerator().run(dataElementSheet, cqlPath);
       new CQLPreMappedConceptsGenerator().run(dataElementSheet, cqlPath);
+      new CQLRetrieveGenerator().run(dataElementSheet, cqlPath);
       new CPGOntologyToCaseFeatureDefTransformer().run(dataElementSheet, fhirDataReqPath);
 
     }
   }
 
+  /**
+   * Generates:
+   * - Case Model to FHIR Plan Definition
+   * - Decision Models to FHIR Plan Definition
+   * - Decision Models to FHIR Questionnaire
+   */
   public static class BPMtoFHIRMain {
     public static void main(String... args) {
 
@@ -100,10 +123,17 @@ public class Main {
     }
   }
 
+  /**
+   * Generates:
+   * - "Situational Data" (DMN) to CQL 'Tuples'
+   * - DMN (FEEL) to CQL Inferences for Case Features
+   */
   public static class BPMtoCQLMain {
     public static void main(String... args) {
 
-      new DMNToCQLInferenceTransformer().run(bpmPath,cqlPath);
+      new ItemDefinitionToCQLStructTransformer("Situational Data Definitions.dmn.xml", bpmPath)
+          .run(dataElementSheet,cqlPath);
+      //new DMNToCQLInferenceTransformer().run(bpmPath,cqlPath);
     }
   }
 
