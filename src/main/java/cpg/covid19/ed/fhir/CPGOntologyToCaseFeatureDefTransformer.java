@@ -16,8 +16,6 @@ import org.hl7.fhir.r4.model.StructureDefinition.TypeDerivationRule;
 public class CPGOntologyToCaseFeatureDefTransformer extends AbstractOntologyDrivenGenerator {
 
 
-
-  @Override
   public void run(Path srcPath, Path tgtPath) {
     List<SemanticDataElementInfo> infos = readDataElements(srcPath);
 

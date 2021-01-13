@@ -24,12 +24,13 @@ import org.omg.spec.dmn._20180521.model.TInformationItem;
 import org.omg.spec.dmn._20180521.model.TInputData;
 import org.omg.spec.dmn._20180521.model.TItemDefinition;
 
-public class ItemDefinitionToCQLStructTransformer extends AbstractCQLGenerator {
+public class ItemDefinitionToCQLStructTransformer extends AbstractGlossaryCQLGenerator {
 
   public static final String NAME = "situational_data";
   public static final String VERSION = "0.0.1";
   public static final String FILE_NAME = NAME + "-" + VERSION + ".cql";
   public static final String LIBRARY_NAME = "COVID19_ED_CPG_Situational_Data";
+  public static final String ALIAS = "Situational Data Definitions";    // TODO FIXME Invalid name
 
   TDefinitions definitions;
 
@@ -43,14 +44,14 @@ public class ItemDefinitionToCQLStructTransformer extends AbstractCQLGenerator {
 
     String cqlRetrieves = toCQL(infos);
 
-    save(cqlRetrieves, cqlFolder);
+    save(infos, cqlRetrieves, cqlFolder);
   }
 
   @Override
-  protected String toCQL(List<SemanticDataElementInfo> infos) {
+  public String toCQL(List<SemanticDataElementInfo> infos) {
     StringBuilder sb = new StringBuilder();
 
-    buildHeader(sb);
+    buildHeader(infos, sb);
 
     definitions.getDrgElement().stream()
         .map(JAXBElement::getValue)
@@ -61,8 +62,8 @@ public class ItemDefinitionToCQLStructTransformer extends AbstractCQLGenerator {
   }
 
 
-  protected void buildHeader(StringBuilder sb) {
-    sb.append("library ").append(getLibraryName()).append(" version '0.0.1'")
+  protected void buildHeader(List<SemanticDataElementInfo> infos, StringBuilder sb) {
+    sb.append("library ").append(getLibraryName(infos)).append(" version '0.0.1'")
         .append("\n\n");
 
     sb.append("using FHIR version '4.0.1'")
@@ -186,12 +187,17 @@ public class ItemDefinitionToCQLStructTransformer extends AbstractCQLGenerator {
   }
 
   @Override
-  protected String getFileName() {
+  public String getFileName(List<SemanticDataElementInfo> source) {
     return FILE_NAME;
   }
 
   @Override
-  protected String getLibraryName() {
+  public String getLibraryName(List<SemanticDataElementInfo> source) {
     return LIBRARY_NAME;
+  }
+
+  @Override
+  public String getVersion(List<SemanticDataElementInfo> source) {
+    return VERSION;
   }
 }

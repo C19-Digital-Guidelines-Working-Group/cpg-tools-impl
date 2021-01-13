@@ -80,19 +80,11 @@ public class IOUtil {
     }
   }
 
-  public static List<KnowledgeCarrier> readDMNModels(Path dmnFolder) {
-    DMN12Parser parser = new DMN12Parser();
+  public static List<Path> listModels(Path modelFolder) {
     try {
-      try (Stream<Path> pathStream = Files.walk(dmnFolder)) {
+      try (Stream<Path> pathStream = Files.walk(modelFolder)) {
         return pathStream
-            .filter(f -> f.getFileName().toString().endsWith("dmn.xml"))
-            .map(IOUtil::loadXMLFile)
-            .flatMap(StreamUtil::trimStream)
-            .map(is -> AbstractCarrier.of(is)
-                .withRepresentation(rep(DMN_1_2,
-                    XML_1_1, Charset.defaultCharset(), Encodings.DEFAULT)))
-            .map(kc -> parser.applyLift(kc, Abstract_Knowledge_Expression, codedRep(DMN_1_2), null))
-            .map(Answer::get)
+            .filter(f -> isDMN(f) || isCMMN(f))
             .collect(Collectors.toList());
       }
     } catch (IOException e) {
@@ -101,26 +93,51 @@ public class IOUtil {
     }
   }
 
-  public static List<KnowledgeCarrier> readCMMNModels(Path cmmnFolder) {
-    CMMN11Parser parser = new CMMN11Parser();
-    try {
-      try (Stream<Path> pathStream = Files.walk(cmmnFolder)) {
-        return pathStream
-            .filter(f -> f.getFileName().toString().endsWith("cmmn.xml"))
-            .map(IOUtil::loadXMLFile)
-            .flatMap(StreamUtil::trimStream)
-            .map(is -> AbstractCarrier.of(is)
-                .withRepresentation(rep(CMMN_1_1,
-                    XML_1_1, Charset.defaultCharset(), Encodings.DEFAULT)))
-            .map(kc -> parser.applyLift(kc, Abstract_Knowledge_Expression, codedRep(CMMN_1_1), null))
-            .map(Answer::get)
-            .collect(Collectors.toList());
-      }
-    } catch (IOException e) {
-      e.printStackTrace();
-      return Collections.emptyList();
-    }
+
+  public static boolean isDMN(Path f) {
+    return f.getFileName().toString().endsWith("dmn.xml");
   }
+  public static boolean isCMMN(Path f) {
+    return f.getFileName().toString().endsWith("cmmn.xml");
+  }
+
+  public static List<KnowledgeCarrier> readDMNModels(Path dmnFolder) {
+    return listModels(dmnFolder).stream()
+        .filter(IOUtil::isDMN)
+        .map(IOUtil::readDMNModel)
+        .flatMap(StreamUtil::trimStream)
+        .collect(Collectors.toList());
+  }
+
+  public static Optional<KnowledgeCarrier> readDMNModel(Path path) {
+    DMN12Parser parser = new DMN12Parser();
+    return loadXMLFile(path)
+        .map(is -> AbstractCarrier.of(is)
+            .withRepresentation(rep(DMN_1_2,
+                XML_1_1, Charset.defaultCharset(), Encodings.DEFAULT)))
+        .map(kc -> parser.applyLift(kc, Abstract_Knowledge_Expression, codedRep(DMN_1_2), null))
+        .map(Answer::get);
+  }
+
+
+  public static List<KnowledgeCarrier> readCMMNModels(Path cmmnFolder) {
+    return listModels(cmmnFolder).stream()
+        .filter(IOUtil::isCMMN)
+        .map(IOUtil::readCMMNModel)
+        .flatMap(StreamUtil::trimStream)
+        .collect(Collectors.toList());
+  }
+
+  private static Optional<KnowledgeCarrier> readCMMNModel(Path path) {
+    CMMN11Parser parser = new CMMN11Parser();
+    return loadXMLFile(path)
+        .map(is -> AbstractCarrier.of(is)
+            .withRepresentation(rep(CMMN_1_1,
+                XML_1_1, Charset.defaultCharset(), Encodings.DEFAULT)))
+        .map(kc -> parser.applyLift(kc, Abstract_Knowledge_Expression, codedRep(CMMN_1_1), null))
+        .map(Answer::get);
+  }
+
 
   private static Optional<InputStream> loadXMLFile(Path file) {
     try {

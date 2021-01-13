@@ -31,7 +31,6 @@ public class TTAcceleratorGenerator extends AbstractOntologyDrivenGenerator {
 
   private static final Logger logger = LoggerFactory.getLogger(TTAcceleratorGenerator.class);
 
-  @Override
   public void run(Path srcPath, Path tgtPath) {
     List<SemanticDataElementInfo> infos = readDataElements(srcPath);
 

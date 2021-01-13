@@ -1,25 +1,15 @@
 package cpg.covid19.ed.cql;
 
 
-import static cpg.util.fhir.IOUtil.readDMNModels;
-import static edu.mayo.kmdp.util.Util.isNotEmpty;
-import static org.omg.spec.api4kp._20200801.AbstractCarrier.rep;
-import static org.omg.spec.api4kp._20200801.taxonomy.krformat.SerializationFormatSeries.XML_1_1;
-import static org.omg.spec.api4kp._20200801.taxonomy.krlanguage.KnowledgeRepresentationLanguageSeries.DMN_1_2;
-import static org.omg.spec.api4kp._20200801.taxonomy.krlanguage.KnowledgeRepresentationLanguageSeries.resolve;
-import static org.omg.spec.api4kp._20200801.taxonomy.parsinglevel.ParsingLevelSeries.Abstract_Knowledge_Expression;
+import static cpg.util.fhir.IOUtil.listModels;
+import static cpg.util.fhir.IOUtil.readDMNModel;
 
 import cpg.util.fhir.IOUtil;
-import edu.mayo.kmdp.language.LanguageDeSerializer;
-import edu.mayo.kmdp.language.parsers.dmn.v1_2.DMN12Parser;
-import edu.mayo.kmdp.util.FileUtil;
 import edu.mayo.kmdp.util.StreamUtil;
-import edu.mayo.kmdp.util.Util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,15 +21,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 import javax.xml.bind.JAXBElement;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-import org.omg.spec.api4kp._20200801.AbstractCarrier;
-import org.omg.spec.api4kp._20200801.AbstractCarrier.Encodings;
 import org.omg.spec.api4kp._20200801.services.KnowledgeCarrier;
 import org.omg.spec.api4kp._20200801.surrogate.Annotation;
 import org.omg.spec.dmn._20180521.model.TBuiltinAggregator;
@@ -50,43 +32,72 @@ import org.omg.spec.dmn._20180521.model.TDecisionRule;
 import org.omg.spec.dmn._20180521.model.TDecisionTable;
 import org.omg.spec.dmn._20180521.model.TDefinitions;
 import org.omg.spec.dmn._20180521.model.TExpression;
+import org.omg.spec.dmn._20180521.model.TInformationItem;
 import org.omg.spec.dmn._20180521.model.TInputClause;
 import org.omg.spec.dmn._20180521.model.TLiteralExpression;
 import org.omg.spec.dmn._20180521.model.TOutputClause;
 import org.omg.spec.dmn._20180521.model.TUnaryTests;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class DMNToCQLInferenceTransformer {
+public class DMNToCQLInferenceTransformer implements CQLGenerator<KnowledgeCarrier> {
 
+  private static final Logger logger = LoggerFactory.getLogger(DMNToCQLInferenceTransformer.class);
 
-  public void run(Path dmnFolder, Path cqlFolder) {
-    List<KnowledgeCarrier> kcs = readDMNModels(dmnFolder);
-
-    for (KnowledgeCarrier dmnCarrier : kcs) {
-      TDefinitions dmnModel = dmnCarrier.as(TDefinitions.class).orElseThrow();
-      String cql = addHeader( dmnModel.getName(), processDMNModel(dmnModel) );
-      if (isNotEmpty(cql)) {
-        IOUtil.saveText(cql, cqlFolder.resolve(dmnModel.getName() + ".cql"));
-      }
-    }
-
+  public static void runAll(Path bpmPath, Path cqlPath) {
+    listModels(bpmPath).stream()
+        .filter(IOUtil::isDMN)
+        .forEach(path -> new DMNToCQLInferenceTransformer().run(path, cqlPath));
   }
 
-  protected String addHeader(String model, String cql) {
-    if (Util.isEmpty(cql)) {
-      return cql;
-    }
+  @Override
+  public String toCQL(KnowledgeCarrier dmnCarrier) {
 
-    StringBuilder lib = new StringBuilder();
+    String cql = buildHeader(dmnCarrier);
 
-    lib.append("library \"" + model + "\"\n")
-        .append("using FHIR \n\n")
-        .append(cql);
+    cql += processDMNModel(dmnCarrier);
 
-    return lib.toString();
+    return cql;
   }
 
-  protected String processDMNModel(TDefinitions tDefinitions) {
-    return processDMNDecisions(tDefinitions, this::isAssessment);
+  @Override
+  public KnowledgeCarrier readSources(Path srcPath) {
+    return readDMNModel(srcPath)
+        .orElseThrow();
+  }
+
+  @Override
+  public String getFileName(KnowledgeCarrier src) {
+    return src.as(TDefinitions.class).orElseThrow()
+        .getName() + "-" + getVersion(src) + ".cql";
+  }
+
+  @Override
+  public String getLibraryName(KnowledgeCarrier src) {
+    return src.as(TDefinitions.class).orElseThrow()
+        .getName().replace(" ", "_");
+  }
+
+  @Override
+  public String getVersion(KnowledgeCarrier src) {
+    return "0.0.1";
+  }
+
+  protected String buildHeader(KnowledgeCarrier src) {
+
+    return "library " + getLibraryName(src) + " version '"+ getVersion(src) + "'"
+        + "\n\n"
+        + "\n\n"
+        + "include " + ItemDefinitionToCQLStructTransformer.LIBRARY_NAME +
+        " version '" + ItemDefinitionToCQLStructTransformer.VERSION + "' "
+        + "called " + ItemDefinitionToCQLStructTransformer.ALIAS
+        + "\n\n";
+  }
+
+  protected String processDMNModel(KnowledgeCarrier carrier) {
+    TDefinitions dmnModel = carrier.as(TDefinitions.class).orElseThrow();
+    return processDMNDecisions(dmnModel,
+        dec -> isAssessment(dec) || isLift(dec));
   }
 
   protected String processDMNDecisions(TDefinitions tDefinitions, Predicate<TDecision> applies) {
@@ -111,11 +122,14 @@ public class DMNToCQLInferenceTransformer {
     }
   }
   protected String toCQLInferences(TDecision d) {
+    String comment = " /* Mapped from Decision '" + d.getName()
+        + "' | expression type = " + d.getExpression().getValue().getClass().getSimpleName() + " */ \n\n";
+
     String expr = toCQLInferences(d.getExpression().getValue(), d.getVariable().getName());
     if (d.getExpression().getValue() instanceof TLiteralExpression) {
       expr = "\n define \"" + d.getName() + "\": \t\n" + expr + "\n\n";
     }
-    return expr;
+    return comment + expr;
   }
 
   private String toCQLInferencesCtx(TContext context, String name) {
@@ -253,6 +267,9 @@ public class DMNToCQLInferenceTransformer {
 
   protected String zeroOf(TDecisionRule r, TOutputClause out, TDecisionTable table) {
     String typeRef = out.getTypeRef() != null ? out.getTypeRef() : table.getTypeRef();
+    if (typeRef == null) {
+      return "null";
+    }
     switch (typeRef) {
       case "number" :
         return "0";
@@ -319,6 +336,14 @@ public class DMNToCQLInferenceTransformer {
   protected boolean isAssessment(TDecision dec) {
       return hasAnnotation(dec,
           "https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce");
+  }
+
+  private boolean isLift(TDecision dec) {
+    // TODO FIXME
+    return Optional.ofNullable(dec.getVariable())
+        .map(TInformationItem::getTypeRef)
+        .orElse("")
+        .contains("Situational Data Definitions.");
   }
 
   protected boolean hasAnnotation(TDecision dec, String annotationId) {

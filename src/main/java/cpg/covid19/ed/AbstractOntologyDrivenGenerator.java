@@ -1,7 +1,5 @@
 package cpg.covid19.ed;
 
-import static org.omg.spec.api4kp._20200801.id.Term.newTerm;
-
 import com.opencsv.bean.AbstractBeanField;
 import com.opencsv.bean.CsvBindAndSplitByName;
 import com.opencsv.bean.CsvBindByName;
@@ -51,8 +49,6 @@ public abstract class AbstractOntologyDrivenGenerator {
   public enum ConceptKind {
     PROCEDURE, OBSERVABLE, PROBLEM, MEDICATION, DEMOGRAPHICS, LAB;
   }
-
-  public abstract void run(Path srcPath, Path tgtPath);
 
   static Map<String,List<SemanticDataElementInfo>> cache = new HashMap<>();
 

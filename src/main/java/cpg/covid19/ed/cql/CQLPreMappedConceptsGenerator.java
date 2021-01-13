@@ -13,13 +13,18 @@ public class CQLPreMappedConceptsGenerator extends AbstractCQLConceptGenerator {
   public static final String LIBRARY_NAME = "COVID19_ED_CPG_Concepts_Premapped";
 
   @Override
-  protected String getFileName() {
+  public String getFileName(List<SemanticDataElementInfo> source) {
     return FILE_NAME;
   }
 
   @Override
-  protected String getLibraryName() {
+  public String getLibraryName(List<SemanticDataElementInfo> source) {
     return LIBRARY_NAME;
+  }
+
+  @Override
+  public String getVersion(List<SemanticDataElementInfo> source) {
+    return VERSION;
   }
 
   @Override

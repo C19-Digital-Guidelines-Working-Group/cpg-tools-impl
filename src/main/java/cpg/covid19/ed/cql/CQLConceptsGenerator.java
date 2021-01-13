@@ -3,13 +3,8 @@ package cpg.covid19.ed.cql;
 import static cpg.util.fhir.CPGUtil.makeTechnicalLabel;
 
 import java.util.List;
-import net.sf.saxon.trans.SymbolicName.F;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class CQLConceptsGenerator extends AbstractCQLConceptGenerator {
-
-  Logger logger = LoggerFactory.getLogger(CQLConceptsGenerator.class);
 
   public static final String NAME = "concepts";
   public static final String VERSION = "0.0.1";
@@ -17,13 +12,18 @@ public class CQLConceptsGenerator extends AbstractCQLConceptGenerator {
   public static final String LIBRARY_NAME = "COVID19_ED_CPG_Concepts";
 
   @Override
-  protected String getFileName() {
+  public String getFileName(List<SemanticDataElementInfo> source) {
     return FILE_NAME;
   }
 
   @Override
-  protected String getLibraryName() {
+  public String getLibraryName(List<SemanticDataElementInfo> source) {
     return LIBRARY_NAME;
+  }
+
+  @Override
+  public String getVersion(List<SemanticDataElementInfo> source) {
+    return VERSION;
   }
 
   @Override

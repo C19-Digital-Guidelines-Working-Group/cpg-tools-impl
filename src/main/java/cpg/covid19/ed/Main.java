@@ -133,7 +133,7 @@ public class Main {
 
       new ItemDefinitionToCQLStructTransformer("Situational Data Definitions.dmn.xml", bpmPath)
           .run(dataElementSheet,cqlPath);
-      //new DMNToCQLInferenceTransformer().run(bpmPath,cqlPath);
+      DMNToCQLInferenceTransformer.runAll(bpmPath,cqlPath);
     }
   }
 

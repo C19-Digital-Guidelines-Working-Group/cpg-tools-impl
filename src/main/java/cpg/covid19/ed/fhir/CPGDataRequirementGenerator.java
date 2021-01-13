@@ -20,7 +20,6 @@ import org.omg.spec.api4kp._20200801.id.Term;
 
 public class CPGDataRequirementGenerator extends AbstractOntologyDrivenGenerator {
 
-  @Override
   public void run(Path srcPath, Path tgtPath) {
     Collection<DataRequirement> dataRequirements = load(srcPath);
 

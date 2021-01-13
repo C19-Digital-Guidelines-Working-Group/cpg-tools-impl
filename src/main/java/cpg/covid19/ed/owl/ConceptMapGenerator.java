@@ -21,7 +21,6 @@ public class ConceptMapGenerator extends AbstractOntologyDrivenGenerator {
 
   Logger logger = LoggerFactory.getLogger(ConceptMapGenerator.class);
 
-  @Override
   public void run(Path srcPath, Path tgtPath) {
     logger.info("Generate Concept Mappings from Data Glossary...");
     List<SemanticDataElementInfo> infos = readDataElements(srcPath);

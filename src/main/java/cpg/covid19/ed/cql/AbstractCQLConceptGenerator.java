@@ -6,25 +6,17 @@ import static cpg.util.fhir.CPGUtil.sanitizeCQLIdentifier;
 
 import cpg.covid19.ed.AbstractOntologyDrivenGenerator;
 import cpg.util.fhir.CPGUtil;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import org.hl7.fhir.r4.model.Enumerations.FHIRAllTypes;
 import org.omg.spec.api4kp._20200801.id.Term;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public abstract class AbstractCQLConceptGenerator extends AbstractCQLGenerator {
+public abstract class AbstractCQLConceptGenerator extends AbstractGlossaryCQLGenerator {
 
-  Logger logger = LoggerFactory.getLogger(AbstractCQLConceptGenerator.class);
 
-  protected String toCQL(List<SemanticDataElementInfo> infos) {
+
+   public String toCQL(List<SemanticDataElementInfo> infos) {
     StringBuilder sb = new StringBuilder();
 
-    buildHeader(sb);
+    buildHeader(infos, sb);
     buildCodeDeclarations(sb, infos);
     buildConceptDeclarations(sb, infos);
 
@@ -32,8 +24,10 @@ public abstract class AbstractCQLConceptGenerator extends AbstractCQLGenerator {
   }
 
 
-  protected void buildHeader(StringBuilder sb) {
-    sb.append("library " + getLibraryName() + " version '0.0.1'").append("\n\n");
+  protected void buildHeader(
+      List<SemanticDataElementInfo> infos,
+      StringBuilder sb) {
+    sb.append("library ").append(getLibraryName(infos)).append(" version '0.0.1'").append("\n\n");
     sb.append("using FHIR version '4.0.1'").append("\n\n");
     sb.append("include FHIRHelpers version '4.0.1'").append("\n\n");
 
